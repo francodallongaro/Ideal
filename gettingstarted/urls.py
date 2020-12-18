@@ -18,4 +18,12 @@ urlpatterns = [
     path("", hello.views.index, name="index"),
     path("db/", hello.views.db, name="db"),
     path("admin/", admin.site.urls),
+    path('', include('myapp.urls')),
 ]
+
+
+
+# ADMIN CUSTOM
+admin.site.site_header = "IDEAL"
+admin.site.index_title = "Administración"
+admin.site.site_title = "IDEAL"

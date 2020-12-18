@@ -1,0 +1,36 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+
+{% block title %} Portal Clasificados {% endblock title %}
+
+{% block content %}
+<h1>Clasificados</h1>
+    <!-- {% include 'myapp/filtros.html' %}
+    
+    {% for clasificado in clasificados %}
+        <div>
+            <a href="{% url 'clasificado' clasificado.pk %}">    
+                <div class="card-clasificado">
+                    <img src="" alt="">
+                    <h4>{{ clasificado.tipologia }} {{ clasificado.m2_totales }}</h4>
+                    <p>{{ clasificado.barrio }}</p>
+                    <div class="row">
+                        <div>
+                            <img src="" alt="">
+                            <p>{{ clasificado.ambientes }}</p>
+                        </div>
+                        <div>
+                            <img src="" alt="">
+                            <p>{{ clasificado.banios }}</p>
+                        </div>
+                        <div>
+                            <img src="" alt="">
+                            <p>{{ clasificado.cocheras }}</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    {% endfor %} -->
+
+{% endblock content %}

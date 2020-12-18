@@ -1,0 +1,27 @@
+{% load static %}
+
+<header>
+    <a class='logo' href="{% url 'home' %}">
+        <img id='logo' src=" {% static 'myapp/ideal/icono.svg' %} " alt="IDEAL">
+        <img id='logo' src=" {% static 'myapp/ideal/ideal.svg' %} " alt="IDEAL">
+    </a>
+    <nav>
+        {% comment %} <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav3" aria-controls="navbarNav3" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button> {% endcomment %}
+
+        <ul class="nav__links">
+            <li>
+                <a class="nav-link" href="{% url 'venta' %}">Vender</a>
+            </li>
+
+            <li>
+                <a class="nav-link" href="{% url 'portal' %}">Comprar</a>
+            </li>
+            
+            <li>
+                <a class="btn-1-r" href="{% url 'contacto' %}">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+</header>
