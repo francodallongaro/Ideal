@@ -12,8 +12,8 @@
     <section class="v100 row v-center">
         <div class="col-8">
             <div class="logo">
-            <img src=" {% static 'myapp/ideal/icono.svg' %} " alt="IDEAL">
-            <img src=" {% static 'myapp/ideal/ideal.svg' %} " alt="IDEAL">
+            <img src=" {% static 'ideal/icono.svg' %} " alt="IDEAL">
+            <img src=" {% static 'ideal/ideal.svg' %} " alt="IDEAL">
             </div>
             <h1>Contactanos</h1>
             <p class="text mb-2">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.</p>
@@ -41,7 +41,7 @@
         {% for faq in faqs %}
             <div class="row pregunta">
                 <h4 class="col-11 preg-text">{{ faq.pregunta }}</h4>
-                <img  class="col-1" src=" {% static 'myapp/ideal/iconos/flecha.svg' %} " alt="ICON">
+                <img  class="col-1" src=" {% static 'ideal/iconos/flecha.svg' %} " alt="ICON">
             </div>
             <p class="respuesta">{{ faq.respuesta }}</p>
         {% endfor %}
