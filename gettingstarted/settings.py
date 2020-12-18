@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     "hello",
     "myapp",
     'django_filters',
-    'storages',
 ]
 
 MIDDLEWARE = [
