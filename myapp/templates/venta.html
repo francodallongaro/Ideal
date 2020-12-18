@@ -1,0 +1,199 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+
+{% block title %}Planes{% endblock title %}
+
+{% block content %}
+<main>
+
+{% comment %} PROPUESTA {% endcomment %}
+
+  <section class="v100 row v-center">
+    <div class="col">
+      <div class="logo">
+        <img src=" {% static 'myapp/ideal/icono.svg' %} " alt="IDEAL">
+        <img src=" {% static 'myapp/ideal/ideal.svg' %} " alt="IDEAL">
+      </div>
+      <h1>Vender tu propiedad<br>nunca fue tan fácil</h1>
+      <p class="">Consultá nuestra oferta.</p>
+    </div>
+    <div class="col-4 col-s card-precio img-center">
+      <h2 class="h-center">{{packs.0.nombre}}</h2>
+      <h3 class="h-center"><strong>${{packs.0.precio}}</strong>/mes</h3>
+      <p class="h-center">{{packs.0.descripcion}}</p>
+      <p class="mt-1 h-center"><a href=" {% url 'venta' %} " class="btn-1-r">Quiero saber más</a></p>
+    </div>
+    <div class="col-4 col-s card-precio img-center">
+      <h2 class="h-center">{{packs.1.nombre}}</h2>
+      <h3 class="h-center"><strong>${{packs.1.precio}}</strong>/mes</h3>
+      <p class="h-center">{{packs.1.descripcion}}</p>
+      <p class="mt-1 h-center"><a href=" {% url 'venta' %} " class="btn-1-r">Quiero saber más</a></p>
+    </div>
+    <div class="col-4 col-s card-precio img-center">
+      <h2 class="h-center">{{packs.2.nombre}}</h2>
+      <h3 class="h-center"><strong>${{packs.2.precio}}</strong>/mes</h3>
+      <p class="h-center">{{packs.2.descripcion}}</p>
+      <p class="mt-1 h-center"><a href=" {% url 'venta' %} " class="btn-1-r">Quiero saber más</a></p>
+    </div>
+    
+  </section>
+
+{% comment %} PROPUESTA {% endcomment %}
+
+
+{% comment %} TABLA {% endcomment %}
+
+  <section>
+    <h2 class="h-center">¿Qué incluyen<br>nuestros planes?</h2>
+  </section>
+
+    <table class="row wireframe card">
+      <tbody class="col wireframe">
+        <tr class="col">
+          <th scope="row" class="">Servicios</th>
+          <td class="">
+            <h2 class="">{{packs.0.nombre}}</h2>
+            <p class="">${{packs.0.precio}} /mes</p>
+          </td>
+          <td class="">
+            <h2 class="">{{packs.1.nombre}}</h2>
+            <p class="">${{packs.1.precio}} /mes</p>
+          </td>
+          <td class="">
+            <h2 class="">{{packs.2.nombre}}</h2>
+            <p class="">${{packs.2.precio}} /mes</p>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">Publicacion en portales</th>
+          {% if packs.0.publicacion == True %}
+            <td>ZonaProp | ArgenProp</td>
+          {% else %}  
+            <td></td>
+          {% endif %}
+          {% if packs.1.publicacion == True %}
+            <td>ZonaProp | ArgenProp | ML</td>
+          {% else %}  
+            <td></td>
+          {% endif %}
+          {% if packs.1.publicacion == True %}
+            <td>ZonaProp | ArgenProp | ML</td>
+          {% else %}  
+            <td></td>
+          {% endif %}
+        </tr>
+
+        <tr>
+          <th scope="row">Fotografía Profesional</th>
+          {% if packs.0.foto == True %}
+            <td>✓</td>
+          {% else %}  
+            <td></td>
+          {% endif %}
+          {% if packs.1.foto == True %}
+            <td>✓</td>
+          {% else %}  
+            <td></td>
+          {% endif %}
+          {% if packs.2.foto == True %}
+            <td>✓</td>
+          {% else %}  
+            <td></td>
+          {% endif %}
+        </tr>
+
+        <tr>
+          <th scope="row">Video Profesional</th>
+          {% if packs.0.video == True %}
+            <td>✓</td>
+          {% else %}  
+            <td></td>
+          {% endif %}
+          {% if packs.1.video == True %}
+            <td>✓</td>
+          {% else %}  
+            <td></td>
+          {% endif %}
+          {% if packs.2.video == True %}
+            <td>✓</td>
+          {% else %}  
+            <td></td>
+          {% endif %}
+        </tr>
+
+        <tr>
+          <th scope="row">Recorrido 360</th>
+          {% if packs.0.recorrido == True %}
+            <td>✓</td>
+          {% else %}  
+            <td></td>
+          {% endif %}
+          {% if packs.1.recorrido == True %}
+            <td>✓</td>
+          {% else %}  
+            <td></td>
+          {% endif %}
+          {% if packs.2.recorrido == True %}
+            <td>✓</td>
+          {% else %}  
+            <td></td>
+          {% endif %}
+        </tr>
+        
+        <tr>
+          <th scope="row">Cartel en la propiedad</th>
+          {% if packs.0.cartel == True %}
+            <td>✓</td>
+          {% else %}  
+            <td></td>
+          {% endif %}
+          {% if packs.1.cartel == True %}
+            <td>✓</td>
+          {% else %}  
+            <td></td>
+          {% endif %}
+          {% if packs.2.cartel == True %}
+            <td>✓</td>
+          {% else %}  
+            <td></td>
+          {% endif %}
+        </tr>
+
+        <tr>
+          <th scope="row">Muestra al público</th>
+          {% if packs.0.muestra == True %}
+            <td>✓</td>
+          {% else %}  
+            <td></td>
+          {% endif %}
+          {% if packs.1.muestra == True %}
+            <td>✓</td>
+          {% else %}  
+            <td></td>
+          {% endif %}
+          {% if packs.2.muestra == True %}
+            <td>✓</td>
+          {% else %}  
+            <td></td>
+          {% endif %}
+        </tr>
+
+      </tbody>
+    </table>
+
+  
+
+{% comment %} TABLA {% endcomment %}
+
+{% include 'myapp/comofunciona.html' %}
+
+{% include 'myapp/calculadora.html' %}
+
+{% include 'myapp/testimonios.html' %}
+
+{% include 'myapp/nuevarev.html' %}
+
+
+</main>
+{% endblock content %}

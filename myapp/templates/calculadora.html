@@ -1,0 +1,74 @@
+{% load static %}
+
+{% comment %} CALCULADORA {% endcomment %}
+
+
+<section>
+    <h2 class="h-center">¿Cuánto podes ahorrar con  <div class="logo">
+        <img src=" {% static 'myapp/ideal/icono.svg' %} " alt="IDEAL">
+        <img src=" {% static 'myapp/ideal/ideal.svg' %} " alt="IDEAL">
+      </div> ?</h2>
+    <div class="row v50 v-center">
+        <div class="col-8 col-s">
+            <h4 class="mb-1">Valor de tu propiedad: </h4>
+            <input type="range" id="rangeInput" class="rangeslider mb-1" step='10000' name="rangeInput" min="80000" max="1000000" value="120000" oninput="amount.value=rangeInput.value">                                                       
+            <br>          
+            <output id="amount" class="output_slider calc-text" name="amount" for="rangeInput">120000</output><span class="calc-text"> USD</span>
+            <br>
+            <h4 class="mb-1 mt-2">Comisión: </h4>
+            <input type="range" id="rangeInput2" class="rangeslider mb-1" step='0.5' name="rangeInput2" min="1" max="6" value="4" oninput="amount2.value=rangeInput2.value">                                                       
+            <br> 
+            <output id="amount2" class="output_slider calc-text" name="amount2" for="rangeInput2">4</output><span class="calc-text">%</span>
+        </div>
+        <div class="col-4 col-s">
+            <h2>Podes ahorrar<br>USD <span id="costocomision">4800 USD</span></h2>
+            <p class="mt-1"><a href=" {% url 'venta' %} " class="btn-1-r">Quiero saber más</a></p>
+            <!-- <h2>Ahorro: <span id="ahorro">Unas medialunas en Atalaya</span></h2> -->
+        </div>
+    </div>
+</section>
+
+
+{% comment %} CALCULADORA {% endcomment %}
+
+{% comment %} SCRIPT {% endcomment %}
+
+    <script>
+        let costo = document.querySelector("#rangeInput");
+        let comision = document.querySelector("#rangeInput2");
+        let outcostocomision = document.querySelector("#costocomision");
+        let outahorro = document.querySelector("#ahorro");
+              
+        costo.addEventListener("change",e=>{
+            let costocomision_val = (costo.value * comision.value) / 100;
+            console.log(costocomision_val)
+            console.log(`Change : ${e.target.value}`)
+            outcostocomision.innerHTML = costocomision_val + ' USD';
+            cambiarFrase()
+        })     
+            
+        comision.addEventListener("change",e=>{
+            let costocomision_val = (costo.value * comision.value) / 100;
+            console.log(costocomision_val)
+            console.log(`Change : ${e.target.value}`)
+            outcostocomision.innerHTML = costocomision_val + ' USD';
+            cambiarFrase()
+        })
+              
+        function cambiarFrase() {
+            let costocomision_val = (costo.value * comision.value) / 100;
+            let ahorro = costocomision_val-2000;
+
+            if (ahorro < 500) {
+                outahorro.innerHTML = 'Unas medialunas en Atalaya';
+            } else if (500 < ahorro < 700) {
+                outahorro.innerHTML = 'Una bici con rueditas';
+            } else if (700 < ahorro < 2000) {
+                outahorro.innerHTML = 'Un autito';
+            } else {
+                outahorro.innerHTML = 'Un viaje a las toninas';
+            }
+        }
+    </script>
+
+{% comment %} SCRIPT {% endcomment %}
