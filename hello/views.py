@@ -10,6 +10,9 @@ def index(request):
 def venta(request):
     return render(request, "venta.html")
 
+def contacto(request):
+    return render(request, "contacto.html")
+
 
 def db(request):
 
