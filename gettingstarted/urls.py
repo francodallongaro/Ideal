@@ -18,6 +18,7 @@ urlpatterns = [
     path("", hello.views.index, name="index"),
     path("venta/", hello.views.venta, name="venta"),
     path("contacto/", hello.views.contacto, name="contacto"),
+    path("portal/", hello.views.portal, name="portal"),
     
     path("admin/", admin.site.urls),
 ]

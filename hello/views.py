@@ -13,6 +13,9 @@ def venta(request):
 def contacto(request):
     return render(request, "contacto.html")
 
+def portal(request):
+    return render(request, "portal.html")
+
 
 def db(request):
 
