@@ -16,7 +16,7 @@
       </div>
       <h1>Descubrí la nueva<br>forma de vender<br>tu casa.</h1>
       <p class="text mb-2">Sin intermediarios.<br>Sin comisiones.<br>Sin trucos.</p>
-      <p class="text mb-2"></p>>SIN <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+      <p class="text mb-2"></p>SIN <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
       
       </h1>
 
@@ -151,98 +151,91 @@
 
 {% comment %} SCRIPT {% endcomment %}
 
-    <script>
+<script>
 
-        // Palabras al inicio
-
-   
-
-
-        let costo = document.querySelector("#rangeInput");
-        let comision = document.querySelector("#rangeInput2");
-        let outcostocomision = document.querySelector("#costocomision");
-        let outahorro = document.querySelector("#ahorro");
-              
-        costo.addEventListener("change",e=>{
-            let costocomision_val = (costo.value * comision.value) / 100;
-            console.log(costocomision_val)
-            console.log(`Change : ${e.target.value}`)
-            outcostocomision.innerHTML = costocomision_val + ' USD';
-            cambiarFrase()
-        })     
-            
-        comision.addEventListener("change",e=>{
-            let costocomision_val = (costo.value * comision.value) / 100;
-            console.log(costocomision_val)
-            console.log(`Change : ${e.target.value}`)
-            outcostocomision.innerHTML = costocomision_val + ' USD';
-            cambiarFrase()
-        })
-              
-        function cambiarFrase() {
-            let costocomision_val = (costo.value * comision.value) / 100;
-            let ahorro = costocomision_val-2000;
-
-            if (ahorro < 500) {
-                outahorro.innerHTML = 'Unas medialunas en Atalaya';
-            } else if (500 < ahorro < 700) {
-                outahorro.innerHTML = 'Una bici con rueditas';
-            } else if (700 < ahorro < 2000) {
-                outahorro.innerHTML = 'Un autito';
-            } else {
-                outahorro.innerHTML = 'Un viaje a las toninas';
-            }
-        }
-
-
-        // PALABRAS
-
-        const typedTextSpan = document.querySelector(".typed-text");
-const cursorSpan = document.querySelector(".cursor");
-
-const textArray = ["intermediarios", "comisiones", "trucos"];
-const typingDelay = 200;
-const erasingDelay = 100;
-const newTextDelay = 2000; // Delay between current and next text
-let textArrayIndex = 0;
-let charIndex = 0;
-
-function type() {
-  if (charIndex < textArray[textArrayIndex].length) {
-    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-    charIndex++;
-    setTimeout(type, typingDelay);
-  } 
-  else {
-    cursorSpan.classList.remove("typing");
-  	setTimeout(erase, newTextDelay);
-  }
-}
-
-function erase() {
-	if (charIndex > 0) {
-    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
-    charIndex--;
-    setTimeout(erase, erasingDelay);
-  } 
-  else {
-    cursorSpan.classList.remove("typing");
-    textArrayIndex++;
-    if(textArrayIndex>=textArray.length) textArrayIndex=0;
-    setTimeout(type, typingDelay + 1100);
-  }
-}
-
-document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-  if(textArray.length) setTimeout(type, newTextDelay + 250);
-});
+  // Palabras al inicio
+  let costo = document.querySelector("#rangeInput");
+  let comision = document.querySelector("#rangeInput2");
+  let outcostocomision = document.querySelector("#costocomision");
+  let outahorro = document.querySelector("#ahorro");
         
+  costo.addEventListener("change",e=>{
+      let costocomision_val = (costo.value * comision.value) / 100;
+      console.log(costocomision_val)
+      console.log(`Change : ${e.target.value}`)
+      outcostocomision.innerHTML = costocomision_val + ' USD';
+      cambiarFrase()
+  })     
+      
+  comision.addEventListener("change",e=>{
+      let costocomision_val = (costo.value * comision.value) / 100;
+      console.log(costocomision_val)
+      console.log(`Change : ${e.target.value}`)
+      outcostocomision.innerHTML = costocomision_val + ' USD';
+      cambiarFrase()
+  })
+        
+  function cambiarFrase() {
+      let costocomision_val = (costo.value * comision.value) / 100;
+      let ahorro = costocomision_val-2000;
+
+      if (ahorro < 500) {
+          outahorro.innerHTML = 'Unas medialunas en Atalaya';
+      } else if (500 < ahorro < 700) {
+          outahorro.innerHTML = 'Una bici con rueditas';
+      } else if (700 < ahorro < 2000) {
+          outahorro.innerHTML = 'Un autito';
+      } else {
+          outahorro.innerHTML = 'Un viaje a las toninas';
+      }
+  }
 
 
+  // PALABRAS
 
-    </script>
+  const typedTextSpan = document.querySelector(".typed-text");
+  const cursorSpan = document.querySelector(".cursor");
+
+  const textArray = ["intermediarios", "comisiones", "trucos"];
+  const typingDelay = 200;
+  const erasingDelay = 100;
+  const newTextDelay = 2000; // Delay between current and next text
+  let textArrayIndex = 0;
+  let charIndex = 0;
+
+  function type() {
+    if (charIndex < textArray[textArrayIndex].length) {
+      if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+      typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(type, typingDelay);
+    } 
+    else {
+      cursorSpan.classList.remove("typing");
+      setTimeout(erase, newTextDelay);
+    }
+  }
+
+  function erase() {
+    if (charIndex > 0) {
+      if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+      typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+      charIndex--;
+      setTimeout(erase, erasingDelay);
+    } 
+    else {
+      cursorSpan.classList.remove("typing");
+      textArrayIndex++;
+      if(textArrayIndex>=textArray.length) textArrayIndex=0;
+      setTimeout(type, typingDelay + 1100);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+    if(textArray.length) setTimeout(type, newTextDelay + 250);
+  });
+                
+</script>
 
 {% comment %} SCRIPT {% endcomment %}
 
