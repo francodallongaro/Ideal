@@ -390,7 +390,21 @@ header nav {
 footer {
   background-color: black;
   color: white;
-  height: 600px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+footer div {
+  background-color: black;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer p {
+  color: white;
 }
 
 body {
