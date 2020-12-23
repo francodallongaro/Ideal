@@ -1,18 +1,18 @@
 {% comment %} TESTIMONIOS {% endcomment %}
 
-<section>
+<section class="v60">
     <h2 class="h-center">Ellos vendieron,<br>¡Vos también podés!</h2>
-    <div class="card">
-        <p class="principal h-center"><span id="principal"></span></p>
-        <p class="text h-center"><span id="testimonio"></span></p>
+    <div class="card-contacto">
+        <p class="principal h-center"><span id="principal">Frase 1</span></p>
+        <p class="text h-center"><span id="testimonio"></span>Testimonio 1</p>
     </div>
     <div class="row">
-        <img id="img1" class="col-2 img-center" src="" alt="img1">
-        <img id="img2" class="col-2 img-center" src="" alt="img2">
-        <img id="img3" class="col-2 img-center" src="" alt="img3">
-        <img id="img4" class="col-2 img-center" src="" alt="img4">
-        <img id="img5" class="col-2 img-center" src="" alt="img5">
-        <img id="img6" class="col-2 img-center" src="" alt="img6">
+        <img id="img1" class="col-2 img-center" src=" {% static 'ideal/avatares/av1.svg' %} " alt="img1">
+        <img id="img2" class="col-2 img-center" src=" {% static 'ideal/avatares/av2.svg' %} " alt="img2">
+        <img id="img3" class="col-2 img-center" src=" {% static 'ideal/avatares/av3.svg' %} " alt="img3">
+        <img id="img4" class="col-2 img-center" src=" {% static 'ideal/avatares/av4.svg' %} " alt="img4">
+        <img id="img5" class="col-2 img-center" src=" {% static 'ideal/avatares/av5.svg' %} " alt="img5">
+        <img id="img6" class="col-2 img-center" src=" {% static 'ideal/avatares/av6.svg' %} " alt="img6">
     </div>
 </section>
 
@@ -29,33 +29,33 @@
     let img6 = document.querySelector("#img6");
 
     img1.addEventListener("click",e=>{
-        principal.innerHTML = 'Frase 1;'
-        testimonio.innerHTML = 'Testimonio 1;'
+        principal.innerHTML = 'Frase 1'
+        testimonio.innerHTML = 'Testimonio 1'
     })  
     
     img2.addEventListener("click",e=>{
-        principal.innerHTML = 'Frase 2;'
-        testimonio.innerHTML = 'Testimonio 2;'
+        principal.innerHTML = 'Frase 2'
+        testimonio.innerHTML = 'Testimonio 2'
     })  
     
     img3.addEventListener("click",e=>{
-        principal.innerHTML = 'Frase 3;'
-        testimonio.innerHTML = 'Testimonio 3;'
+        principal.innerHTML = 'Frase 3'
+        testimonio.innerHTML = 'Testimonio 3'
     })  
     
     img4.addEventListener("click",e=>{
-        principal.innerHTML = 'Frase 4;'
-        testimonio.innerHTML = 'Testimonio 4;'
+        principal.innerHTML = 'Frase 4'
+        testimonio.innerHTML = 'Testimonio 4'
     })  
     
     img5.addEventListener("click",e=>{
-        principal.innerHTML = 'Frase 5;'
-        testimonio.innerHTML = 'Testimonio 5;'
+        principal.innerHTML = 'Frase 5'
+        testimonio.innerHTML = 'Testimonio 5'
     })  
     
     img6.addEventListener("click",e=>{
-        principal.innerHTML = 'Frase 6;'
-        testimonio.innerHTML = 'Testimonio 6;'
+        principal.innerHTML = 'Frase 6'
+        testimonio.innerHTML = 'Testimonio 6'
     })  
 
 
