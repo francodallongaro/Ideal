@@ -88,6 +88,18 @@
 
 // ---------------------------- PADDING -----------------------------------
 
+.p-1 {
+    padding: 1rem;
+}
+
+.p-2 {
+    padding: 2rem;
+}
+
+.p-3 {
+    padding: 3rem;
+}
+
 .pt-1 {
     padding-top: 1rem;
 }
@@ -136,11 +148,11 @@
 }
 
 .btn-1-r{
-    color: $c-b;
+    color: $c-w;
     background-color: $c-0;
-    padding: .5rem 1rem;
+    padding: 1rem 1.5rem;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 25px;
     font-weight: bold;
 }
 
@@ -243,6 +255,12 @@ h4 {
 
 .wireframe {
     border: 1px solid black;
+}
+
+.typed-text {
+    font-size: 34px;
+    font-weight: 400;
+    font-family: $t-5;
 }
 
 // ---------------------------- TABLA ------------------------

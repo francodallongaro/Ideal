@@ -4,15 +4,19 @@ footer {
   padding-left: 10%;
   padding-right: 10%;
 }
+
 footer div {
   background-color: black;
 }
+
 footer a {
   text-decoration: none;
   color: white;
   background-color: black;
 }
+
 footer p {
   color: white;
   background-color: black;
 }
+/*# sourceMappingURL=footer.css.map */
