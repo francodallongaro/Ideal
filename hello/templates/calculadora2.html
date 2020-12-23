@@ -4,24 +4,12 @@
 
 
 <section>
-    <h2 class="h-center">¿Cuánto podes ahorrar con  
-        <div class="logo">
+    <h2 class="h-center">¿Cuánto podes ahorrar con  <div class="logo">
         <img src=" {% static 'ideal/icono.svg' %} " alt="IDEAL">
         <img src=" {% static 'ideal/ideal.svg' %} " alt="IDEAL">
-        </div> ?
-    </h2>
-
+      </div> ?</h2>
     <div class="row v50 v-center">
-        <div class="col-5 col-s">
-            <h4 class="mb-1 mt-2">Con IDEAL desde: </h4>
-            <p class="calc-text"> $1500</p>
-            <h4 class="mb-1 mt-2">Con inmobiliarias: </h4>
-            <p class="calc-text"> $1500</p>
-            <h2>Ahorrás<br>USD <span id="costocomision">4800 USD</span></h2>
-            <p class="mt-1"><a href=" {% url 'venta' %} " class="btn-1-r">Quiero saber más</a></p>
-            <!-- <h2>Ahorro: <span id="ahorro">Unas medialunas en Atalaya</span></h2> -->
-        </div>
-        <div class="col-7 col-s">
+        <div class="col-8 col-s">
             <h4 class="mb-1">Valor de tu propiedad: </h4>
             <input type="range" id="rangeInput" class="rangeslider mb-1" step='10000' name="rangeInput" min="80000" max="1000000" value="120000" oninput="amount.value=rangeInput.value">                                                       
             <br>          
@@ -32,10 +20,12 @@
             <br> 
             <output id="amount2" class="output_slider calc-text" name="amount2" for="rangeInput2">4</output><span class="calc-text">%</span>
         </div>
-        
+        <div class="col-4 col-s">
+            <h2>Podes ahorrar<br>USD <span id="costocomision">4800 USD</span></h2>
+            <p class="mt-1"><a href=" {% url 'venta' %} " class="btn-1-r">Quiero saber más</a></p>
+            <!-- <h2>Ahorro: <span id="ahorro">Unas medialunas en Atalaya</span></h2> -->
+        </div>
     </div>
-
-
 </section>
 
 
