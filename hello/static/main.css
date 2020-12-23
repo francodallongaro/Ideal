@@ -252,6 +252,12 @@ h4 {
   font-family: "Raleway", sans-serif;
 }
 
+.typewriter {
+  font-size: 34px;
+  font-weight: 400;
+  font-family: "Raleway", sans-serif;
+}
+
 table, th, td {
   border: 1px solid black;
 }
@@ -410,10 +416,17 @@ footer {
   color: white;
   padding-left: 10%;
   padding-right: 10%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 footer div {
   background-color: black;
+}
+
+footer h4 {
+  background-color: black;
+  color: white;
 }
 
 footer a {
@@ -424,6 +437,10 @@ footer a {
 
 footer p {
   color: white;
+  background-color: black;
+}
+
+footer img {
   background-color: black;
 }
 
