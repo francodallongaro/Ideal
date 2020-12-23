@@ -16,8 +16,10 @@
             <h4 class="mb-1 mt-2">Con IDEAL desde: </h4>
             <p class="calc-text"> $1500</p>
             <h4 class="mb-1 mt-2">Con inmobiliarias: </h4>
-            <p class="calc-text"> $1500</p>
-            <h2>Ahorrás<br>USD <span id="costocomision">4800 USD</span></h2>
+            <p class="calc-text">USD <span id="costocomision">4800 USD</span></p>
+            <h4 class="mb-1 mt-2">Ahorrás</h4>
+            <h2>USD <span id="ahorrofinal">4800 USD</span></h2>
+
             <p class="mt-1"><a href=" {% url 'venta' %} " class="btn-1-r">Quiero saber más</a></p>
             <!-- <h2>Ahorro: <span id="ahorro">Unas medialunas en Atalaya</span></h2> -->
         </div>
@@ -48,6 +50,7 @@
         let comision = document.querySelector("#rangeInput2");
         let outcostocomision = document.querySelector("#costocomision");
         let outahorro = document.querySelector("#ahorro");
+        let ahorrofinal = document.querySelector("#ahorrofinal");
               
         costo.addEventListener("change",e=>{
             let costocomision_val = (costo.value * comision.value) / 100;
@@ -67,7 +70,8 @@
               
         function cambiarFrase() {
             let costocomision_val = (costo.value * comision.value) / 100;
-            let ahorro = costocomision_val-2000;
+            let ahorro = costocomision_val-1500;
+            ahorrofinal.innerHTML = ahorro + ' USD';
 
             if (ahorro < 500) {
                 outahorro.innerHTML = 'Unas medialunas en Atalaya';
