@@ -3,5 +3,20 @@
 footer {
     background-color: $c-b;
     color: $c-w;
-    height: 600px;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    div {
+        background-color: $c-b;
+    }
+
+    a {
+        text-decoration: none;
+        color: $c-w;
+    }
+
+    p { 
+        color: $c-w;
+    }
 }
+
