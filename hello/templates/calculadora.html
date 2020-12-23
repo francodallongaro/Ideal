@@ -37,7 +37,7 @@
     <div class="row v50 v-center">
         <div class="col-5 col-s">
             <h2>Con los que ahorrás<br>con ideal podrías..</h2>
-            <h2><span id="ahorro">¡Cambiar esos muebles antiguos de tu casa!</span></h2>
+            <p><span id="ahorro"></span></p>
             <p class="mt-1"><a href=" {% url 'venta' %} " class="btn-1-r">Quiero saber más</a></p>
         </div>
         <div class="col-7 col-s">
@@ -74,6 +74,7 @@
             console.log(`Change : ${e.target.value}`)
             outcostocomision.innerHTML = costocomision_val + ' USD';
             cambiarFrase()
+            
         })
               
         function cambiarFrase() {
@@ -92,6 +93,8 @@
             } else {
                 outahorro.innerHTML = '¡Reservar un pasaje a marte (con Elon) y conocer el espacio exterior!';
             }
+
+            console.log(ahorro)
         }
     </script>
 
