@@ -55,7 +55,7 @@
         <p class="h-center text">Elegí cuánto querés involucrarte en el proceso de ventas y maximizá tu ganancia</p>
       </div>
     </div>
-    <div class="row v-center">
+    <div class="row v-center mb-2">
       <div class="col-4 col-s">
         <img class="img-center mb-1" src=" {% static 'ideal/iconos/alcance.svg' %} " alt="">
         <h4 class="h-center mb-1">Alcance</h4>
@@ -72,80 +72,38 @@
         <p class="h-center text">Te damos las herramientas para que seas VOS quien vende tu propiedad, ahorrando mucho dinero para utilizar como quieras.</p>
       </div>
     </div>
-    <p class="mt-1 h-center"><a href="{% url 'contacto' %}" class="btn-1-r">¡Informate gratis!</a></p>
+    <p class="mt-3 h-center"><a href="{% url 'contacto' %}" class="btn-1-r">¡Informate gratis!</a></p>
   </section>
 
 {% comment %} ¿ POR QUÉ IDEAL ? {% endcomment %}
 
-{% include 'nuevarev.html' %}
+
 
 
 {% comment %} PORTALES {% endcomment %}
 
   <section class="v50">
-    <div class="row v-center">
-      <div class="col-4 col-s">
-        <h2>2.000+</h2>
-        <p class="text">Usuarios que verán tus inmuebles.</p>
-        <p class="mt-1"><a href="{% url 'venta' %}" class="btn-1-r">Quiero saber más</a></p>
+      <h2>Destacados en portales</h2>
+      <div class="row v-center">
+        <img class="img-center portales col-2 col-6-s v-center" src=" {% static 'ideal/portales/argenprop.svg' %} " alt="">
+        <img class="img-center portales col-2 col-6-s v-center" src=" {% static 'ideal/portales/zonaprop.svg' %} " alt="">
+        <img class="img-center portales col-2 col-6-s v-center" src=" {% static 'ideal/portales/properati.svg' %} " alt="">
+        <img class="img-center portales col-2 col-6-s v-center" src=" {% static 'ideal/portales/argenprop.svg' %} " alt="">
+        <img class="img-center portales col-2 col-6-s v-center" src=" {% static 'ideal/portales/zonaprop.svg' %} " alt="">
+        <img class="img-center portales col-2 col-6-s v-center" src=" {% static 'ideal/portales/properati.svg' %} " alt="">
       </div>
-      <div class="col-8 col-s">
-        <div class="row">
-          <img class="img-center portales col-4 col-6-s v-center" src=" {% static 'ideal/portales/argenprop.svg' %} " alt="">
-          <img class="img-center portales col-4 col-6-s v-center" src=" {% static 'ideal/portales/zonaprop.svg' %} " alt="">
-          <img class="img-center portales col-4 col-6-s v-center" src=" {% static 'ideal/portales/properati.svg' %} " alt="">
-        </div>
-      </div>
-    </div>
+      <p class="text">Llegamos a millones de potenciales compradores anunciando<br>tu propiedad en los principales portales del mercado.</p>
   </section>
 
 {% comment %} PORTALES {% endcomment %}
 
-{% comment %} CLIENTES {% endcomment %}
 
-<section class="v80">
-
-  <h2 class="h-center">¿Por qué IDEAL?</h2>
-  <p class="h-center text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur illo porro ipsam cum amet saepe autem, incidunt delectus praesentium eum maxime corrupti exercitationem culpa consequatur alias quaerat facilis? Quibusdam, quam?</p>
-  <div class="row v-center">
-
-    <div class="col-4">
-      <div class="card">
-        <h3 class="h-center">Review</h3>
-        <p class="h-center text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi saepe adipisci possimus doloremque at accusantium quo fugit, sint veritatis consectetur nemo! Et dolore laudantium quis soluta fugit temporibus, suscipit quo.</p>
-      </div>
-      <div>
-        <h4 class="h-center">Nombre</h4>
-        <p class="h-center text">Vendedor</p>
-      </div>
-    </div>
-    <div class="col-4">
-      <div class="card">
-        <h3 class="h-center">Review</h3>
-        <p class="h-center text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi saepe adipisci possimus doloremque at accusantium quo fugit, sint veritatis consectetur nemo! Et dolore laudantium quis soluta fugit temporibus, suscipit quo.</p>
-      </div>
-      <div>
-        <h4 class="h-center">Nombre</h4>
-        <p class="h-center text">Vendedor</p>
-      </div>
-    </div>
-    <div class="col-4">
-      <div class="card">
-        <h3 class="h-center">Review</h3>
-        <p class="h-center text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi saepe adipisci possimus doloremque at accusantium quo fugit, sint veritatis consectetur nemo! Et dolore laudantium quis soluta fugit temporibus, suscipit quo.</p>
-      </div>
-      <div>
-        <h4 class="h-center">Nombre</h4>
-        <p class="h-center text">Vendedor</p>
-      </div>
-    </div>
-
-  </div>
-</section>
+{% include 'testimonios.html' %}
 
 
+{% include 'nuevarev.html' %}
 
-{% comment %} CLIENTES {% endcomment %}
+
 
 </main>
 

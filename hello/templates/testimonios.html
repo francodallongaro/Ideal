@@ -1,8 +1,68 @@
 {% comment %} TESTIMONIOS {% endcomment %}
 
 <section>
-  
-
+    <h2>Ellos vendieron,<br>¡Vos también podés!</h2>
+    <div class="card">
+        <p id="principal" class="principal"></p>
+        <p id="testimonio" class="text"></p>
+    </div>
+    <div class="row">
+        <img id="img1" class="col-2 img-center" src="" alt="img1">
+        <img id="img2" class="col-2 img-center" src="" alt="img2">
+        <img id="img3" class="col-2 img-center" src="" alt="img3">
+        <img id="img4" class="col-2 img-center" src="" alt="img4">
+        <img id="img5" class="col-2 img-center" src="" alt="img5">
+        <img id="img6" class="col-2 img-center" src="" alt="img6">
+    </div>
 </section>
+
+<script>
+
+    let principal = document.querySelector("#principal");
+    let testimonio = document.querySelector("#testimonio");
+
+    let img1 = document.querySelector("#img1");
+    let img2 = document.querySelector("#img2");
+    let img3 = document.querySelector("#img3");
+    let img4 = document.querySelector("#img4");
+    let img5 = document.querySelector("#img5");
+    let img6 = document.querySelector("#img6");
+
+    img1.addEventListener("onclick",e=>{
+        principal.innerHTML = 'Frase 1;'
+        testimonio.innerHTML = 'Testimonio 1;'
+    })  
+    
+    img2.addEventListener("onclick",e=>{
+        principal.innerHTML = 'Frase 2;'
+        testimonio.innerHTML = 'Testimonio 2;'
+    })  
+    
+    img3.addEventListener("onclick",e=>{
+        principal.innerHTML = 'Frase 3;'
+        testimonio.innerHTML = 'Testimonio 3;'
+    })  
+    
+    img4.addEventListener("onclick",e=>{
+        principal.innerHTML = 'Frase 4;'
+        testimonio.innerHTML = 'Testimonio 4;'
+    })  
+    
+    img5.addEventListener("onclick",e=>{
+        principal.innerHTML = 'Frase 5;'
+        testimonio.innerHTML = 'Testimonio 5;'
+    })  
+    
+    img6.addEventListener("onclick",e=>{
+        principal.innerHTML = 'Frase 6;'
+        testimonio.innerHTML = 'Testimonio 6;'
+    })  
+
+
+
+
+</script>
+
+
 
 {% comment %} TESTIMONIOS {% endcomment %}
