@@ -15,7 +15,7 @@
         <img src=" {% static 'ideal/ideal.svg' %} " alt="IDEAL">
       </div>
       <h1>Descubrí la nueva<br>forma de vender<br>tu casa.</h1>
-      <div class="container"><p class="typed-text mb-2"></p><span class="typewriter">Sin</span><span class="typed-text"></span><span class="cursor">&nbsp;</span></p></div>
+      <div class="container"><p class="typed-text mb-2">SIN</p><p class="typewriter">Sin</p><span class="typed-text"></span><span class="cursor">&nbsp;</span></p></div>
 
       <p class="mt-1"><a href="{% url 'venta' %}" class="btn-1-r">Quiero saber más</a></p>
     </div>
@@ -97,7 +97,10 @@
 {% include 'testimonios.html' %}
 
 
-{% include 'nuevarev.html' %}
+  <section class="v40">
+    <h2 class="h-center">¿Qué esperás?<br>Vende tu inmueble con Ideal.</h2>
+    <p class="mt-3 h-center"><a href=" {% url 'venta' %} " class="btn-1-r">¡Quiero saber más!</a></p>
+  </section>
 
 
 
