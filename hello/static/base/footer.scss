@@ -5,8 +5,14 @@ footer {
     color: $c-w;
     padding-left: 10%;
     padding-right: 10%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 
     div {
+        background-color: $c-b;
+    }
+
+    h4 {
         background-color: $c-b;
     }
 
@@ -18,6 +24,10 @@ footer {
 
     p { 
         color: $c-w;
+        background-color: $c-b;
+    }
+
+    img {
         background-color: $c-b;
     }
 }
