@@ -20,8 +20,7 @@
             <h4 class="mb-1 mt-2">Ahorrás</h4>
             <h2>USD <span id="ahorrofinal">4800 USD</span></h2>
 
-            <p class="mt-1"><a href=" {% url 'venta' %} " class="btn-1-r">Quiero saber más</a></p>
-            <!-- <h2>Ahorro: <span id="ahorro">Unas medialunas en Atalaya</span></h2> -->
+            
         </div>
         <div class="col-7 col-s">
             <h4 class="mb-1">Valor de tu propiedad: </h4>
@@ -33,8 +32,17 @@
             <input type="range" id="rangeInput2" class="rangeslider mb-1" step='0.5' name="rangeInput2" min="1" max="6" value="4" oninput="amount2.value=rangeInput2.value">                                                       
             <br> 
             <output id="amount2" class="output_slider calc-text" name="amount2" for="rangeInput2">4</output><span class="calc-text">%</span>
+        </div> 
+    </div>
+    <div class="row v50 v-center">
+        <div class="col-5 col-s">
+            <h2>Con los que ahorrás<br>con ideal podrías..</h2>
+            <h2><span id="ahorro">¡Cambiar esos muebles antiguos de tu casa!</span></h2>
+            <p class="mt-1"><a href=" {% url 'venta' %} " class="btn-1-r">Quiero saber más</a></p>
         </div>
-        
+        <div class="col-7 col-s">
+            <img src="" alt="">
+        </div>
     </div>
 
 
@@ -73,14 +81,16 @@
             let ahorro = costocomision_val-1500;
             ahorrofinal.innerHTML = ahorro + ' USD';
 
-            if (ahorro < 500) {
-                outahorro.innerHTML = 'Unas medialunas en Atalaya';
-            } else if (500 < ahorro < 700) {
-                outahorro.innerHTML = 'Una bici con rueditas';
-            } else if (700 < ahorro < 2000) {
-                outahorro.innerHTML = 'Un autito';
+            if (ahorro < 2000) {
+                outahorro.innerHTML = '¡Comprarte ese celular que siempre quisiste!';
+            } else if (2000 < ahorro < 10000) {
+                outahorro.innerHTML = '¡Cambiar los muebles antiguos de tu casa!';
+            } else if (10000 < ahorro < 20000) {
+                outahorro.innerHTML = '¡Pedirte vacaciones y viajar por el mundo!';
+            } else if (20000 < ahorro < 40000) {
+                outahorro.innerHTML = '¡Comprarte ese auto que tenés entre ceja y ceja!';
             } else {
-                outahorro.innerHTML = 'Un viaje a las toninas';
+                outahorro.innerHTML = '¡Reservar un pasaje a marte (con Elon) y conocer el espacio exterior!';
             }
         }
     </script>
