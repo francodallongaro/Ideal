@@ -111,43 +111,6 @@
 
 <script>
 
-  // Palabras al inicio
-  let costo = document.querySelector("#rangeInput");
-  let comision = document.querySelector("#rangeInput2");
-  let outcostocomision = document.querySelector("#costocomision");
-  let outahorro = document.querySelector("#ahorro");
-        
-  costo.addEventListener("change",e=>{
-      let costocomision_val = (costo.value * comision.value) / 100;
-      console.log(costocomision_val)
-      console.log(`Change : ${e.target.value}`)
-      outcostocomision.innerHTML = costocomision_val + ' USD';
-      cambiarFrase()
-  })     
-      
-  comision.addEventListener("change",e=>{
-      let costocomision_val = (costo.value * comision.value) / 100;
-      console.log(costocomision_val)
-      console.log(`Change : ${e.target.value}`)
-      outcostocomision.innerHTML = costocomision_val + ' USD';
-      cambiarFrase()
-  })
-        
-  function cambiarFrase() {
-      let costocomision_val = (costo.value * comision.value) / 100;
-      let ahorro = costocomision_val-2000;
-
-      if (ahorro < 500) {
-          outahorro.innerHTML = 'Unas medialunas en Atalaya';
-      } else if (500 < ahorro < 700) {
-          outahorro.innerHTML = 'Una bici con rueditas';
-      } else if (700 < ahorro < 2000) {
-          outahorro.innerHTML = 'Un autito';
-      } else {
-          outahorro.innerHTML = 'Un viaje a las toninas';
-      }
-  }
-
 
   // PALABRAS
 
