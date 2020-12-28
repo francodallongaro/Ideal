@@ -266,9 +266,8 @@ table {
   border: 5px solid white;
 }
 
-table tr {
-  text-align: center;
-  vertical-align: center;
+table tr :nth-child(even) {
+  background-color: rgba(82, 229, 212, 0.15);
 }
 
 table th {
@@ -281,10 +280,6 @@ table td {
   padding: 1rem;
   text-align: center;
   vertical-align: center;
-}
-
-tr:nth-child(even) {
-  background-color: rgba(82, 229, 212, 0.15);
 }
 
 .card-precio {

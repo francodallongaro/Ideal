@@ -278,8 +278,9 @@ table {
     border-radius: 16px;
     border: 5px solid white;
     tr {
-        text-align: center;
-        vertical-align: center;
+        :nth-child(even) {
+            background-color: rgba(82, 229, 212, 0.15);
+        }
     }
     th {
         height: 120px;
@@ -293,7 +294,7 @@ table {
     }
 }
 
-tr:nth-child(even) {background-color: rgba(82, 229, 212, 0.15);}
+
 
 // ---------------------------- CARDS ------------------------  
 
