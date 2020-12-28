@@ -1,10 +1,21 @@
+header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid white;
+  box-shadow: 0px 1px 0px #E5E9F2;
+}
+
 nav {
-  padding: 8px;
+  padding-right: 10%;
 }
 
 .logo {
   float: left;
-  padding: 8px;
+  padding-left: 10%;
   margin-left: 16px;
   margin-top: 8px;
 }
