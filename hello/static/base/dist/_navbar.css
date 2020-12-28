@@ -29,13 +29,8 @@ nav {
   text-decoration: none;
 }
 
-nav ul {
-  float: right;
-}
-
 nav ul li {
   display: inline-block;
-  float: left;
 }
 
 nav ul li:not(:first-child) {
@@ -50,11 +45,14 @@ nav ul li a {
   display: inline-block;
   outline: none;
   color: #000;
-  text-transform: uppercase;
   text-decoration: none;
-  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
   letter-spacing: 1.2px;
   font-weight: 600;
+}
+nav ul li a :hover {
+  color: #36ceb9;
 }
 
 @media screen and (max-width: 864px) {

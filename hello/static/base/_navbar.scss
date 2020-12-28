@@ -54,13 +54,13 @@ nav {
     text-decoration: none;
 }
 
-nav ul {
-    float: right;
-}
+// nav ul {
+//     float: right;
+// }
 
 nav ul li {
     display: inline-block;
-    float: left;
+    // float: left;
 }
 
 nav ul li:not(:first-child) {
@@ -75,11 +75,15 @@ nav ul li a {
     display: inline-block;
     outline: none;
     color: #000;
-    text-transform: uppercase;
     text-decoration: none;
-    font-size: 14px;
+    font-family: $t-3;
+    font-size: 18px;
     letter-spacing: 1.2px;
     font-weight: 600;
+
+    :hover {
+        color: $c-1;
+    }
 }
 
 @media screen and (max-width: 864px) {
