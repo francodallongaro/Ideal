@@ -3,8 +3,8 @@
 header {
     position: fixed;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
     align-items: center;
     padding: 20px;
     border-bottom: 1px solid white;
@@ -39,7 +39,7 @@ nav {
 }
 
 .logonav {
-    // float: left;
+    float: left;
     padding-left: 10%;
     margin-left: 16px;
     margin-top: 8px;
@@ -54,13 +54,13 @@ nav {
     text-decoration: none;
 }
 
-// nav ul {
-//     float: right;
-// }
+nav ul {
+    float: right;
+}
 
 nav ul li {
     display: inline-block;
-    // float: left;
+    float: left;
 }
 
 nav ul li:not(:first-child) {
