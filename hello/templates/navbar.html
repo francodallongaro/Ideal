@@ -1,14 +1,11 @@
 {% load static %}
 
 <header>
-    <a class='logo' href="{% url 'index' %}">
+    {% comment %} <a class='logo' href="{% url 'index' %}">
         <img id='logo' src=" {% static 'ideal/icono.svg' %} " alt="IDEAL">
         <img id='logo' src=" {% static 'ideal/ideal.svg' %} " alt="IDEAL">
     </a>
     <nav>
-        {% comment %} <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav3" aria-controls="navbarNav3" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button> {% endcomment %}
 
         <ul class="nav__links">
             <li>
@@ -20,8 +17,30 @@
             </li>
             
             <li>
-                <a class="btn-1-r" href="{% url 'contacto' %}">Contacto</a>
+                <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
             </li>
         </ul>
-    </nav>
+    </nav>{% endcomment %}
+    
+    <nav>
+        <input type="checkbox" id="nav" class="hidden">
+        <label for="nav" class="nav-btn">
+            <i></i>
+            <i></i>
+            <i></i>
+        </label>
+        <div class="logo">
+            <a href="{% url 'index' %}">
+                <img id='logo' src=" {% static 'ideal/icono.svg' %} " alt="IDEAL">
+                <img id='logo' src=" {% static 'ideal/ideal.svg' %} " alt="IDEAL">
+            </a>
+        </div>
+        <div class="nav-wrapper">
+            <ul>
+                <li><a href="{% url 'venta' %}">Venta</a></li>
+                <li><a href="{% url 'portal' %}">Comprar</a></li>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
+            </ul>
+        </div>
+    </nav> 
 </header>
