@@ -4,11 +4,7 @@ body {
     margin-right: auto;
 }
 
-main {
-    padding-left: 10%;
-    padding-right: 10%;
-    
-}
+
 
 // ------------------------- ALTURAS ---------------------------
 
@@ -126,9 +122,26 @@ main {
 }
 
 /* --------------------- MEDIA QUERIES -------------------------- */
+@media screen and (max-width: 1800px) {
+    .container {
+        width: 1800px;
+    }
+    main {
+        padding-left: 20%;
+        padding-right: 20%;
+        
+    }
+    
+}
+
 @media screen and (max-width: 1285px) {
     .container {
         width: 1285px;
+    }
+    main {
+        padding-left: 10%;
+        padding-right: 10%;
+        
     }
     
 }
