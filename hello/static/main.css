@@ -622,6 +622,12 @@ body {
   .col-6-s {
     grid-column: span 6 !important;
   }
+  .col-4-s {
+    grid-column: span 4 !important;
+  }
+  .col-3-s {
+    grid-column: span 3 !important;
+  }
   h1 {
     font-size: 2rem;
   }

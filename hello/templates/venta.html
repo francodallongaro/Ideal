@@ -14,25 +14,22 @@
         <img src=" {% static 'ideal/icono.svg' %} " alt="IDEAL">
         <img src=" {% static 'ideal/ideal.svg' %} " alt="IDEAL">
       </div>
-      <h1>Vender tu propiedad<br>nunca fue tan fácil</h1>
-      <p class="">Consultá nuestra oferta.</p>
+      <h1>Vender tu casa<br>nunca fue tan fácil</h1>
+      <p class="">Elegí la opción que mejor se<br>adapta a tus necesidades.</p>
     </div>
     <div class="col-4 col-s card-precio img-center">
-      <h2 class="h-center">{{packs.0.nombre}}</h2>
-      <h3 class="h-center"><strong>${{packs.0.precio}}</strong>/mes</h3>
-      <p class="h-center">{{packs.0.descripcion}}</p>
+      <h2 class="h-center">Básico</h2>
+      <h2 class="h-center"><strong>$50</strong>/mes</h2>
       <p class="mt-1 h-center"><a href=" {% url 'venta' %} " class="btn-1-r">Quiero saber más</a></p>
     </div>
     <div class="col-4 col-s card-precio img-center">
-      <h2 class="h-center">{{packs.1.nombre}}</h2>
-      <h3 class="h-center"><strong>${{packs.1.precio}}</strong>/mes</h3>
-      <p class="h-center">{{packs.1.descripcion}}</p>
+      <h2 class="h-center">Ideal</h2>
+      <h2 class="h-center"><strong>$80</strong>/mes</h2>
       <p class="mt-1 h-center"><a href=" {% url 'venta' %} " class="btn-1-r">Quiero saber más</a></p>
     </div>
     <div class="col-4 col-s card-precio img-center">
-      <h2 class="h-center">{{packs.2.nombre}}</h2>
-      <h3 class="h-center"><strong>${{packs.2.precio}}</strong>/mes</h3>
-      <p class="h-center">{{packs.2.descripcion}}</p>
+      <h2 class="h-center">Premium</h2>
+      <h2 class="h-center"><strong>$100</strong>/mes</h2>
       <p class="mt-1 h-center"><a href=" {% url 'venta' %} " class="btn-1-r">Quiero saber más</a></p>
     </div>
     
@@ -49,16 +46,16 @@
 
 
     <table class="row mb-3">
-      <tbody class="col">
+      <tbody class="col col-s">
         <tr class="row">
-          <th scope="row" class="col-6 mb-2"><h2>Servicios</h2></th>
-          <td class="col-2 mb-2">
+          <th scope="row" class="col-6 col-s mb-2"><h2>Servicios</h2></th>
+          <td class="col-2 col-4-s mb-2">
             <h2 class="">Básico</h2>
           </td>
-          <td class="col-2 mb-2">
+          <td class="col-2 col-4-s mb-2">
             <h2 class="">Ideal</h2>
           </td>
-          <td class="col-2 mb-2">
+          <td class="col-2 col-4-s mb-2">
             <h2 class="">Premium</h2>
           </td>
         </tr>
@@ -242,13 +239,13 @@
 
 {% include 'comofunciona.html' %}
 
-{% include 'calculadora.html' %}
+{% include 'calculadora2.html' %}
 
 {% include 'testimonios.html' %}
 
   <section class="v40">
-    <h2 class="h-center">Vende tu casa online.<br>Es un juego de niños. </h2>
-    <p class="mt-3 h-center"><a href=" {% url 'contacto' %} " class="btn-1-r mt-3">¡Contáctenos!</a></p>
+    <h2 class="h-center mb-2">Vende tu casa online.<br>Es un juego de niños. </h2>
+    <p class="mt-2 h-center"><a href=" {% url 'contacto' %} " class="btn-1-r mt-3">¡Contáctenos!</a></p>
   </section>
 
 
