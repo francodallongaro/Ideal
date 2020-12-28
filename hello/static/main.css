@@ -266,6 +266,11 @@ table {
   border: 5px solid white;
 }
 
+table tr {
+  text-align: center;
+  vertical-align: center;
+}
+
 table th {
   height: 120px;
   padding: 1rem;
@@ -278,7 +283,7 @@ table td {
   vertical-align: center;
 }
 
-table tr:nth-child(even) {
+tr:nth-child(even) {
   background-color: rgba(82, 229, 212, 0.15);
 }
 
