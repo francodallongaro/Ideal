@@ -38,14 +38,14 @@ nav {
     padding-right: 10%;
 }
 
-.logo {
+.logonav {
     float: left;
     padding-left: 10%;
     margin-left: 16px;
     margin-top: 8px;
 }
 
-.logo a {
+.logonav a {
     color: #000;
     text-transform: uppercase;
     font-weight: 700;
@@ -54,9 +54,9 @@ nav {
     text-decoration: none;
 }
 
-// nav ul {
-//     float: right;
-// }
+nav ul {
+    float: right;
+}
 
 nav ul li {
     display: inline-block;
