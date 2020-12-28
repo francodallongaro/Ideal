@@ -277,14 +277,12 @@ table tr {
 
 table th {
   height: 40px;
-  padding: .3rem;
   text-align: start;
   vertical-align: center;
 }
 
 table td {
   height: 40px;
-  padding: .3rem;
   text-align: center;
   vertical-align: center;
 }
