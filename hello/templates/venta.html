@@ -47,41 +47,30 @@
     <h2 class="h-center">¿Qué incluyen<br>nuestros planes?</h2>
   </section>
 
+
     <table class="row wireframe card">
       <tbody class="col wireframe">
         <tr class="col">
           <th scope="row" class="">Servicios</th>
           <td class="">
-            <h2 class="">{{packs.0.nombre}}</h2>
-            <p class="">${{packs.0.precio}} /mes</p>
+            <h2 class="">Básico</h2>
+            <p class="">$10 /mes</p>
           </td>
           <td class="">
-            <h2 class="">{{packs.1.nombre}}</h2>
-            <p class="">${{packs.1.precio}} /mes</p>
+            <h2 class="">Ideal</h2>
+            <p class="">$40 /mes</p>
           </td>
           <td class="">
-            <h2 class="">{{packs.2.nombre}}</h2>
-            <p class="">${{packs.2.precio}} /mes</p>
+            <h2 class="">Premium</h2>
+            <p class="">$70 /mes</p>
           </td>
         </tr>
 
         <tr>
-          <th scope="row">Publicacion en portales</th>
-          {% if packs.0.publicacion == True %}
-            <td>ZonaProp | ArgenProp</td>
-          {% else %}  
+          <th scope="row">Tasación de tu propiedad</th>
+            <td><img src=" {% static 'ideal/iconos/check.svg' %} " alt="IDEAL"></td>
             <td></td>
-          {% endif %}
-          {% if packs.1.publicacion == True %}
-            <td>ZonaProp | ArgenProp | ML</td>
-          {% else %}  
-            <td></td>
-          {% endif %}
-          {% if packs.1.publicacion == True %}
-            <td>ZonaProp | ArgenProp | ML</td>
-          {% else %}  
-            <td></td>
-          {% endif %}
+            <td><img src=" {% static 'ideal/iconos/check.svg' %} " alt="IDEAL"></td>
         </tr>
 
         <tr>
@@ -177,6 +166,13 @@
           {% else %}  
             <td></td>
           {% endif %}
+        </tr>
+        
+        <tr>
+          <th scope="row"> </th>
+            <td><p class="mt-3 h-center"><a href=" {% url 'contacto' %} " class="btn-1-r mt-3">¡Contáctenos!</a></p></td>
+            <td><p class="mt-3 h-center"><a href=" {% url 'contacto' %} " class="btn-1-r mt-3">¡Contáctenos!</a></p></td>
+            <td><p class="mt-3 h-center"><a href=" {% url 'contacto' %} " class="btn-1-r mt-3">¡Contáctenos!</a></p></td>
         </tr>
 
       </tbody>

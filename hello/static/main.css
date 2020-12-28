@@ -258,22 +258,28 @@ h4 {
   font-family: "Raleway", sans-serif;
 }
 
-table, th, td {
-  border: 5px solid white;
-}
-
 table {
   width: 100%;
+  -webkit-box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
+          box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
+  border-radius: 16px;
+  border: 5px solid white;
 }
 
 table th {
   height: 120px;
+  padding: 1rem;
 }
 
 table td {
   height: 20px;
+  padding: 1rem;
   text-align: center;
   vertical-align: center;
+}
+
+table tr:nth-child(even) {
+  background-color: rgba(82, 229, 212, 0.15);
 }
 
 .card-precio {
