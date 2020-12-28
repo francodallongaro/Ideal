@@ -293,8 +293,6 @@ table td img {
 
 .card-precio {
   background-color: white;
-  width: 80%;
-  height: 80%;
   padding: 3rem;
   -webkit-box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
           box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
@@ -628,6 +626,12 @@ body {
   }
   h1 {
     font-size: 2rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  .avatar {
+    width: 30px;
   }
   .v100, .v90, .v80, .v70, .v60, .v50, .v40 {
     height: auto;
