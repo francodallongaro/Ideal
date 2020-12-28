@@ -281,22 +281,26 @@ table {
     .impar {
         background-color: rgba(82, 229, 212, 0.15);
     }
-    
+
     tr {
         text-align: center;
         vertical-align: center;
     }
     th {
-        height: 40px;
+        height: 60px;
         padding: 1rem;
         text-align: center;
         vertical-align: center;
     }
     td {
-        height: 40px;
+        height: 60px;
         padding: 1rem;
         text-align: center;
         vertical-align: center;
+
+        img {
+            width: 20px;
+        }
     }
 }
 
