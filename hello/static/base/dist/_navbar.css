@@ -14,7 +14,6 @@ nav {
 }
 
 .logonav {
-  float: left;
   padding-left: 10%;
   margin-left: 16px;
   margin-top: 8px;
@@ -27,10 +26,6 @@ nav {
   font-size: 18px;
   letter-spacing: 0px;
   text-decoration: none;
-}
-
-nav ul {
-  float: right;
 }
 
 nav ul li {
@@ -115,7 +110,7 @@ nav ul li a :hover {
     padding: 10px 24px;
     opacity: 0;
     color: #000;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 600;
     letter-spacing: 1.2px;
     transform: translateX(-20px);
