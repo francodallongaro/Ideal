@@ -1,0 +1,11 @@
+#faqs {
+  padding: 1rem;
+  border-bottom: 1px solid gray;
+  color: #47BD9C;
+  font-size: 2rem;
+}
+
+summary {
+  padding: 1rem;
+  border-bottom: 1px dashed gray;
+}
