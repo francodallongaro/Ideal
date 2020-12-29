@@ -395,7 +395,7 @@ table td img {
   padding: 1rem;
   border-bottom: 1px solid gray;
   color: #47BD9C;
-  font-size: 2rem;
+  font-size: 1.5rem;
   outline: none;
   cursor: pointer;
   -webkit-transition: background-color .3s;
@@ -413,10 +413,6 @@ summary {
   cursor: pointer;
   -webkit-transition: background-color .3s;
   transition: background-color .3s;
-}
-
-summary:hover {
-  background: #e6e6e6;
 }
 
 header {
@@ -479,7 +475,7 @@ nav ul li a {
   font-weight: 600;
 }
 
-nav ul li a :hover {
+nav ul li a:hover {
   color: #36ceb9;
 }
 
