@@ -10,6 +10,10 @@
 #faqs:hover {
   background: #e6e6e6;
 }
+#faqs::-webkit-details-marker {
+  background: url("../ideal/iconos/flecha.svg") center no-repeat;
+  color: transparent;
+}
 
 summary {
   padding: 1rem;
@@ -32,4 +36,8 @@ details[open] summary ~ * {
     opacity: 1;
     margin-left: 0px;
   }
+}
+details[open] summary::-webkit-details-marker {
+  background: url("../ideal/iconos/flecha-arriba.svg") center no-repeat;
+  color: transparent;
 }

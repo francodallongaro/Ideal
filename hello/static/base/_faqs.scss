@@ -13,6 +13,11 @@
     &:hover {
         background: rgb(230, 230, 230);
     }
+
+    &::-webkit-details-marker {
+        background: url('../ideal/iconos/flecha.svg') center no-repeat;
+        color: transparent;
+    }
 }
 
 summary {
@@ -31,3 +36,8 @@ details[open] summary ~ * {
     0%    {opacity: 0; margin-left: -10px}
     100%  {opacity: 1; margin-left: 0px}
   }
+
+  details[open] summary::-webkit-details-marker {
+    background: url('../ideal/iconos/flecha-arriba.svg') center no-repeat;
+    color: transparent;
+}
