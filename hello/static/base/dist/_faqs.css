@@ -3,9 +3,21 @@
   border-bottom: 1px solid gray;
   color: #47BD9C;
   font-size: 2rem;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#faqs:hover {
+  background: #e6e6e6;
 }
 
 summary {
   padding: 1rem;
   border-bottom: 1px dashed gray;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+summary:hover {
+  background: #e6e6e6;
 }

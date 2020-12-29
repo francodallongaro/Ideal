@@ -6,9 +6,23 @@
     border-bottom: 1px solid gray;
     color: #47BD9C;
     font-size: 2rem;
+    outline: none;
+    cursor: pointer;
+    transition: background-color .3s;
+
+    &:hover {
+        background: rgb(230, 230, 230);
+    }
 }
 
 summary {
     padding: 1rem;
     border-bottom: 1px dashed gray;
+    outline: none;
+    cursor: pointer;
+    transition: background-color .3s;
+
+    &:hover {
+        background: rgb(230, 230, 230);
+    }
 }
