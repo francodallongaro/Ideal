@@ -33,23 +33,10 @@
     {% comment %} PROPUESTA {% endcomment %}
     
     {% include 'nuevarev.html' %}  
+    
+    {% include 'faqs.html' %}  
 
-    <section>
-        <h2 class="h-center mb-3">Preguntas frecuentes</h2>
-        
-        <div class="preg-frec">
-        {% for faq in faqs %}
-            <div class="row pregunta">
-                <h4 class="col-11 preg-text">{{ faq.pregunta }}</h4>
-                <img  class="col-1" src=" {% static 'ideal/iconos/flecha.svg' %} " alt="ICON">
-            </div>
-            <p class="respuesta">{{ faq.respuesta }}</p>
-        {% endfor %}
-        </div>
-
-        <br>
-        <br>
-    </section>
+   
 
 
 
