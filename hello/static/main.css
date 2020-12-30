@@ -323,7 +323,7 @@ table td img {
 }
 
 #img-principal {
-  width: auto;
+  width: 100%;
 }
 
 .pregunta {
