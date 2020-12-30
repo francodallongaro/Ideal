@@ -36,11 +36,11 @@
     <div class="row mb-3 v-center">
         <div class="col-5 col-s">
             <h2>Con los que ahorrás<br>con ideal podrías..</h2>
-            <p><span id="ahorro"></span></p>
+            <p class="mt-1 mb-3"><span id="ahorro">¡Cambiar los muebles antiguos de tu casa!</span></p>
             <p class="mt-1"><a href=" {% url 'venta' %} " class="btn-1-r">Quiero saber más</a></p>
         </div>
         <div class="col-7 col-s">
-            <img src="" alt="">
+            <img id="img-calc" src="{% static 'ideal/calculadora/muebles.png' %}" alt="Muebles">
         </div>
     </div>
 
@@ -58,6 +58,7 @@
         let outcostocomision = document.querySelector("#costocomision");
         let outahorro = document.querySelector("#ahorro");
         let ahorrofinal = document.querySelector("#ahorrofinal");
+        let imagen = document.querySelector("#img-calc");
               
         costo.addEventListener("change",e=>{
             let costocomision_val = (costo.value * comision.value) / 100;
@@ -79,14 +80,19 @@
             
             if (ahorro > 40000) {
                 outahorro.innerHTML = '¡Reservar un pasaje a marte (con Elon) y conocer el espacio exterior!';
+                imagen.src = '{% static 'ideal/calculadora/marte.png' %}';
             } else if (ahorro > 20000) {
                 outahorro.innerHTML = '¡Comprarte ese auto que tenés entre ceja y ceja!';
+                imagen.src = '{% static 'ideal/calculadora/auto.png' %}';
             } else if (ahorro > 10000) {
                 outahorro.innerHTML = '¡Pedirte vacaciones y viajar por el mundo!';
+                imagen.src = '{% static 'ideal/calculadora/viaje.png' %}';
             } else if (ahorro > 2000) {
                 outahorro.innerHTML = '¡Cambiar los muebles antiguos de tu casa!';
+                imagen.src = '{% static 'ideal/calculadora/muebles.png' %}';
             } else {
                 outahorro.innerHTML = '¡Comprarte ese celular que siempre quisiste!';
+                imagen.src = '{% static 'ideal/calculadora/celular.png' %}';
             }
         }
     </script>

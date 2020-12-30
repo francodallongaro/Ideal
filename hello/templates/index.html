@@ -15,7 +15,7 @@
         {% comment %} <img src=" {% static 'ideal/ideal.svg' %} " alt="IDEAL"> {% endcomment %}
       </div>
       <h1>Descubrí la nueva<br>forma de vender<br>tu casa.</h1>
-      <div class="container"><p class="typed-text mb-2">Sin</p><p class="typewriter">NO</p>NO<span class="typed-text">SIN</span>sin<span class="cursor">&nbsp;</span></p></div>
+      <div class="container"><p class="typed-text mb-2"></p><p class="typewriter"> </p><span class="typed-text"></span><span class="cursor">&nbsp;</span></p></div>
 
       <p class="mt-1 mb-3"><a href="{% url 'venta' %}" class="btn-1-r">Quiero saber más</a></p>
     </div>
@@ -99,7 +99,7 @@
   const typedTextSpan = document.querySelector(".typed-text");
   const cursorSpan = document.querySelector(".cursor");
 
-  const textArray = ["intermediarios", "comisiones", "trucos"];
+  const textArray = ["Sin intermediarios", "Sin comisiones", "Sin trucos"];
   const typingDelay = 200;
   const erasingDelay = 100;
   const newTextDelay = 2000; // Delay between current and next text
