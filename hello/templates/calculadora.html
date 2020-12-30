@@ -77,13 +77,13 @@
             let ahorro = costocomision_val-1500;
             ahorrofinal.innerHTML = ahorro + ' USD';
             
-            if (ahorro < 40000) {
+            if (ahorro > 40000) {
                 outahorro.innerHTML = '¡Reservar un pasaje a marte (con Elon) y conocer el espacio exterior!';
-            } else if (ahorro < 20000) {
+            } else if (ahorro > 20000) {
                 outahorro.innerHTML = '¡Comprarte ese auto que tenés entre ceja y ceja!';
-            } else if (ahorro < 10000) {
+            } else if (ahorro > 10000) {
                 outahorro.innerHTML = '¡Pedirte vacaciones y viajar por el mundo!';
-            } else if (ahorro < 2000) {
+            } else if (ahorro > 2000) {
                 outahorro.innerHTML = '¡Cambiar los muebles antiguos de tu casa!';
             } else {
                 outahorro.innerHTML = '¡Comprarte ese celular que siempre quisiste!';

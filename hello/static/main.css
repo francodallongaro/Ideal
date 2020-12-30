@@ -322,6 +322,10 @@ table td img {
   padding: 2rem;
 }
 
+#img-principal {
+  width: auto;
+}
+
 .pregunta {
   padding: 1rem 0;
   border-bottom: 1px dashed gray;
