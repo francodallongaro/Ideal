@@ -343,7 +343,7 @@ table td img {
 
 .container p span.cursor {
   display: inline-block;
-  background-color: #ccc;
+  background-color: #36ceb9;
   margin-left: 0.1rem;
   width: 3px;
   -webkit-animation: blink 1s infinite;
@@ -357,10 +357,10 @@ table td img {
 
 @-webkit-keyframes blink {
   0% {
-    background-color: #ccc;
+    background-color: #36ceb9;
   }
   49% {
-    background-color: #ccc;
+    background-color: #36ceb9;
   }
   50% {
     background-color: transparent;
@@ -369,16 +369,16 @@ table td img {
     background-color: transparent;
   }
   100% {
-    background-color: #ccc;
+    background-color: #36ceb9;
   }
 }
 
 @keyframes blink {
   0% {
-    background-color: #ccc;
+    background-color: #36ceb9;
   }
   49% {
-    background-color: #ccc;
+    background-color: #36ceb9;
   }
   50% {
     background-color: transparent;
@@ -387,7 +387,7 @@ table td img {
     background-color: transparent;
   }
   100% {
-    background-color: #ccc;
+    background-color: #36ceb9;
   }
 }
 
