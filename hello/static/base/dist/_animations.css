@@ -5,7 +5,7 @@
 
 .container p span.cursor {
   display: inline-block;
-  background-color: #ccc;
+  background-color: #36ceb9;
   margin-left: 0.1rem;
   width: 3px;
   animation: blink 1s infinite;
@@ -17,10 +17,10 @@
 
 @keyframes blink {
   0% {
-    background-color: #ccc;
+    background-color: #36ceb9;
   }
   49% {
-    background-color: #ccc;
+    background-color: #36ceb9;
   }
   50% {
     background-color: transparent;
@@ -29,6 +29,6 @@
     background-color: transparent;
   }
   100% {
-    background-color: #ccc;
+    background-color: #36ceb9;
   }
 }

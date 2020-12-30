@@ -31,14 +31,15 @@
         </label>
         <div class="logonav">
             <a href="{% url 'index' %}">
-                <img id='logo' src=" {% static 'ideal/icono.svg' %} " alt="IDEAL">
-                <img id='logo' src=" {% static 'ideal/ideal.svg' %} " alt="IDEAL">
+                <img id='logo' src=" {% static 'ideal/logo.svg' %} " alt="IDEAL">
+                {% comment %} <img id='logo' src=" {% static 'ideal/icono.svg' %} " alt="IDEAL">
+                <img id='logo' src=" {% static 'ideal/ideal.svg' %} " alt="IDEAL"> {% endcomment %}
             </a>
         </div>
         <div class="nav-wrapper">
             <ul>
                 <li><a href="{% url 'venta' %}">Venta</a></li>
-                <li><a href="{% url 'portal' %}">Comprar</a></li>
+                {% comment %} <li><a href="{% url 'portal' %}">Comprar</a></li> {% endcomment %}
                 <li><a href="{% url 'contacto' %}">Contacto</a></li>
             </ul>
         </div>
