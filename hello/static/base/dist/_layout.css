@@ -155,6 +155,14 @@ body {
   .col-3-s {
     grid-column: span 3 !important;
   }
+
+  .section-principal {
+    margin-top: 20%;
+  }
+  .section-principal #img-principal {
+    position: absolute;
+    opacity: 0.6;
+  }
 }
 @media screen and (max-width: 900px) {
   .col-s {
@@ -171,6 +179,14 @@ body {
 
   .col-3-s {
     grid-column: span 3 !important;
+  }
+
+  .section-principal {
+    margin-top: 20%;
+  }
+  .section-principal #img-principal {
+    position: absolute;
+    opacity: 0.6;
   }
 }
 @media screen and (max-width: 450px) {
@@ -209,7 +225,11 @@ body {
   }
 
   .section-principal {
-    padding-top: 10%;
+    margin-top: 20%;
+  }
+  .section-principal #img-principal {
+    position: absolute;
+    opacity: 0.6;
   }
 
   .v100, .v90, .v80, .v70, .v60, .v50, .v40 {

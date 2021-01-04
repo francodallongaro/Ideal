@@ -53,7 +53,7 @@ nav ul li a:hover {
   color: #36ceb9;
 }
 
-@media screen and (max-width: 864px) {
+@media screen and (max-width: 900px) {
   .logo {
     padding: 0;
   }
