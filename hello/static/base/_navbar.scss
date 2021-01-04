@@ -43,6 +43,7 @@ header {
     padding-left: 10%;
     // margin-left: 16px;
     // margin-top: 8px;
+    align-items: center;
 }
 
 .logonav a {
@@ -56,6 +57,7 @@ header {
 
 nav ul {
     float: right;
+    padding-right: 10%;
 }
 
 nav ul li {
@@ -63,9 +65,9 @@ nav ul li {
     float: left;
 }
 
-// nav ul li:not(:first-child) {
-//     margin-left: 48px;
-// }
+nav ul li:not(:first-child) {
+    margin-left: 48px;
+}
 
 // nav ul li:last-child {
 //     margin-right: 24px;

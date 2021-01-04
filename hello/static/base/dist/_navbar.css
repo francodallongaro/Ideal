@@ -9,6 +9,7 @@ header {
 .logonav {
   float: left;
   padding-left: 10%;
+  align-items: center;
 }
 
 .logonav a {
@@ -22,11 +23,16 @@ header {
 
 nav ul {
   float: right;
+  padding-right: 10%;
 }
 
 nav ul li {
   display: inline-block;
   float: left;
+}
+
+nav ul li:not(:first-child) {
+  margin-left: 48px;
 }
 
 nav ul li a {
