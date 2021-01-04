@@ -127,10 +127,6 @@ body {
   }
 }
 @media screen and (max-width: 1285px) {
-  .container {
-    width: 100vw;
-  }
-
   main {
     padding-left: 10%;
     padding-right: 10%;
@@ -142,11 +138,6 @@ body {
 
   h2 {
     font-size: 3rem;
-  }
-}
-@media screen and (max-width: 900px) {
-  .container {
-    width: 100vw;
   }
 
   .col-s {
@@ -165,11 +156,24 @@ body {
     grid-column: span 3 !important;
   }
 }
-@media screen and (max-width: 450px) {
-  .container {
-    width: 100vw;
+@media screen and (max-width: 900px) {
+  .col-s {
+    grid-column: span 12 !important;
   }
 
+  .col-6-s {
+    grid-column: span 6 !important;
+  }
+
+  .col-4-s {
+    grid-column: span 4 !important;
+  }
+
+  .col-3-s {
+    grid-column: span 3 !important;
+  }
+}
+@media screen and (max-width: 450px) {
   main {
     width: 100vw;
     padding-left: 5%;
