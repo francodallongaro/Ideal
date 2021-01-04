@@ -196,6 +196,10 @@
   font-weight: bold;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 h1 {
   font-family: "Poppins", sans-serif;
   font-size: 4rem;
@@ -354,7 +358,7 @@ table td img {
 }
 
 .icono {
-  width: 40px;
+  width: 60px;
 }
 
 .pregunta {

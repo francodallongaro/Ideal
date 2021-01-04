@@ -206,6 +206,10 @@
 
 // --------------------------- TEXT ----------------------------
 
+.bold {
+    font-weight: bold;
+}
+
 h1{
     font-family: $t-3;
     font-size: 4rem;
@@ -369,7 +373,7 @@ table {
 }
 
 .icono {
-    width: 40px;
+    width: 60px;
 }
 
 
