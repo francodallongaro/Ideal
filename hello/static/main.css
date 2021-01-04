@@ -792,7 +792,6 @@ body {
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
   grid-gap: 20px;
-  justify-items: center;
 }
 
 .v-center {
