@@ -872,11 +872,17 @@ body {
   .container {
     width: 100vw;
   }
-}
-
-@media screen and (max-width: 500px) {
-  .container {
-    width: 100vw;
+  .col-s {
+    grid-column: span 12 !important;
+  }
+  .col-6-s {
+    grid-column: span 6 !important;
+  }
+  .col-4-s {
+    grid-column: span 4 !important;
+  }
+  .col-3-s {
+    grid-column: span 3 !important;
   }
 }
 
@@ -909,6 +915,9 @@ body {
   }
   .avatar {
     width: 30px;
+  }
+  .section-principal {
+    padding-top: 10%;
   }
   .v100, .v90, .v80, .v70, .v60, .v50, .v40 {
     height: auto;
