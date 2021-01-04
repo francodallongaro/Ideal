@@ -821,6 +821,12 @@ body {
     padding-left: 10%;
     padding-right: 10%;
   }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (max-width: 900px) {
