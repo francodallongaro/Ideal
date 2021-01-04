@@ -229,6 +229,7 @@ h4 {
 
 .ideal-cal {
   width: 60%;
+  font-weight: bold;
 }
 
 .text {
@@ -791,9 +792,7 @@ body {
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
   grid-gap: 20px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-items: center;
 }
 
 .v-center {
