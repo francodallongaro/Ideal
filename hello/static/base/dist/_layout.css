@@ -97,6 +97,10 @@ body {
   align-items: start;
 }
 
+.v-a-start {
+  align-self: start;
+}
+
 .h-center {
   text-align: center;
 }
@@ -118,8 +122,8 @@ body {
   }
 
   main {
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 @media screen and (max-width: 1285px) {
