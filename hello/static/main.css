@@ -497,7 +497,6 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 70px;
   border-bottom: 1px solid white;
   -webkit-box-shadow: 0px 1px 0px #E5E9F2;
           box-shadow: 0px 1px 0px #E5E9F2;
@@ -510,6 +509,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 30px;
 }
 
 .logonav a {
@@ -529,6 +529,7 @@ nav ul {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  padding: 0 30px;
 }
 
 nav ul li {
