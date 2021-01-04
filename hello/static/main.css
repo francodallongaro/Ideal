@@ -228,7 +228,7 @@ h4 {
 }
 
 .ideal-cal {
-  width: 50px;
+  width: 60%;
 }
 
 .text {
@@ -825,7 +825,7 @@ body {
 /* --------------------- MEDIA QUERIES -------------------------- */
 @media screen and (max-width: 1920px) {
   .container {
-    width: 1920px;
+    width: 100vw;
   }
   main {
     padding-left: 15%;
@@ -835,7 +835,7 @@ body {
 
 @media screen and (max-width: 1285px) {
   .container {
-    width: 1285px;
+    width: 100vw;
   }
   main {
     padding-left: 10%;
@@ -851,13 +851,13 @@ body {
 
 @media screen and (max-width: 900px) {
   .container {
-    width: 900px;
+    width: 100vw;
   }
 }
 
 @media screen and (max-width: 500px) {
   .container {
-    width: 500px;
+    width: 100vw;
   }
 }
 
