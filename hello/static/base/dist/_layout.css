@@ -94,6 +94,10 @@ body {
   align-items: center;
 }
 
+.v-start {
+  align-items: start;
+}
+
 .h-center {
   text-align: center;
 }
@@ -134,7 +138,7 @@ body {
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }
 @media screen and (max-width: 900px) {
@@ -188,5 +192,9 @@ body {
 
   .v100, .v90, .v80, .v70, .v60, .v50, .v40 {
     height: auto;
+  }
+
+  .hidden {
+    display: none;
   }
 }

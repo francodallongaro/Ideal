@@ -231,6 +231,16 @@ h4 {
     text-decoration: none;
 }
 
+.ahorro {
+    font-family: $t-3;
+    color: $c-0;
+    text-decoration: none;
+}
+
+.ideal-cal {
+    width: 50px;
+}
+
 .text {
     font-family: $t-5;
     color: $c-b;
@@ -338,6 +348,10 @@ table {
 }
 
 #img-principal {
+    width: 100%;
+}
+
+#img-calc {
     width: 100%;
 }
 

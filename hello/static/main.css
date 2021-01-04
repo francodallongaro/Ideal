@@ -221,6 +221,16 @@ h4 {
   text-decoration: none;
 }
 
+.ahorro {
+  font-family: "Poppins", sans-serif;
+  color: #65DBBA;
+  text-decoration: none;
+}
+
+.ideal-cal {
+  width: 50px;
+}
+
 .text {
   font-family: "Raleway", sans-serif;
   color: black;
@@ -323,6 +333,10 @@ table td img {
 }
 
 #img-principal {
+  width: 100%;
+}
+
+#img-calc {
   width: 100%;
 }
 
@@ -788,6 +802,12 @@ body {
           align-items: center;
 }
 
+.v-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
 .h-center {
   text-align: center;
 }
@@ -825,7 +845,7 @@ body {
     font-size: 3rem;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }
 
@@ -873,6 +893,9 @@ body {
   }
   .v100, .v90, .v80, .v70, .v60, .v50, .v40 {
     height: auto;
+  }
+  .hidden {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */

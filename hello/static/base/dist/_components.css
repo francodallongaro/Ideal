@@ -209,6 +209,16 @@ h4 {
   text-decoration: none;
 }
 
+.ahorro {
+  font-family: "Poppins", sans-serif;
+  color: #65DBBA;
+  text-decoration: none;
+}
+
+.ideal-cal {
+  width: 50px;
+}
+
 .text {
   font-family: "Raleway", sans-serif;
   color: black;
@@ -302,6 +312,10 @@ table td img {
 }
 
 #img-principal {
+  width: 100%;
+}
+
+#img-calc {
   width: 100%;
 }
 
