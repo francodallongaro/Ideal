@@ -2,7 +2,7 @@
 
 header {
     position: fixed;
-    // width: 100vw;
+    width: 100%;
     // display: flex;
     // justify-content: space-between;
     align-items: center;
@@ -26,8 +26,7 @@ header {
     float: left;
     // margin-left: 16px;
     // margin-top: 8px;
-    align-items: center;
-    align-self: center;
+    height: auto;
 }
 
 .logonav a {

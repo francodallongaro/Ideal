@@ -493,6 +493,7 @@ details[open] summary::-webkit-details-marker {
 
 header {
   position: fixed;
+  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -506,12 +507,7 @@ header {
 
 .logonav {
   float: left;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  height: auto;
 }
 
 .logonav a {
