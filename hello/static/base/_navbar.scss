@@ -2,7 +2,7 @@
 
 header {
     position: fixed;
-    width: 100vw;
+    // width: 100vw;
     // display: flex;
     // justify-content: space-between;
     align-items: center;
@@ -24,7 +24,6 @@ header {
 
 .logonav {
     float: left;
-    padding-left: 10%;
     // margin-left: 16px;
     // margin-top: 8px;
     align-items: center;
@@ -42,7 +41,6 @@ header {
 
 nav ul {
     float: right;
-    padding-right: 10%;
     align-self: center;
 }
 

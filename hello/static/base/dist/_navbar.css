@@ -1,6 +1,5 @@
 header {
   position: fixed;
-  width: 100vw;
   align-items: center;
   height: 70px;
   border-bottom: 1px solid white;
@@ -11,7 +10,6 @@ header {
 
 .logonav {
   float: left;
-  padding-left: 10%;
   align-items: center;
   align-self: center;
 }
@@ -27,7 +25,6 @@ header {
 
 nav ul {
   float: right;
-  padding-right: 10%;
   align-self: center;
 }
 
