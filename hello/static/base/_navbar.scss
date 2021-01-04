@@ -13,25 +13,6 @@ header {
 }
 
 
-//     .logo {
-//         padding-left: 10%;
-//     }
-
-//     nav {
-//         padding-right: 10%;
-//     }
-
-// }
-
-
-// .nav__links {
-//     list-style: none;
-    
-//     li {
-//         display: inline-block;
-//         padding: 0px 20px;
-//     }
-// }
 
 
 
@@ -45,7 +26,7 @@ header {
     // margin-left: 16px;
     // margin-top: 8px;
     align-items: center;
-    height: 70px;
+    align-self: center;
 }
 
 .logonav a {
@@ -60,7 +41,7 @@ header {
 nav ul {
     float: right;
     padding-right: 10%;
-    height: 70px;
+    align-self: center;
 }
 
 nav ul li {
