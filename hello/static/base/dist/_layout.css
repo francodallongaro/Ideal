@@ -113,6 +113,10 @@ body {
   justify-items: end;
 }
 
+.h-s-end {
+  justify-self: end;
+}
+
 .img-center {
   display: block;
   margin-left: auto;

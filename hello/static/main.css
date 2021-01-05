@@ -861,6 +861,11 @@ body {
   justify-items: end;
 }
 
+.h-s-end {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
 .img-center {
   display: block;
   margin-left: auto;
