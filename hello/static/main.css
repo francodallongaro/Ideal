@@ -147,7 +147,7 @@
 
 .btn-1 {
   color: black;
-  background-color: #65DBBA;
+  background-color: #47BD9C;
   padding: .5rem 1rem;
   text-decoration: none;
   font-weight: bold;
@@ -243,13 +243,13 @@ h4 {
 .calc-text {
   font-family: "Poppins", sans-serif;
   font-size: 24px;
-  color: #65DBBA;
+  color: #47BD9C;
   text-decoration: none;
 }
 
 .ahorro {
   font-family: "Poppins", sans-serif;
-  color: #65DBBA;
+  color: #47BD9C;
   text-decoration: none;
 }
 
@@ -276,11 +276,11 @@ h4 {
 }
 
 #costocomision {
-  color: #36ceb9;
+  color: #47BD9C;
 }
 
 .output_slider {
-  color: #36ceb9;
+  color: #47BD9C;
 }
 
 .wireframe {
@@ -402,7 +402,7 @@ table td img {
 
 .container p span.cursor {
   display: inline-block;
-  background-color: #36ceb9;
+  background-color: #47BD9C;
   margin-left: 0.1rem;
   width: 3px;
   -webkit-animation: blink 1s infinite;
@@ -416,10 +416,10 @@ table td img {
 
 @-webkit-keyframes blink {
   0% {
-    background-color: #36ceb9;
+    background-color: #47BD9C;
   }
   49% {
-    background-color: #36ceb9;
+    background-color: #47BD9C;
   }
   50% {
     background-color: transparent;
@@ -428,16 +428,16 @@ table td img {
     background-color: transparent;
   }
   100% {
-    background-color: #36ceb9;
+    background-color: #47BD9C;
   }
 }
 
 @keyframes blink {
   0% {
-    background-color: #36ceb9;
+    background-color: #47BD9C;
   }
   49% {
-    background-color: #36ceb9;
+    background-color: #47BD9C;
   }
   50% {
     background-color: transparent;
@@ -446,7 +446,7 @@ table td img {
     background-color: transparent;
   }
   100% {
-    background-color: #36ceb9;
+    background-color: #47BD9C;
   }
 }
 
@@ -573,7 +573,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #36ceb9;
+  color: #47BD9C;
 }
 
 @media screen and (max-width: 900px) {
