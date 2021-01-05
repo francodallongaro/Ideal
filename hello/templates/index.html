@@ -8,7 +8,7 @@
 <main>
 {% comment %} PROPUESTA {% endcomment %}
 
-  <section id="section-principal" class="row v-center wireframe v100">
+  <section id="section-principal" class="row v-center v100 pt-2">
     <div class="col-7 col-s">
       <div class="logo mb-2">
         <img src=" {% static 'ideal/logo.svg' %} " alt="IDEAL">
@@ -16,7 +16,7 @@
       </div>
       <h1>Descubrí la nueva<br>forma de vender<br>tu casa.</h1>
       <div class="inline">
-        <p class="typewriter mb-3">Sin </p>
+        <p class="typewriter mb-3 mr-1">Sin </p>
         <p class="typed-text mb-3"> </p><p class="typewriter"> </p><span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
       </div>
       <p class="mb-2"><a href="{% url 'venta' %}" class="btn-1-r">Quiero saber más</a></p>
@@ -34,37 +34,37 @@
 
 {% comment %} ¿ POR QUÉ IDEAL ? {% endcomment %}
 
-  <section class="mb-3 wireframe">
+  <section class="mb-3">
     <h2 class="h-center mb-1">¿Por qué IDEAL?</h2>
-    <div class="row v-start mb-2 wireframe">
-      <div class="col-4 col-s p-1 v-a-start wireframe">
+    <div class="row v-start mb-2">
+      <div class="col-4 col-s p-1 v-a-start">
         <img class="img-center mb-1 v-a-start icono" src=" {% static 'ideal/iconos/ahorro.svg' %} " alt="">
         <h3 class="h-center bold mb-1 v-a-start">Ahorro</h3>
         <p class="h-center text">Nuestro servicio con un valor fijo te permite maximizar el ahorro que obtienes al vender tu casa. Chequea nuestra calculadora de ahorro y comprobalo!</p>
       </div>
-      <div class="col-4 col-s p-1 v-a-start wireframe">
+      <div class="col-4 col-s p-1 v-a-start">
         <img class="img-center mb-1 v-a-start icono" src=" {% static 'ideal/iconos/transparencia.svg' %} " alt="">
         <h3 class="h-center bold mb-1 v-a-start">Transparencia</h3>
         <p class="h-center text">Cobramos en función del servicio prestado y no el valor de tu propiedad</p>
       </div>
-      <div class="col-4 col-s p-1 v-a-start wireframe">
+      <div class="col-4 col-s p-1 v-a-start">
         <img class="img-center mb-1 v-a-start icono" src=" {% static 'ideal/iconos/particulares.svg' %} " alt="">
         <h3 class="h-center bold mb-1 v-a-start">Entre particulares</h3>
         <p class="h-center text">Te damos las herramientas para que seas VOS quien vende tu propiedad, ahorrando mucho dinero para utilizar como quieras.</p>
       </div>
     </div>
-    <div class="row v-start mb-2 wireframe">
-      <div class="col-4 col-s p-1 v-a-start wireframe">
+    <div class="row v-start mb-2">
+      <div class="col-4 col-s p-1 v-a-start">
         <img class="img-center mb-1 v-a-start icono" src=" {% static 'ideal/iconos/alcance.svg' %} " alt="">
         <h3 class="h-center bold mb-1 v-a-start">Alcance</h3>
         <p class="h-center text">Llegamos a millones de potenciales compradores anunciando tu propiedad en los principales portales y potenciando el anuncio mediante nuestro plan personalizado de marketing.</p>
       </div>
-      <div class="col-4 col-s p-1 v-a-start wireframe">
+      <div class="col-4 col-s p-1 v-a-start">
         <img class="img-center mb-1 v-a-start icono" src=" {% static 'ideal/iconos/servicio.svg' %} " alt="">
         <h3 class="h-center bold mb-1 v-a-start">Servicio</h3>
         <p class="h-center text">Nos diferenciamos por el valor que agregamos a tu propiedad, con fotos de calidad, video y tour 360, plano y un anuncio perfecto potenciado por nuestro plan de marketing.</p>
       </div>
-      <div class="col-4 col-s p-1 v-a-start wireframe">
+      <div class="col-4 col-s p-1 v-a-start">
         <img class="img-center mb-1 v-a-start icono" src=" {% static 'ideal/iconos/flexibilidad.svg' %} " alt="">
         <h3 class="h-center bold mb-1 v-a-start">Flexibilidad</h3>
         <p class="h-center text">Elegí cuánto querés involucrarte en el proceso de ventas y maximizá tu ganancia</p>
@@ -82,7 +82,7 @@
 {% include 'testimonios.html' %}
 
 
-  <section class="wireframe mb-3">
+  <section class="mb-3">
     <h2 class="h-center mb-3">¿Qué esperás?<br>Vende tu inmueble con Ideal.</h2>
     <p class="h-center"><a href=" {% url 'venta' %} " class="btn-1-r mt-3">¡Quiero saber más!</a></p>
   </section>

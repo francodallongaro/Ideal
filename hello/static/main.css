@@ -69,6 +69,10 @@
   margin-top: 2rem;
 }
 
+.mt-3 {
+  margin-top: 3rem;
+}
+
 .ml-1 {
   margin-left: 1rem;
 }
@@ -965,7 +969,8 @@ body {
     grid-column: span 3 !important;
   }
   h1 {
-    font-size: 3rem;
+    font-size: 2rem;
+    line-height: 40px;
   }
   h2 {
     font-size: 2rem;
