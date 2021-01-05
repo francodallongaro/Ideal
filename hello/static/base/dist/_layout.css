@@ -171,6 +171,10 @@ body {
     position: absolute;
     opacity: 0.6;
   }
+
+  .hidden {
+    display: none;
+  }
 }
 @media screen and (max-width: 900px) {
   .col-s {
@@ -195,6 +199,10 @@ body {
   .section-principal #img-principal {
     position: absolute;
     opacity: 0.6;
+  }
+
+  .hidden {
+    display: none;
   }
 }
 @media screen and (max-width: 450px) {

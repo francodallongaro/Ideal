@@ -193,6 +193,9 @@ body {
         }
     }
 
+    .hidden {
+        display: none;
+    }
     
 }
 
@@ -224,6 +227,10 @@ body {
             position: absolute;
             opacity: 0.6;
         }
+    }
+
+    .hidden {
+        display: none;
     }
 
 }
