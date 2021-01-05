@@ -225,6 +225,14 @@ h2 {
     text-decoration: none;
 }
 
+h3 {
+    font-family: $t-3;
+    color: $c-b;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
 h4 {
     font-family: $t-3;
     font-size: 24px;
@@ -297,7 +305,7 @@ h4 {
 }
 
 .inline {
-    display: inline;
+    display: flex;
 }
 
 // ---------------------------- TABLA ------------------------

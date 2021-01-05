@@ -101,6 +101,10 @@ body {
   align-self: start;
 }
 
+.v-a-stretch {
+  align-self: stretch;
+}
+
 .h-center {
   text-align: center;
 }
