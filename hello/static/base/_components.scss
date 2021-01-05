@@ -161,7 +161,7 @@
 
 .btn-1-r{
     color: $c-w;
-    background-color: $c-0;
+    background-color: #47BD9C;
     padding: 1rem 1.5rem;
     text-decoration: none;
     border-radius: 25px;
@@ -212,7 +212,9 @@
 
 h1{
     font-family: $t-3;
-    font-size: 4rem;
+    font-size: 68px;
+    font-weight: 600;
+    line-height: 79px;
     color: $c-b;
     text-decoration: none;
 }
@@ -377,7 +379,7 @@ table {
 
 .portales {
     width: 100%;
-    padding: 2rem;
+    padding: .5rem;
 }
 
 #img-principal {
