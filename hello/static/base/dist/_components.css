@@ -331,9 +331,7 @@ table td img {
 
 .card-contacto {
   background-color: white;
-  width: auto;
-  height: auto;
-  padding: 3rem;
+  padding: 1rem;
   box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
   border-radius: 16px;
 }
