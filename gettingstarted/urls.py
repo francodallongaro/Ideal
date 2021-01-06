@@ -22,3 +22,8 @@ urlpatterns = [
     
     path("admin/", admin.site.urls),
 ]
+
+
+admin.site.site_header = "IDEAL"
+admin.site.index_title = "Administración"
+admin.site.site_title = "IDEAL"
