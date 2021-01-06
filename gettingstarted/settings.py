@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-import psycopg2
 import django_heroku
 
 
@@ -77,16 +76,16 @@ WSGI_APPLICATION = "gettingstarted.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE" : "django.db.backends.postgresql",
-#         "NAME": "database-ideal",
-#         "USER": "idealdatabase",
-#         "PASSWORD": "2IdealServicios",
-#         "HOST": "database-ideal.c8xhkoscqibi.us-east-2.rds.amazonaws.com",
-#         "PORT": "5432",
-#     }
-# }
+DATABASES = {
+    "default": {
+        "ENGINE" : "django.db.backends.postgresql",
+        "NAME": "database-ideal",
+        "USER": "idealdatabase",
+        "PASSWORD": "2IdealServicios",
+        "HOST": "database-ideal.c8xhkoscqibi.us-east-2.rds.amazonaws.com",
+        "PORT": "5432",
+    }
+}
 
 import dj_database_url
 DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
