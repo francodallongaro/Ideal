@@ -76,14 +76,21 @@ WSGI_APPLICATION = "gettingstarted.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE" : "django.db.backends.postgresql",
+#         "NAME": "database-ideal",
+#         "USER": "idealdatabase",
+#         "PASSWORD": "2IdealServicios",
+#         "HOST": "database-ideal.c8xhkoscqibi.us-east-2.rds.amazonaws.com",
+#         "PORT": "5432",
+#     }
+# }
+
 DATABASES = {
-    "default": {
-        "ENGINE" : "django.db.backends.postgresql",
-        "NAME": "database-ideal",
-        "USER": "idealdatabase",
-        "PASSWORD": "2IdealServicios",
-        "HOST": "database-ideal.c8xhkoscqibi.us-east-2.rds.amazonaws.com",
-        "PORT": "5432",
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

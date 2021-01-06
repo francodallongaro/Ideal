@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
-from .models import Greeting
+from django.urls.base import reverse
+from .models import *
+from django.http import Http404
 
 # Create your views here.
 def index(request):

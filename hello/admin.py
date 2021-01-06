@@ -1,5 +1,5 @@
 from django.contrib import admin
-from hello.models import Usuario, Pack
+from hello.models import *
 
 # Register your models here.
 
