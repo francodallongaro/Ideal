@@ -4,3 +4,6 @@ django-heroku
 Pillow
 dj-database-url
 psycopg2
+django-heroku
+whitenoise
+sqlparse
