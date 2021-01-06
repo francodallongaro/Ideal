@@ -276,7 +276,7 @@ class Clasificado(models.Model):
     aysa = models.IntegerField(blank=True, default=0)
    
 
-    imagen_principal = models.ImageField(upload_to="", null=True, blank=True)
+    # imagen_principal = models.ImageField(upload_to="", null=True, blank=True)
 
     m2_totales = models.IntegerField(blank=True, default=0)
     m2_cubiertos = models.IntegerField(blank=True, default=0)
@@ -351,34 +351,34 @@ class Clasificado(models.Model):
 
 
 
-class Foto(models.Model):
+# class Foto(models.Model):
 
-    propiedad = models.ForeignKey(Clasificado, on_delete=models.CASCADE, default=None)
-    imagen = models.ImageField(upload_to="propiedades/", null=True, blank=True)
-    nombre = models.CharField(max_length=50)
+#     propiedad = models.ForeignKey(Clasificado, on_delete=models.CASCADE, default=None)
+#     imagen = models.ImageField(upload_to="propiedades/", null=True, blank=True)
+#     nombre = models.CharField(max_length=50)
 
-    class Meta:
-        verbose_name = ("Foto")
-        verbose_name_plural = ("Fotos")
+#     class Meta:
+#         verbose_name = ("Foto")
+#         verbose_name_plural = ("Fotos")
 
-    def __str__(self):
-        return self.nombre
+#     def __str__(self):
+#         return self.nombre
 
-    def get_absolute_url(self):
-        return reverse("Foto_detail", kwargs={"pk": self.pk})
+#     def get_absolute_url(self):
+#         return reverse("Foto_detail", kwargs={"pk": self.pk})
 
-class Plano(models.Model):
+# class Plano(models.Model):
 
-    propiedad = models.ForeignKey(Clasificado, on_delete=models.CASCADE, default=None)
-    imagen = models.ImageField(upload_to="planos/", null=True, blank=True)
-    nombre = models.CharField(max_length=50)
+#     propiedad = models.ForeignKey(Clasificado, on_delete=models.CASCADE, default=None)
+#     imagen = models.ImageField(upload_to="planos/", null=True, blank=True)
+#     nombre = models.CharField(max_length=50)
 
-    class Meta:
-        verbose_name = ("Plano")
-        verbose_name_plural = ("Planos")
+#     class Meta:
+#         verbose_name = ("Plano")
+#         verbose_name_plural = ("Planos")
 
-    def __str__(self):
-        return self.nombre
+#     def __str__(self):
+#         return self.nombre
 
-    def get_absolute_url(self):
-        return reverse("Foto_detail", kwargs={"pk": self.pk})
+#     def get_absolute_url(self):
+#         return reverse("Foto_detail", kwargs={"pk": self.pk})
