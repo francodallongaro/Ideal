@@ -40,9 +40,9 @@ class Pack(models.Model):
 
     # financiacion = models.BooleanField(default=False)
 
-    class Meta:
-        verbose_name = ("Pack")
-        verbose_name_plural = ("Packs")
+    # class Meta:
+    #     verbose_name = ("Pack")
+    #     verbose_name_plural = ("Packs")
 
     def __str__(self):
         return self.nombre
