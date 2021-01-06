@@ -11,7 +11,7 @@ Esta formado por: nombre, precio, descripcion.
 class Pack(models.Model):
 
     nombre = models.CharField(max_length=50)
-    precio = models.IntegerField()
+    # precio = models.IntegerField()
     # descripcion = models.TextField()
 
     # valuacion_propiedad = models.BooleanField(default=False)
