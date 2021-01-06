@@ -78,8 +78,12 @@ WSGI_APPLICATION = "gettingstarted.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE" : "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3")
+        "ENGINE" : "django.db.backends.postgresql",
+        "NAME": "database-ideal",
+        "USER": "idealdatabase",
+        "PASSWORD": "2IdealServicios",
+        "HOST": "database-ideal.c8xhkoscqibi.us-east-2.rds.amazonaws.com",
+        "PORT": "5432",
     }
 }
 

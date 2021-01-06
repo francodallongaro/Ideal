@@ -16,6 +16,26 @@ def contacto(request):
 def portal(request):
     return render(request, "portal.html")
 
+# def portal_detail(request, pk, *args, **kwargs):
+
+#     try:
+#         clasificado = Clasificado.objects.get(pk=pk)
+
+#     except Clasificado.DoesNotExist:
+#         raise Http404
+    
+#     # clasificados = Propiedad.objects.all()
+#     # myFilter = PropiedadFilter(request.GET, queryset=clasificados)
+#     # clasificados = myFilter.qs
+
+
+
+#     # ctx = {
+#     #     'clasificado': clasificado,
+#     #     # 'myFilter': myFilter,
+#     # }
+
+#     return render(request, 'clasificado.html')
 
 def db(request):
 
