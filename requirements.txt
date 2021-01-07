@@ -1,9 +1,13 @@
 django
+Django
 gunicorn
 django-heroku
 Pillow
 dj-database-url
+psycopg2-binary
 psycopg2
 django-heroku
 whitenoise
 sqlparse
+pytz
+django-cors-headers
