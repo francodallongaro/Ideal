@@ -73,6 +73,8 @@ nav ul li a {
     .menu {
         padding-left: 10%;
     }
+
+    
     
     .aparece {
         width: 100%;
@@ -205,4 +207,11 @@ nav ul li a {
 
 .hidden {
     display: none;
+}
+
+
+@media screen and (max-width: 450px) {
+    header {
+        padding-left: 5%;
+    }
 }

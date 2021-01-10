@@ -721,6 +721,12 @@ nav ul li a:hover {
   display: none;
 }
 
+@media screen and (max-width: 450px) {
+  header {
+    padding-left: 5%;
+  }
+}
+
 footer {
   background-color: black;
   color: white;
