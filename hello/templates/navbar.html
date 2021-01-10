@@ -32,11 +32,11 @@
         <div class="logonav v-center">
             <a href="{% url 'index' %}">
                 <img id='logo' src=" {% static 'ideal/logo.svg' %} " alt="IDEAL">
-                {% comment %} <img id='logo' src=" {% static 'ideal/icono.svg' %} " alt="IDEAL">
-                <img id='logo' src=" {% static 'ideal/ideal.svg' %} " alt="IDEAL"> {% endcomment %}
+                <!-- {% comment %} <img id='logo' src=" {% static 'ideal/icono.svg' %} " alt="IDEAL">
+                <img id='logo' src=" {% static 'ideal/ideal.svg' %} " alt="IDEAL"> {% endcomment %} -->
             </a>
         </div>
-        <div class="nav-wrapper v-center">
+        <div id="mobile" class="nav-wrapper v-center">
             <ul>
                 <li><a href="{% url 'venta' %}">Venta</a></li>
                 <li><a href="{% url 'portal' %}">Comprar</a></li>
@@ -45,3 +45,13 @@
         </div>
     </nav> 
 </header>
+
+
+<script>
+    let menu = document.querySelector(".menu");
+    let mobile = document.querySelector("#mobile");
+
+    menu.addEventListener("click",e=>{
+        mobile.classList.toggle("aparece");
+        })  
+</script>
