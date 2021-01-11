@@ -764,6 +764,11 @@ body {
   margin-right: auto;
 }
 
+#portales {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .v100 {
   height: 100vh;
 }
@@ -1001,7 +1006,7 @@ body {
     position: absolute;
     opacity: 0.6;
   }
-  .v100, .v90, .v80, .v70, .v60, .v50, .v40 {
+  .v90, .v80, .v70, .v60, .v50, .v40 {
     height: auto;
   }
   .hidden {

@@ -5,7 +5,10 @@ body {
 }
 
 
-
+#portales {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
 
 // ------------------------- ALTURAS ---------------------------
 
@@ -285,7 +288,7 @@ body {
         }
     }
 
-    .v100, .v90, .v80, .v70, .v60, .v50, .v40 {
+    .v90, .v80, .v70, .v60, .v50, .v40 {
         height: auto;
     }
 
