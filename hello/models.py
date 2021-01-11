@@ -11,41 +11,39 @@ Esta formado por: nombre, precio, descripcion.
 class Pack(models.Model):
 
     nombre = models.CharField(max_length=50)
-    precio = models.IntegerField()
-    # descripcion = models.TextField()
-
+    precio = models.IntegerField(default=10)
     valuacion_propiedad = models.BooleanField(default=False)
-    # foto = models.BooleanField(default=False)
-    # tour = models.BooleanField(default=False)
-    # redaccion = models.BooleanField(default=False)
-    # publicacion = models.BooleanField(default=False)
-    # destacado = models.BooleanField(default=False)
-    # cartel = models.BooleanField(default=False)
-    # secretario = models.BooleanField(default=False)
-    # visitas = models.BooleanField(default=False)
-    # ficha_tecnica = models.BooleanField(default=False)
-    # soporte_post_venta = models.BooleanField(default=False)
-    # experto = models.BooleanField(default=False)
-    # reportes_semanales = models.BooleanField(default=False)
-    # visitas_acompanadas = models.BooleanField(default=False)
-    # estudio_titulos = models.BooleanField(default=False)
-    # gestion_online = models.BooleanField(default=False)
-    # ambientacion = models.BooleanField(default=False)
+    foto = models.BooleanField(default=False)
+    tour = models.BooleanField(default=False)
+    redaccion = models.BooleanField(default=False)
+    publicacion = models.BooleanField(default=False)
+    destacado = models.BooleanField(default=False)
+    cartel = models.BooleanField(default=False)
+    secretario = models.BooleanField(default=False)
+    visitas = models.BooleanField(default=False)
+    ficha_tecnica = models.BooleanField(default=False)
+    soporte_post_venta = models.BooleanField(default=False)
+    experto = models.BooleanField(default=False)
+    reportes_semanales = models.BooleanField(default=False)
+    visitas_acompanadas = models.BooleanField(default=False)
+    estudio_titulos = models.BooleanField(default=False)
+    gestion_online = models.BooleanField(default=False)
+    ambientacion = models.BooleanField(default=False)
 
-    # borradores = models.BooleanField(default=False)
-    # asesoramiento_legal = models.BooleanField(default=False)
+    borradores = models.BooleanField(default=False)
+    asesoramiento_legal = models.BooleanField(default=False)
 
-    # financiacion = models.BooleanField(default=False)
+    financiacion = models.BooleanField(default=False)
 
-    # class Meta:
-    #     verbose_name = ("Pack")
-    #     verbose_name_plural = ("Packs")
+    class Meta:
+        verbose_name = ("Pack")
+        verbose_name_plural = ("Packs")
 
     def __str__(self):
         return self.nombre
 
-    # def get_absolute_url(self):
-    #     return reverse("Contacto_detail", kwargs={"pk": self.pk})
+    def get_absolute_url(self):
+        return reverse("Contacto_detail", kwargs={"pk": self.pk})
 
 
     # USUARIOS

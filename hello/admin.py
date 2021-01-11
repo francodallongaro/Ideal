@@ -99,6 +99,6 @@ class ClasificadoAdmin(admin.ModelAdmin):
         }),
     )
 
-
+admin.site.register(Clasificado, ClasificadoAdmin)
 admin.site.register(Usuario)
 admin.site.register(Pack)
