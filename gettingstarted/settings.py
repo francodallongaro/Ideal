@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 import django_heroku
-import dj_database_url
+# import dj_database_url
 # from pathlib import Path
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -81,10 +81,10 @@ WSGI_APPLICATION = "gettingstarted.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE" : "django.db.backends.postgresql",
-        "NAME": "idealdb",
+        "NAME": "database-1",
         "USER": "idealdatabase",
         "PASSWORD": "2IdealServicios",
-        "HOST": "idealdb.c8xhkoscqibi.us-east-2.rds.amazonaws.com",
+        "HOST": "database-1.c8xhkoscqibi.us-east-2.rds.amazonaws.com",
         "PORT": "5432",
     }
 }
