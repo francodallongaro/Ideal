@@ -12,7 +12,7 @@ class Pack(models.Model):
 
     nombre = models.CharField(max_length=50)
     precio = models.IntegerField(default=10)
-    valuacion_propiedad = models.BooleanField(default=False)
+    valuacionpropiedad = models.BooleanField(default=False)
     foto = models.BooleanField(default=False)
     tour = models.BooleanField(default=False)
     redaccion = models.BooleanField(default=False)
@@ -21,17 +21,17 @@ class Pack(models.Model):
     cartel = models.BooleanField(default=False)
     secretario = models.BooleanField(default=False)
     visitas = models.BooleanField(default=False)
-    ficha_tecnica = models.BooleanField(default=False)
+    fichatecnica = models.BooleanField(default=False)
     soporte_post_venta = models.BooleanField(default=False)
     experto = models.BooleanField(default=False)
-    reportes_semanales = models.BooleanField(default=False)
-    visitas_acompanadas = models.BooleanField(default=False)
-    estudio_titulos = models.BooleanField(default=False)
-    gestion_online = models.BooleanField(default=False)
+    reportessemanales = models.BooleanField(default=False)
+    visitasacompanadas = models.BooleanField(default=False)
+    estudiotitulos = models.BooleanField(default=False)
+    gestiononline = models.BooleanField(default=False)
     ambientacion = models.BooleanField(default=False)
 
     borradores = models.BooleanField(default=False)
-    asesoramiento_legal = models.BooleanField(default=False)
+    asesoramientolegal = models.BooleanField(default=False)
 
     financiacion = models.BooleanField(default=False)
 
