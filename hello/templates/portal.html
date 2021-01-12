@@ -16,10 +16,11 @@
                 <!-- FILTROS -->
             </div>
         </div>
+        {% comment %}  {% url 'portal_detail' destacado.pk %}  {% endcomment %}
         <div class="row v100">
             <h2 class="col bb">Publicaciones destacadas</h2>
             {% for destacado in destacados %} 
-            <a class="col-4 card-clasificado" href=" {% url 'portal_detail' destacado.pk %} ">
+            <a class="col-4 card-clasificado" href="#">
                     <img src=" {% static 'myapp/media/{{ destacado.imagen_principal.url }}' %} " alt="Foto Principal">
                     
                     <h4>{{ destacado.tipologia }} {{ destacado.m2_totales }}</h4>
@@ -45,10 +46,11 @@
 
     </section>
 
+ {% comment %} {% url 'portal_detail' clasificado.pk %}  {% endcomment %}
     <section class="row">
         <h2 class="col bb">Propiedades en venta</h2>
         {% for clasificado in clasificados %} 
-                <a class="col-4 card-clasificado" href=" {% url 'portal_detail' clasificado.pk %} ">
+                <a class="col-4 card-clasificado" href="#">
                     <img src="{{ clasificado.imagen_principal.url }}" alt="Foto Principal">
                     
                     <h4>{{ clasificado.tipologia }} {{ clasificado.m2_totales }}</h4>

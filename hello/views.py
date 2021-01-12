@@ -15,7 +15,18 @@ def contacto(request):
     return render(request, "contacto.html")
 
 def portal(request):
-    return render(request, "portal.html")
+
+    clasificados = Clasificado.objects.all()
+
+    # destacados = Clasificado.objects.filter(pack__nombre='ideal').order_by('creacion')[:3]
+
+    ctx = {
+        'clasificados': clasificados,
+    }
+
+    return render(request, 'portal.html', ctx)
+
+
 
 # def portal_detail(request, pk, *args, **kwargs):
 
