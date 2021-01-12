@@ -8,42 +8,42 @@ from django.urls import reverse
 Planes que aparecen en la pagina: COMPLETAR
 Esta formado por: nombre, precio, descripcion.
 """
-class Pack(models.Model):
+# class Pack(models.Model):
 
-    nombre = models.CharField(max_length=50)
-    precio = models.IntegerField(default=10)
-    valuacionpropiedad = models.BooleanField(default=False)
-    foto = models.BooleanField(default=False)
-    tour = models.BooleanField(default=False)
-    redaccion = models.BooleanField(default=False)
-    publicacion = models.BooleanField(default=False)
-    destacado = models.BooleanField(default=False)
-    cartel = models.BooleanField(default=False)
-    secretario = models.BooleanField(default=False)
-    visitas = models.BooleanField(default=False)
-    fichatecnica = models.BooleanField(default=False)
-    soporte_post_venta = models.BooleanField(default=False)
-    experto = models.BooleanField(default=False)
-    reportessemanales = models.BooleanField(default=False)
-    visitasacompanadas = models.BooleanField(default=False)
-    estudiotitulos = models.BooleanField(default=False)
-    gestiononline = models.BooleanField(default=False)
-    ambientacion = models.BooleanField(default=False)
+#     nombre = models.CharField(max_length=50)
+#     precio = models.IntegerField(default=10)
+#     valuacionpropiedad = models.BooleanField(default=False)
+#     foto = models.BooleanField(default=False)
+#     tour = models.BooleanField(default=False)
+#     redaccion = models.BooleanField(default=False)
+#     publicacion = models.BooleanField(default=False)
+#     destacado = models.BooleanField(default=False)
+#     cartel = models.BooleanField(default=False)
+#     secretario = models.BooleanField(default=False)
+#     visitas = models.BooleanField(default=False)
+#     fichatecnica = models.BooleanField(default=False)
+#     soporte_post_venta = models.BooleanField(default=False)
+#     experto = models.BooleanField(default=False)
+#     reportessemanales = models.BooleanField(default=False)
+#     visitasacompanadas = models.BooleanField(default=False)
+#     estudiotitulos = models.BooleanField(default=False)
+#     gestiononline = models.BooleanField(default=False)
+#     ambientacion = models.BooleanField(default=False)
 
-    borradores = models.BooleanField(default=False)
-    asesoramientolegal = models.BooleanField(default=False)
+#     borradores = models.BooleanField(default=False)
+#     asesoramientolegal = models.BooleanField(default=False)
 
-    financiacion = models.BooleanField(default=False)
+#     financiacion = models.BooleanField(default=False)
 
-    class Meta:
-        verbose_name = ("Pack")
-        verbose_name_plural = ("Packs")
+#     class Meta:
+#         verbose_name = ("Pack")
+#         verbose_name_plural = ("Packs")
 
-    def __str__(self):
-        return self.nombre
+#     def __str__(self):
+#         return self.nombre
 
-    def get_absolute_url(self):
-        return reverse("Pack_detail", kwargs={"pk": self.pk})
+#     def get_absolute_url(self):
+#         return reverse("Pack_detail", kwargs={"pk": self.pk})
 
 
     # USUARIOS
@@ -227,9 +227,9 @@ class Clasificado(models.Model):
 
     creacion = models.DateTimeField(auto_now_add=True)
 
-    pack = models.ForeignKey(Pack, related_name='pack', on_delete=models.SET_NULL, default=None, null=True)
+    # pack = models.ForeignKey(Pack, related_name='pack', on_delete=models.SET_NULL, default=None, null=True)
 
-    vendedor = models.ForeignKey(Usuario, related_name='usuario', on_delete=models.SET_NULL, default=None, null=True)
+    # vendedor = models.ForeignKey(Usuario, related_name='usuario', on_delete=models.SET_NULL, default=None, null=True)
 
     tipologia = models.CharField(
         choices=TIPOLOGIA_CHOICES,
