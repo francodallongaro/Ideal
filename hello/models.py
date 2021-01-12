@@ -43,7 +43,7 @@ class Pack(models.Model):
         return self.nombre
 
     def get_absolute_url(self):
-        return reverse("Contacto_detail", kwargs={"pk": self.pk})
+        return reverse("Pack_detail", kwargs={"pk": self.pk})
 
 
     # USUARIOS
