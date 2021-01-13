@@ -36,7 +36,7 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     "storages",
-    
+
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -172,11 +172,11 @@ AWS_LOCATION = 'static'
 # s3 static settings
 STATIC_LOCATION = 'static'
 STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
-STATICFILES_STORAGE = 'gettingstarted.storage_backends.StaticStorage'
+STATICFILES_STORAGE = 'gettingstarted.storages.StaticStorage'
 # s3 public media settings
 PUBLIC_MEDIA_LOCATION = 'media'
 MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
-DEFAULT_FILE_STORAGE = 'gettingstarted.storage_backends.PublicMediaStorage'
+DEFAULT_FILE_STORAGE = 'gettingstarted.storages.PublicMediaStorage'
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
