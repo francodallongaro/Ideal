@@ -1,4 +1,4 @@
-{% extends 'myapp/base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
 {% block title %}Clasificado{% endblock title %}
@@ -6,102 +6,141 @@
 
 {% block content %}
 
-{% include 'myapp/filtros.html' %}
-
-    <div id="imprimir">
-        {% if clasificado.vendedor.estado == 'Vendedor' or clasificado.vendedor.estado == 'Ambas' %}
+{% comment %} {% include 'myapp/filtros.html' %} {% endcomment %}
+<main>
+    <div id="imprimir" class="pt-3">
+        <!-- {% if clasificado.vendedor.estado == 'Vendedor' or clasificado.vendedor.estado == 'Ambas' %}
             <p>Vendedor: {{ clasificado.vendedor.nombre }} {{ clasificado.vendedor.apellido }}</p>
             <p>{{ clasificado.vendedor.email }}</p>
             <a href="https://api.whatsapp.com/send?phone={{clasificado.vendedor.tel}}&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20{{clasificado.tipologia}}%20ubicado%20en%20{{ubicacion.direccion}}%202." target="_blank"><i class="fa fa-whatsapp my-float whatsicon"></i></a>
-        {% endif %}
+        {% endif %} -->
         
-        <h2>Descripcion: {{clasificado.descripcion}}</h2>
-        <p>Nombre: {{clasificado.nombre}}</p>
-        <p>Expensas: {{precio.expensas}}</p>
-        <img src="{{infogen.imagen_principal.url}}" alt="">
-        <p>m2 totales: {{infogen.m2_totales}}</p>
-        <p>m2 cubiertos: {{infogen.m2_cubiertos}}</p>
-        <p>Piso: {{infogen.piso}}</p>
-        <p>Departamento: {{infogen.depto}}</p>
-        <p>Ambientes: {{infogen.ambientes}}</p>
-        <p>Dormitorios: {{infogen.dormitorios}}</p>
-        <p>Baños: {{infogen.banios}}</p>
-        <p>Orientacion: {{infogen.orientacion}}</p>
-        <p>Antiguedad: {{infogen.antiguedad}}</p>
 
-        {% if infogen.cochera == True %}
-            <p>Cocheras: {{infogen.cocheras}}</p>
-        {% endif %}
+        <p class="text pt-3 mb-3"><strong>Venta</strong> > {{ clasificado.tipologia }} > {{ clasificado.barrio }} > {{ clasificado.ambientes }} Ambientes > {{clasificado.direccion}}</p>
+        <div class="row v-center mt-3 mb-3">
+            <div class="col-10">
+                <h2 class="">{{clasificado.tipologia}} | {{clasificado.m2_totales}}m2</h2>
+                <p class="text">{{clasificado.direccion}} | {{ clasificado.barrio }}</p>
+            </div>
+            <div class="col-2">
+                <p>{{clasificado.costo}}</p>
+            </div>
+        </div>
 
-        {% if amenitie.pileta == True %}
-            <!-- <img src="" alt=""> -->
-            <p>Pileta</p>
-        {% endif %}
+        <div class="row">
+            <div class="col-8 pr-2">
+                <h4 class="bb mb-2">Características</h4>
+                <div class="row mb-2">
+                    <div class="col-3">
+                        <img class="img-center" src="{% static 'ideal/iconos/ambiente.svg' %}" alt="">
+                        <p class="h-center">Baños: {{clasificado.banios}}</p>
+                    </div>
+                    <div class="col-3">
+                        <img class="img-center" src="{% static 'ideal/iconos/ambiente.svg' %}" alt="">
+                        <p class="h-center">Baños: {{clasificado.banios}}</p>
+                    </div>
+                    <div class="col-3">
+                        <img class="img-center" src="{% static 'ideal/iconos/ambiente.svg' %}" alt="">
+                        <p class="h-center">Baños: {{clasificado.banios}}</p>
+                    </div>
+                    <div class="col-3">
+                        <img class="img-center" src="{% static 'ideal/iconos/ambiente.svg' %}" alt="">
+                        <p class="h-center">Baños: {{clasificado.banios}}</p>
+                    </div>
+                </div>
+                <h4 class="bb mb-2">Servicios</h4>
+                <div class="row mb-2">
+                    <div class="col-3">
+                        <img class="img-center" src="{% static 'ideal/iconos/ambiente.svg' %}" alt="">
+                        <p class="h-center">Baños: {{clasificado.banios}}</p>
+                    </div>
+                    <div class="col-3">
+                        <img class="img-center" src="{% static 'ideal/iconos/ambiente.svg' %}" alt="">
+                        <p class="h-center">Baños: {{clasificado.banios}}</p>
+                    </div>
+                    <div class="col-3">
+                        <img class="img-center" src="{% static 'ideal/iconos/ambiente.svg' %}" alt="">
+                        <p class="h-center">Baños: {{clasificado.banios}}</p>
+                    </div>
+                    <div class="col-3">
+                        <img class="img-center" src="{% static 'ideal/iconos/ambiente.svg' %}" alt="">
+                        <p class="h-center">Baños: {{clasificado.banios}}</p>
+                    </div>
+                </div>
+                <h4 class="bb mb-2">Destacados</h4>
+                <div class="row mb-2">
+                    <div class="col-3">
+                        <img class="img-center" src="{% static 'ideal/iconos/ambiente.svg' %}" alt="">
+                        <p class="h-center">Baños: {{clasificado.banios}}</p>
+                    </div>
+                    <div class="col-3">
+                        <img class="img-center" src="{% static 'ideal/iconos/ambiente.svg' %}" alt="">
+                        <p class="h-center">Baños: {{clasificado.banios}}</p>
+                    </div>
+                    <div class="col-3">
+                        <img class="img-center" src="{% static 'ideal/iconos/ambiente.svg' %}" alt="">
+                        <p class="h-center">Baños: {{clasificado.banios}}</p>
+                    </div>
+                    <div class="col-3">
+                        <img class="img-center" src="{% static 'ideal/iconos/ambiente.svg' %}" alt="">
+                        <p class="h-center">Baños: {{clasificado.banios}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 card-contacto pl-2">
+                <h4 class="h-center">¡Contactate!</h4>
+                <div>
+                    <a href="#">
+                        <img src="{% static 'ideal/redes/whatsapp.svg' %}" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="{% static 'ideal/redes/mail.svg' %}" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
 
-        {% if amenitie.gimnasio == True %}
-            <!-- <img src="" alt=""> -->
-            <p>Gimnasio</p>
-        {% endif %}
+        <!-- TOUR 360 -->
+        <a class="tour360 row v-center" href="#">
+            <div class="col-8 p-2">
+                <h2>Recorré esta propiedad<br>desde una visita virtual</h2>
+                <p class="text mt-1">¡Hace click aquí para iniciar el tour 360!</p>
+            </div>
+            <div class="col-4">
+                <img src="" alt="Imagen">
+            </div>
+        </a>
 
-        {% if amenitie.juegos == True %}
-            <!-- <img src="" alt=""> -->
-            <p>Salon de Juegos</p>
-        {% endif %}
 
-        {% if amenitie.solarium == True %}
-            <!-- <img src="" alt=""> -->
-            <p>Solarium</p>
-        {% endif %}
-
-        {% if amenitie.microcine == True %}
-            <!-- <img src="" alt=""> -->
-            <p>Microcine</p>
-        {% endif %}
-
-        {% if amenitie.parrilla == True %}
-            <!-- <img src="" alt=""> -->
-            <p>Parrilla</p>
-        {% endif %}
-
-        {% if amenitie.salon_usos_multiples == True %}
-            <!-- <img src="" alt=""> -->
-            <p>SUM</p>
-        {% endif %}
+        <!-- UBICACION -->
+        <h2 class="bb mb-2">Ubicación</h2>
+        <div class="row">
+            <div class="col-4">
+                <p class="text">{{clasificado.direccion}}</p>
+                <p class="text">{{clasificado.barrio}} | CP: {{clasificado.cp}}</p>
+            </div>
+            <div class="col-8">
+                
+            </div>
+        </div>
         
-        {% if caracteristica.alarma == True %}
-            <!-- <img src="" alt=""> -->
-            <p>Alarma</p>
-        {% endif %}
-        
-        {% if caracteristica.mascotas == True %}
-            <!-- <img src="" alt=""> -->
-            <p>Mascotas</p>
-        {% endif %}
-        
-        {% if caracteristica.aire_acondicionado == True %}
-            <!-- <img src="" alt=""> -->
-            <p>Aire Acondicionado</p>
-        {% endif %}
-        
-        {% if caracteristica.losa_radiante == True %}
-            <!-- <img src="" alt=""> -->
-            <p>Losa Radiante</p>
-        {% endif %}
-        
-        {% if caracteristica.gas == True %}
-            <!-- <img src="" alt=""> -->
-            <p>Gas</p>
-        {% endif %}
-        
-        {% if caracteristica.internet == True %}
-            <!-- <img src="" alt=""> -->
-            <p>Internet</p>
-        {% endif %}
-        
-        {% if caracteristica.cable == True %}
-            <!-- <img src="" alt=""> -->
+        <!-- INFO EXTRA -->
+        <h2 class="bb mb-3 mt-3">Información adicional</h2>
+        <p class="text">{{clasificado.descripcion}}</p>
+
+
+        <!-- INTERESADO -->
+        <h2 class="h-center mt-3 mb-2">¿Estás interesado en esta propiedad?</h2>
+        <div class="mb-3">
+            <a class="btn-1-r h-center" href="#">¡Contactate!</a>
+            <button id="download" class="btn-1-r h-center">Descarga ficha PDF</button>
+        </div>
+
+
+
+        <!-- {% if caracteristica.cable == True %}
             <p>Cable</p>
-        {% endif %}
+        {% endif %} -->
 
 
 
@@ -109,8 +148,9 @@
 
 
     </div>
-<button class="btn btn-primary" id="download"> download pdf</button>
+    <!-- <button class="btn-1-r" id="download"> download pdf</button> -->
 
+</main>
 <script>
 
     // Descargar publicacion como PDF

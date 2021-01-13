@@ -19,6 +19,7 @@ urlpatterns = [
     path("venta/", hello.views.venta, name="venta"),
     path("contacto/", hello.views.contacto, name="contacto"),
     path("portal/", hello.views.portal, name="portal"),
+    path("portal/<int:pk>/", hello.views.clasificado_detalle, name="clasificado_detalle"),
     
     path("admin/", admin.site.urls),
 ]

@@ -271,7 +271,7 @@ class Clasificado(models.Model):
     aysa = models.IntegerField(blank=True, default=0)
    
 
-    # imagen_principal = models.ImageField(upload_to="", null=True, blank=True)
+    imagen_principal = models.ImageField(upload_to="", null=True, blank=True)
 
     m2_totales = models.IntegerField(blank=True, default=0)
     m2_cubiertos = models.IntegerField(blank=True, default=0)

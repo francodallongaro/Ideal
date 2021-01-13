@@ -15,8 +15,7 @@
     }
 
     &::-webkit-details-marker {
-        background: url('../ideal/iconos/flecha.svg') center no-repeat;
-        color: transparent;
+        color: $c-0;
     }
 }
 
@@ -38,6 +37,5 @@ details[open] summary ~ * {
   }
 
   details[open] summary::-webkit-details-marker {
-    background: url('../ideal/iconos/flecha-arriba.svg') center no-repeat;
-    color: transparent;
+    color: $c-0;
 }

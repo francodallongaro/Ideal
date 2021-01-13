@@ -4,73 +4,54 @@
 {% block content %}
 
 <main>
-    <section class="">
-        <div class="row pt-2">
-            <div class="col-4">
-                <div class="logo">
-                  <img src=" {% static 'ideal/icono.svg' %} " alt="IDEAL">
-                  <img src=" {% static 'ideal/ideal.svg' %} " alt="IDEAL">
-                </div>
-            </div>    
-            <div class="col-8">
-                <!-- FILTROS -->
-            </div>
+    <section id="section-principal" class="row v-center v100">
+        <div class="col-7 col-s pt-2">
+        <div class="logo mb-2">
+            <img src=" {% static 'ideal/logo.svg' %} " alt="IDEAL">
+            {% comment %} <img src=" {% static 'ideal/ideal.svg' %} " alt="IDEAL"> {% endcomment %}
         </div>
-        {% comment %}  {% url 'portal_detail' destacado.pk %}  {% endcomment %}
-        <div class="row v100">
-            <h2 class="col bb">Publicaciones destacadas</h2>
-            {% for destacado in destacados %} 
-            <a class="col-4 card-clasificado" href="#">
-                    <img src=" {% static 'myapp/media/{{ destacado.imagen_principal.url }}' %} " alt="Foto Principal">
-                    
-                    <h4>{{ destacado.tipologia }} {{ destacado.m2_totales }}</h4>
-                    <p class="text bb">{{ destacado.barrio }}</p>
-                    
-                    <div class="row">
-                        <div class="col-4 h-center">
-                            <img src="" alt="">
-                            <p>{{ destacado.ambientes }}</p>
-                        </div>
-                        <div class="col-4 bl br h-center">
-                            <img src="" alt="">
-                            <p>{{ destacado.banios }}</p>
-                        </div>
-                        <div class="col-4 h-center">
-                            <img src="" alt="">
-                            <p>{{ destacado.cocheras }}</p>
-                        </div>
-                    </div>
-            </a>     
-            {% endfor %}
+        <h1>Encontrá hoy tu<br>hogar ideal.</h1>
+        <p class="typewriter mb-3 mr-1">Sin comisiones y entre particulares</p>
         </div>
-
+        <img id="img-principal" class="col-5 col-s img-center" src="{% static 'ideal/principal.jpeg' %}" alt="IMAGEN">
     </section>
 
- {% comment %} {% url 'portal_detail' clasificado.pk %}  {% endcomment %}
-    <section class="row">
-        <h2 class="col bb">Propiedades en venta</h2>
+
+
+
+    <section class="row mt-2 mb-3">
+        <h2 class="col-10">Propiedades en venta</h2>
+        <p class="col-2 h-end">{{ cuenta }}</p>
         {% for clasificado in clasificados %} 
-                <a class="col-4 card-clasificado" href="#">
+                <div class="col-4 col-s card-clasificado mb-2">
                     <img src="{{ clasificado.imagen_principal.url }}" alt="Foto Principal">
                     
-                    <h4>{{ clasificado.tipologia }} {{ clasificado.m2_totales }}</h4>
-                    <p class="text bb">{{ clasificado.barrio }}</p>
+                    <div class="row v-center p-1 bb mt-1 mb-1">
+                        <div class="col-8">
+                            <p class="text">{{ clasificado.tipologia }} | {{ clasificado.direccion }}</p>
+                            <p class="calc-text">{{ clasificado.moneda_costo }} {{ clasificado.costo }}</p>
+                        </div>
+                        <div class="col-4">
+                            <a class="btn-1-r" href="{% url 'clasificado_detalle' clasificado.pk %}">Ver más</a>
+                        </div>
+
+                    </div>
                     
-                    <div class="row">
-                        <div class="col-4 h-center">
-                            <img src="" alt="">
-                            <p>{{ clasificado.ambientes }}</p>
+                    <div class="row p-1">
+                        <div class="col-4 inline br">
+                            <img class="img-center mr-1" src="{% static 'ideal/iconos/ambientes.svg' %}" alt="">
+                            <p class="text">{{ clasificado.ambientes }}</p>
                         </div>
-                        <div class="col-4 bl br h-center">
-                            <img src="" alt="">
-                            <p>{{ clasificado.banios }}</p>
+                        <div class="col-4 inline h-center">
+                            <img class="img-center mr-1" src="{% static 'ideal/iconos/banios.svg' %}" alt="">
+                            <p class="text">{{ clasificado.banios }}</p>
                         </div>
-                        <div class="col-4 h-center">
-                            <img src="" alt="">
-                            <p>{{ clasificado.cocheras }}</p>
+                        <div class="col-4 inline bl">
+                            <img class="img-center mr-1" src="{% static 'ideal/iconos/m2.svg' %}" alt="">
+                            <p class="text">{{ clasificado.m2_totales }}</p>
                         </div>
                     </div>
-                </a>    
+                </div>    
             {% endfor %}
     </section>
 

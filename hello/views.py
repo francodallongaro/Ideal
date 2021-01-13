@@ -17,35 +17,38 @@ def contacto(request):
 def portal(request):
 
     clasificados = Clasificado.objects.all()
+    cuenta = Clasificado.objects.all().count()
+    
 
     # destacados = Clasificado.objects.filter(pack__nombre='ideal').order_by('creacion')[:3]
 
     ctx = {
         'clasificados': clasificados,
+        'cuenta': cuenta,
     }
 
     return render(request, 'portal.html', ctx)
 
 
 
-# def portal_detail(request, pk, *args, **kwargs):
+def clasificado_detalle(request, pk, *args, **kwargs):
 
-#     try:
-#         clasificado = Clasificado.objects.get(pk=pk)
+    try:
+        clasificado = Clasificado.objects.get(pk=pk)
 
-#     except Clasificado.DoesNotExist:
-#         raise Http404
+    except Clasificado.DoesNotExist:
+        raise Http404
     
-#     # clasificados = Propiedad.objects.all()
-#     # myFilter = PropiedadFilter(request.GET, queryset=clasificados)
-#     # clasificados = myFilter.qs
+    # clasificados = Propiedad.objects.all()
+    # myFilter = PropiedadFilter(request.GET, queryset=clasificados)
+    # clasificados = myFilter.qs
 
 
 
-#     # ctx = {
-#     #     'clasificado': clasificado,
-#     #     # 'myFilter': myFilter,
-#     # }
+    ctx = {
+        'clasificado': clasificado,
+        # 'myFilter': myFilter,
+    }
 
-#     return render(request, 'clasificado.html')
+    return render(request, 'clasificado.html', ctx)
 

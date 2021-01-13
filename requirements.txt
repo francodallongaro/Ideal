@@ -11,3 +11,5 @@ whitenoise
 sqlparse
 pytz
 django-cors-headers
+django-storages
+boto3
