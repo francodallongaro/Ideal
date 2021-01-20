@@ -419,6 +419,13 @@ table td {
   border-top-right-radius: 16px;
 }
 
+#img-portal {
+  width: 500px;
+  height: 300px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
 .pregunta {
   padding: 1rem 0;
   border-bottom: 1px dashed gray;

@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 import django_heroku
+from boto.s3.connection import OrdinaryCallingFormat
+from storages.backends.s3boto import S3BotoStorage
 # import dj_database_url
 # from pathlib import Path
 
@@ -43,7 +45,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
-    "storages",
+    'storages',
     "hello",
 ]
 
