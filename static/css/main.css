@@ -74,6 +74,10 @@ details[open] summary::-webkit-details-marker {
   height: 20px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .bb {
   border-bottom: 1px solid gray;
   width: 100%;
@@ -370,6 +374,10 @@ h4 {
   font-size: 2rem;
 }
 
+.faq-respuesta {
+  width: 90%;
+}
+
 .inline {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -381,11 +389,7 @@ table {
   -webkit-box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
           box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
   border-radius: 16px;
-  border: 3px solid white;
-}
-
-table .impar {
-  background-color: rgba(82, 229, 212, 0.15);
+  border: 1px solid white;
 }
 
 table tr {
@@ -405,10 +409,6 @@ table td {
   vertical-align: center;
 }
 
-table td img {
-  width: 30px;
-}
-
 .card-precio {
   background-color: white;
   padding: 3rem;
@@ -419,10 +419,38 @@ table td img {
 
 .card-contacto {
   background-color: white;
-  padding: 1rem;
+  width: 100%;
+  padding: 1.5rem;
   -webkit-box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
           box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
   border-radius: 16px;
+}
+
+.impar {
+  background-color: rgba(82, 229, 212, 0.15);
+}
+
+.card-tabla {
+  width: 100%;
+  padding: 1rem 0;
+  -webkit-box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
+          box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
+  border-radius: 16px;
+}
+
+.card-tabla p {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.card-tabla img {
+  width: 100%;
+  height: 35px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .card-clasificado {
@@ -434,12 +462,27 @@ table td img {
 }
 
 .tour360 {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
   background-color: #65DBBA;
   -webkit-box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
           box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
   border-radius: 16px;
+  height: 300px;
+}
+
+.tour360 div {
+  background: transparent;
+}
+
+.tour360 div h2 {
+  background: transparent;
+}
+
+.tour360 div p {
+  background: transparent;
+}
+
+.tour360 div p strong {
+  background: transparent;
 }
 
 .portales {
@@ -459,6 +502,13 @@ table td img {
   height: 90px;
 }
 
+#img-360 {
+  width: 100%;
+  height: 300px;
+  border-bottom-right-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
 .pregunta {
   padding: 1rem 0;
   border-bottom: 1px dashed gray;
@@ -471,6 +521,133 @@ table td img {
 .respuesta {
   padding: 1rem 0;
   margin-bottom: 3rem;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  width: 100%;
+  /* Specific width is required for Firefox. */
+  background: transparent;
+  /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #e0e0e0;
+  height: 25px;
+  width: 25px;
+  border-radius: 500px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -14px;
+  /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  -webkit-box-shadow: 0px 5px 5px rgba(41, 41, 42, 0.26);
+          box-shadow: 0px 5px 5px rgba(41, 41, 42, 0.26);
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  -webkit-box-shadow: inset 1px 1px 5px #00000063;
+          box-shadow: inset 1px 1px 5px #00000063;
+  background: #e4e4e4;
+  border-radius: 500px;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+
+.form-group {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.form-group p label {
+  display: none;
+}
+
+.form-group p .form-control {
+  margin-bottom: 15px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: #F5F5F5;
+  border-radius: 5px;
+  outline: none;
+}
+
+.form-group p .form-control::-webkit-input-placeholder, .form-group p .form-control ::-webkit-input-placeholder {
+  padding-left: 1rem;
+  color: black;
+}
+
+.form-group p .form-control::placeholder, .form-group p .form-control ::-webkit-input-placeholder {
+  padding-left: 1rem;
+  color: black;
+}
+
+input[type=submit] {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+
+.map-container {
+  height: 300px;
+  position: relative;
+  border-radius: 16px;
+}
+
+.map-container iframe {
+  border: none;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 16px;
+}
+
+.video-responsive {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16/9 ratio */
+  padding-top: 30px;
+  /* IE6 workaround*/
+  height: 0;
+  overflow: hidden;
+}
+
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed {
+  position: absolute;
+  border-radius: 16px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .container p span.typed-text {
@@ -898,6 +1075,7 @@ body {
 
 .h-end {
   justify-items: end;
+  text-align: end;
 }
 
 .h-s-end {
@@ -945,9 +1123,6 @@ body {
   .col-3-s {
     grid-column: span 3 !important;
   }
-  .section-principal {
-    margin-top: 20%;
-  }
   .section-principal #img-principal {
     position: absolute;
     opacity: 0.6;
@@ -969,9 +1144,6 @@ body {
   }
   .col-3-s {
     grid-column: span 3 !important;
-  }
-  .section-principal {
-    margin-top: 20%;
   }
   .section-principal #img-principal {
     position: absolute;
@@ -1018,15 +1190,29 @@ body {
     padding: 0.5rem 1rem;
     font-size: 1rem;
   }
-  .section-principal {
-    margin-top: 20%;
-  }
   .section-principal #img-principal {
     position: absolute;
     opacity: 0.6;
   }
   .v90, .v80, .v70, .v60, .v50, .v40 {
     height: auto;
+  }
+  table th, table td {
+    height: 35px;
+    text-align: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .tabla-titulo {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    font-weight: bolder;
+    text-align: center;
+  }
+  .titulo-tabla {
+    text-align: center;
+    margin-top: 2rem;
   }
   .hidden {
     display: none;

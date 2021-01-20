@@ -1,6 +1,47 @@
 from django.db import models
 from django.urls import reverse
 
+CAT_CHOICES = (
+    ('General', 'General'),
+    ('Servicio', 'Servicio'),
+    ('Post-Publicación', 'Post-Publicación')
+)
+class Faqs(models.Model):
+
+    categoria = models.CharField(
+        choices=CAT_CHOICES,
+        default='General',
+        max_length=50)
+    pregunta = models.CharField(max_length=100, blank=True)
+    respuesta = models.CharField(max_length=500, blank=True)
+    
+
+
+    class Meta:
+        verbose_name = ("FAQ")
+        verbose_name_plural = ("FAQS")
+
+    def __str__(self):
+        return self.pregunta
+
+    def get_absolute_url(self):
+        return reverse("faqs_detail", kwargs={"pk": self.pk})
+
+
+class Pack(models.Model):
+
+    nombre = models.CharField(max_length=50, null=True, blank=True)   
+    precio = models.IntegerField(null=True, blank=True) 
+
+    class Meta:
+        verbose_name = ("Pack")
+        verbose_name_plural = ("Packs")
+
+    def __str__(self):
+        return self.nombre
+
+    def get_absolute_url(self):
+        return reverse("Pack_detail", kwargs={"pk": self.pk})
 
 
 # PLANES
@@ -69,7 +110,7 @@ class Usuario(models.Model):
         default='Vendedor',
         max_length=50)
 
-    testimonio = models.CharField(max_length=50, blank=True)
+    mensaje = models.CharField(max_length=400, blank=True)
 
     tel = models.IntegerField()
     email = models.EmailField(max_length=254)
@@ -245,6 +286,8 @@ class Clasificado(models.Model):
     mercadolibre = models.BooleanField(default=False)
     reporteinmobiliario = models.BooleanField(default=False)
     direccion = models.CharField(max_length=50, blank=True)
+    mapa = models.CharField(max_length=300, null=True, blank=True)
+    youtube = models.CharField(max_length=300, null=True, blank=True)
 
     barrio = models.CharField(
         choices=BARRIOS_CHOICES,
@@ -252,6 +295,7 @@ class Clasificado(models.Model):
         max_length=50)
 
     cp = models.IntegerField(blank=True, default=0)
+
 
     costo = models.IntegerField(blank=True, default=0)
     moneda_costo = models.CharField(
@@ -303,8 +347,13 @@ class Clasificado(models.Model):
         choices=NUM_CHOICES,
         max_length=10,
         default='1')
-    cochera = models.BooleanField(default=False)
+    
     cocheras = models.CharField(
+        choices=NUM_CHOICES,
+        max_length=10,
+        default='1')
+
+    balcones = models.CharField(
         choices=NUM_CHOICES,
         max_length=10,
         default='1')

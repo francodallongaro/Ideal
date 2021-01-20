@@ -6,7 +6,7 @@
 <section class="mb-3 mt-3">
     <h2 class="h-center mb-1">¿Cuánto podes ahorrar con  
         <div class="logo">
-        <img class="ideal-cal" src=" {% static 'ideal/logo.svg' %} " alt="IDEAL">
+        <img class="ideal-cal" src=" {% static 'img/ideal/logo.svg' %} " alt="IDEAL">
         </div> ?
     </h2>
     <h2 class="ahorro h-center mb-3">¡Descubrilo!</h2>
@@ -14,7 +14,8 @@
     <div class="row mb-1 v-center">
         <div class="col-5 col-s mt-2">
             <h4 class="mb-1">Con ideal desde: </h4>
-            <p class="calc-text"> U$S 1500</p>
+            <p class="calc-text">U$S 1500</p>
+            <p class="text">(Pagás en pesos a tipo de cambio oficial)</p>
             <h4 class="mt-1">Con inmobiliarias: </h4>
             <p class="calc-text"><span id="costocomision">U$S 4800</span></p>
             <h4 class="mt-1">Ahorrás</h4>
@@ -22,7 +23,7 @@
 
             
         </div>
-        <div class="col-7 col-s v-a-stretch h-end mt-2">
+        <div class="col-7 col-s v-a-stretch mt-2">
             <h4 class="mb-1">Valor de tu propiedad: </h4>
             <input type="range" id="rangeInput" class="rangeslider mb-1" step='10000' name="rangeInput" min="80000" max="1000000" value="120000" oninput="amount.value=rangeInput.value">                                                       
             <br>          
@@ -37,11 +38,11 @@
     <div class="row mb-3 v-center">
         <div class="col-5 col-s">
             <h2 class="calc-ahorro">Con los que ahorrás<br>con ideal ...</h2>
-            <h4 class="mt-1 mb-3"><span id="ahorro">¡Cambiar los muebles antiguos de tu casa!</span></h4>
+            <p class=" text mt-1 mb-3"><span id="ahorro">¡Cambiar los muebles antiguos de tu casa!</span></p>
             <p class="mt-1"><a href=" {% url 'venta' %} " class="btn-1-r">¡Quiero ahorrar YA!</a></p>
         </div>
         <div class="col-7 col-s">
-            <img id="img-calc" src="{% static 'ideal/calculadora/muebles.png' %}" alt="Muebles">
+            <img id="img-calc" src="{% static 'img/ideal/calculadora/muebles.png' %}" alt="Muebles">
         </div>
     </div>
 
@@ -81,19 +82,19 @@
             
             if (ahorro > 40000) {
                 outahorro.innerHTML = '¡Reservar un pasaje a marte (con Elon) y conocer el espacio exterior!';
-                imagen.src = '{% static 'ideal/calculadora/marte.png' %}';
+                imagen.src = '{% static 'img/ideal/calculadora/marte.png' %}';
             } else if (ahorro > 20000) {
                 outahorro.innerHTML = '¡Comprarte ese auto que tenés entre ceja y ceja!';
-                imagen.src = '{% static 'ideal/calculadora/auto.png' %}';
+                imagen.src = '{% static 'img/ideal/calculadora/auto.png' %}';
             } else if (ahorro > 10000) {
                 outahorro.innerHTML = '¡Pedirte vacaciones y viajar por el mundo!';
-                imagen.src = '{% static 'ideal/calculadora/viaje.png' %}';
+                imagen.src = '{% static 'img/ideal/calculadora/viaje.png' %}';
             } else if (ahorro > 2000) {
                 outahorro.innerHTML = '¡Cambiar los muebles antiguos de tu casa!';
-                imagen.src = '{% static 'ideal/calculadora/muebles.png' %}';
+                imagen.src = '{% static 'img/ideal/calculadora/muebles.png' %}';
             } else {
                 outahorro.innerHTML = '¡Comprarte ese celular que siempre quisiste!';
-                imagen.src = '{% static 'ideal/calculadora/celular.png' %}';
+                imagen.src = '{% static 'img/ideal/calculadora/celular.png' %}';
             }
         }
     </script>

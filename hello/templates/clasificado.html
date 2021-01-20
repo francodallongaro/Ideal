@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Clasificado{% endblock title %}
+{% block title %}{{clasificado.nombre}}{% endblock title %}
 
 
 {% block content %}
@@ -18,110 +18,166 @@
 
         <p class="text pt-3 mb-3"><strong>Venta</strong> > {{ clasificado.tipologia }} > {{ clasificado.barrio }} > {{ clasificado.ambientes }} Ambientes > {{clasificado.direccion}}</p>
         <div class="row v-center mt-3 mb-3">
-            <div class="col-10">
-                <h2 class="">{{clasificado.tipologia}} | {{clasificado.m2_totales}}m2</h2>
-                <p class="text">{{clasificado.direccion}} | {{ clasificado.barrio }}</p>
+            <div class="col-8">
+                <h2 class="">{{clasificado.tipologia}} • {{clasificado.m2_totales}}m²</h2>
+                <p class="text">{{clasificado.direccion}}, {{ clasificado.barrio }}</p>
             </div>
-            <div class="col-2">
-                <p>{{clasificado.costo}}</p>
+            <div class="col-4">
+                <h2 class=" ahorro h-end">{{clasificado.costo}} {{clasificado.moneda_costo}}</h2>
+                <p class="text h-end">Expensas: {{clasificado.moneda_expensas}}{{ clasificado.expensas }}</p>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-8 pr-2">
+            <div class="col-8 col-s pr-2">
+                <h2>Detalles</h2>
                 <h4 class="bb mb-2">Características</h4>
                 <div class="row mb-2">
                     <div class="col-3">
-                        <img class="img-center" src="{% static 'ideal/iconos/ambiente.svg' %}" alt="">
-                        <p class="h-center">Baños: {{clasificado.banios}}</p>
+                        <img class="img-center" src="{% static 'img/ideal/iconos/ambiente.svg' %}" alt="">
+                        <p class="h-center">Ambientes: {{clasificado.ambientes}}</p>
                     </div>
                     <div class="col-3">
-                        <img class="img-center" src="{% static 'ideal/iconos/ambiente.svg' %}" alt="">
-                        <p class="h-center">Baño: {{clasificado.banios}}</p>
+                        <img class="img-center" src="{% static 'img/ideal/iconos/ambiente.svg' %}" alt="">
+                        <p class="h-center">Superficie: {{clasificado.m2_totales}}m²</p>
                     </div>
                     <div class="col-3">
-                        <img class="img-center" src="{% static 'ideal/iconos/ambiente.svg' %}" alt="">
-                        <p class="h-center">Baños: {{clasificado.banios}}</p>
+                        <img class="img-center" src="{% static 'img/ideal/iconos/ambiente.svg' %}" alt="">
+                        <p class="h-center">Dormitorios: {{clasificado.dormitorios}}</p>
                     </div>
                     <div class="col-3">
-                        <img class="img-center" src="{% static 'ideal/iconos/ambiente.svg' %}" alt="">
-                        <p class="h-center">Baños: {{clasificado.banios}}</p>
-                    </div>
-                </div>
-                <h4 class="bb mb-2">Servicios</h4>
-                <div class="row mb-2">
-                    <div class="col-3">
-                        <img class="img-center" src="{% static 'ideal/iconos/ambiente.svg' %}" alt="">
-                        <p class="h-center">Baños: {{clasificado.banios}}</p>
-                    </div>
-                    <div class="col-3">
-                        <img class="img-center" src="{% static 'ideal/iconos/ambiente.svg' %}" alt="">
-                        <p class="h-center">Baños: {{clasificado.banios}}</p>
-                    </div>
-                    <div class="col-3">
-                        <img class="img-center" src="{% static 'ideal/iconos/ambiente.svg' %}" alt="">
-                        <p class="h-center">Baños: {{clasificado.banios}}</p>
-                    </div>
-                    <div class="col-3">
-                        <img class="img-center" src="{% static 'ideal/iconos/ambiente.svg' %}" alt="">
+                        <img class="img-center" src="{% static 'img/ideal/iconos/ambiente.svg' %}" alt="">
                         <p class="h-center">Baños: {{clasificado.banios}}</p>
                     </div>
                 </div>
-                <h4 class="bb mb-2">Destacados</h4>
+                <div class="row">
+                    <div class="col-3">
+                        <img class="img-center" src="{% static 'img/ideal/iconos/ambiente.svg' %}" alt="">
+                        <p class="h-center">Balcones: </p>
+                    </div>
+                    <div class="col-3">
+                        <img class="img-center" src="{% static 'img/ideal/iconos/ambiente.svg' %}" alt="">
+                        <p class="h-center">Orientación: {{clasificado.orientacion}}</p>
+                    </div>
+                    <div class="col-3">
+                        <img class="img-center" src="{% static 'img/ideal/iconos/ambiente.svg' %}" alt="">
+                        <p class="h-center">Sup. Cubierta: {{clasificado.m2_cubiertos}}m²</p>
+                    </div>
+                    <div class="col-3">
+                        <img class="img-center" src="{% static 'img/ideal/iconos/ambiente.svg' %}" alt="">
+                        <p class="h-center">Disposición: </p>
+                    </div>
+                </div>
+                <h4 class="bb mb-2">Edificio</h4>
                 <div class="row mb-2">
                     <div class="col-3">
-                        <img class="img-center" src="{% static 'ideal/iconos/ambiente.svg' %}" alt="">
-                        <p class="h-center">Baños: {{clasificado.banios}}</p>
+                        <img class="img-center" src="{% static 'img/ideal/iconos/ambiente.svg' %}" alt="">
+                        <p class="h-center">Antiguedad: {{clasificado.antiguedad}}</p>
                     </div>
                     <div class="col-3">
-                        <img class="img-center" src="{% static 'ideal/iconos/ambiente.svg' %}" alt="">
-                        <p class="h-center">Baños: {{clasificado.banios}}</p>
+                        <img class="img-center" src="{% static 'img/ideal/iconos/ambiente.svg' %}" alt="">
+                        <p class="h-center">Cant. de pisos: </p>
                     </div>
                     <div class="col-3">
-                        <img class="img-center" src="{% static 'ideal/iconos/ambiente.svg' %}" alt="">
-                        <p class="h-center">Baños: {{clasificado.banios}}</p>
+                        <img class="img-center" src="{% static 'img/ideal/iconos/ambiente.svg' %}" alt="">
+                        <p class="h-center">Depto. por piso: </p>
                     </div>
-                    <div class="col-3">
-                        <img class="img-center" src="{% static 'ideal/iconos/ambiente.svg' %}" alt="">
+                    <!-- <div class="col-3">
+                        <img class="img-center" src="{% static 'img/ideal/iconos/ambiente.svg' %}" alt="">
                         <p class="h-center">Baños: {{clasificado.banios}}</p>
-                    </div>
+                    </div> -->
+                </div>
+                <h4 class="bb mb-2">Adicionales</h4>
+                <div class="row mb-2">
+                    <div class="col-3 inline">
+                            {% if clasificado.salon_usos_multiples %}
+                            <img class="img-center" src="{% static 'img/ideal/iconos/checked.svg' %}" alt="">
+                            {% endif %}
+                            <p class="h-center">Sum</p>
+                        </div>
+                    <div class="col-3 inline">
+                            {% if clasificado.pileta %}
+                            <img class="img-center" src="{% static 'img/ideal/iconos/checked.svg' %}" alt="">
+                            {% endif %}
+                            <p class="h-center">Pileta</p>
+                        </div>
+                    <div class="col-3 inline">
+                            {% if clasificado.salon_usos_multiples %}
+                            <img class="img-center" src="{% static 'img/ideal/iconos/checked.svg' %}" alt="">
+                            {% endif %} 
+                            <p class="h-center">Seguridad</p>
+                        </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-3 inline">
+                            {% if clasificado.gimnasio %}
+                            <img class="img-center" src="{% static 'img/ideal/iconos/checked.svg' %}" alt="">
+                            {% endif %}
+                            <p class="h-center">Gimnasio</p>
+                        </div>
+                    <div class="col-3 inline">
+                            {% if clasificado.laundry %}
+                                <img class="img-center" src="{% static 'img/ideal/iconos/checked.svg' %}" alt="">
+                            {% endif %}
+                            <p class="h-center">Laundry</p>
+                        </div>
+                    <div class="col-3 inline">
+                            {% if clasificado.aire_acondicionado %}
+                                <img class="img-center" src="{% static 'img/ideal/iconos/checked.svg' %}" alt="">
+                            {% endif %} 
+                            <p class="h-center">Aire Acond.</p>
+                        </div>
                 </div>
             </div>
-            <div class="col-4 card-contacto pl-2">
-                <h4 class="h-center">¡Contactate!</h4>
+            <form class="col-4 col-s card-contacto" method="POST">
                 <div>
-                    <a href="#">
-                        <img src="{% static 'ideal/redes/whatsapp.svg' %}" alt="">
-                    </a>
-                    <a href="#">
-                        <img src="{% static 'ideal/redes/mail.svg' %}" alt="">
-                    </a>
+                    <p class="h-center text mt-1">¡Contactate!</p>
+                    <div class="row mt-3">
+                        <a class="col-6" href="mailto:ideal@gmail.com">
+                            <img class="img-center" src=" {% static 'img/ideal/redes/mail.svg' %} " alt="">
+                            <p class="h-center text mt-1">Enviar e-mail</p>
+                        </a>
+                        <a class="col-6" href="https://api.whatsapp.com/send?phone=541144726070&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20{{clasificado.nombre}}%20ubicado%20en%20{{clasificado.direccion}}%202." target="_blank">
+                            <img class="img-center" src=" {% static 'img/ideal/redes/whatsapp.svg' %} " alt="">
+                            <p class="h-center text mt-1">Enviar Whatsapp</p>
+                        </a>
+                    </div>
+                    <div class="form-group p-1">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <input class="btn-1-r" type="submit" value="¡Contactenmé!">
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
 
-        <!-- TOUR 360 -->
-        <a class="tour360 row v-center" href="#">
-            <div class="col-8 p-2">
-                <h2>Recorré esta propiedad<br>desde una visita virtual</h2>
-                <p class="text mt-1">¡Hace click aquí para iniciar el tour 360!</p>
-            </div>
-            <div class="col-4">
-                <img src="" alt="Imagen">
-            </div>
-        </a>
+       
 
 
         <!-- UBICACION -->
-        <h2 class="bb mb-2">Ubicación</h2>
-        <div class="row">
-            <div class="col-4">
-                <p class="text">{{clasificado.direccion}}</p>
-                <p class="text">{{clasificado.barrio}} | CP: {{clasificado.cp}}</p>
+        <h2 class="bb mb-2 mt-3">Ubicación</h2>
+        <!--Google map-->
+        <div id="map-container-google-1" class="map-container row mb-5">
+            <iframe src="{{clasificado.mapa}}" class="col" allowfullscreen></iframe>
+        </div>
+        <!--Google Maps-->
+
+         <!-- TOUR 360 -->
+        <h2 class="bb mb-2 mt-3">Recorrido 360º</h2>
+        <a class="tour360 row v-center" href="#">
+            <div class="col-8 col-s pl-2">
+                <h2>Recorré esta propiedad<br>desde una visita virtual</h2>
+                <p class="text mt-1">¡Hace <strong>click aquí</strong> para iniciar el tour 360º!</p>
             </div>
-            <div class="col-8">
-                
+            <div class="col-4 col-s">
+                <img src="{% static 'img/ideal/principal.jpeg' %}" id="img-360" alt="Imagen">
             </div>
+        </a>
+        
+        <!-- YOUTUBE -->
+        <h2 class="bb mb-2 mt-3">Video</h2>
+        <div class="”video-responsive”">
+            <iframe src="https://www.youtube.com/embed/sOnqjkJTMaA" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
         </div>
         
         <!-- INFO EXTRA -->
@@ -130,24 +186,51 @@
 
 
         <!-- INTERESADO -->
-        <h2 class="h-center mt-3 mb-2">¿Estás interesado en esta propiedad?</h2>
-        <div class="mb-3">
-            <a class="btn-1-r h-center" href="#">¡Contactate!</a>
-            <button id="download" class="btn-1-r h-center">Descarga ficha PDF</button>
-        </div>
+        <section class="mb-3 mt-3">
+            <h2 class="h-center mt-3 mb-2">¿Estás interesado en esta<br>propiedad?</h2>
+            <p class="h-center"><a href="#" class="btn-1-r mt-3">¡Quiero que me contacten!</a></p>
+        </section>
 
 
-
-        <!-- {% if caracteristica.cable == True %}
-            <p>Cable</p>
-        {% endif %} -->
-
-
-
-
-
-
+        <section class="row mt-2 mb-3">
+            <h2 class="col bb">Publicaciones similares</h2>
+            {% for similar in similares %} 
+                    <div class="col-4 col-s card-clasificado mb-2">
+                        {% comment %} <img src="{{ similar.imagen_principal.url }}" alt="Foto Principal"> {% endcomment %}
+                        
+                        <div class="row v-center p-1 bb mt-1 mb-1">
+                            <div class="col-8">
+                                <p class="text">{{ similar.tipologia }} | {{ similar.direccion }}</p>
+                                <p class="calc-text">{{ similar.moneda_costo }} {{ similar.costo }}</p>
+                            </div>
+                            <div class="col-4">
+                                <a class="btn-1-r" href="{% url 'clasificado_detalle' clasificado.pk %}">Ver más</a>
+                            </div>
+    
+                        </div>
+                        
+                        <div class="row p-1">
+                            <div class="col-4 inline br">
+                                <img class="img-center mr-1" src="{% static 'img/ideal/iconos/ambientes.svg' %}" alt="">
+                                <p class="text">{{ similar.ambientes }}</p>
+                            </div>
+                            <div class="col-4 inline h-center">
+                                <img class="img-center mr-1" src="{% static 'img/ideal/iconos/banios.svg' %}" alt="">
+                                <p class="text">{{ similar.banios }}</p>
+                            </div>
+                            <div class="col-4 inline bl">
+                                <img class="img-center mr-1" src="{% static 'img/ideal/iconos/m2.svg' %}" alt="">
+                                <p class="text">{{ similar.m2_totales }}</p>
+                            </div>
+                        </div>
+                    </div>    
+                {% endfor %}
+        </section>
+        
+        
+        
     </div>
+    <!-- <button id="download" class="btn-1-r h-center">Descarga ficha PDF</button> -->
     <!-- <button class="btn-1-r" id="download"> download pdf</button> -->
 
 </main>

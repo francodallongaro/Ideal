@@ -100,5 +100,6 @@ from hello.models import *
 #     )
 
 admin.site.register(Usuario)
-# admin.site.register(Pack)
+admin.site.register(Faqs)
+admin.site.register(Pack)
 admin.site.register(Clasificado)

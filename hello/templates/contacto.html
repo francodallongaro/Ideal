@@ -10,31 +10,51 @@
     {% comment %} PROPUESTA {% endcomment %}
 
     <section class="v100 row v-center">
-        <div class="col-8">
+        <div class="col-8 col-s">
             <div class="logo">
-            <img src=" {% static 'ideal/icono.svg' %} " alt="IDEAL">
-            <img src=" {% static 'ideal/ideal.svg' %} " alt="IDEAL">
+                <img src=" {% static 'img/ideal/logo.svg' %} " alt="IDEAL">
             </div>
             <h1>Contactanos</h1>
-            <p class="text mb-2">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.</p>
-            <p class="mt-2"><a href=" {% url 'venta' %} " class="">+ 54 11 44726070</a></p>
-            <p class="mt-2"><a href=" {% url 'venta' %} " class="">info@ideal.com</a></p>
-        </div>
-        <form class="col-4 card-contacto" method="POST">
-            <div class="form-group">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <input type="submit" value="Submit">
+            <p class="text mb-2">¿Necesitás hablar con nosotros?<br>¡Estamos para ayudarte!</p>
+            <div class="row mt-3">
+                <a class="col-4" href="mailto:ideal@gmail.com">
+                    <img class="img-center" src=" {% static 'img/ideal/redes/mail.svg' %} " alt="">
+                    <p class="h-center text mt-1">Enviar e-mail</p>
+                </a>
+                
+                
+                <a class="col-4" href="https://api.whatsapp.com/send?phone=541144726070&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20blabla%20ubicado%20en%20blabla%202." target="_blank">
+                    <img class="img-center" src=" {% static 'img/ideal/redes/whatsapp.svg' %} " alt="">
+                    <p class="h-center text mt-1">Enviar Whatsapp</p>
+                </a>
             </div>
-        </form>
+        </div>
+        <div class="col-4 col-s">
+            <form id="form-contacto" class="card-contacto" method="POST">
+            <p class="h-center mt-1">Rellená este formulario y<br>¡Vendé ya!</p>
+                <div class="form-group p-1">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input class="btn-1-r" type="submit" value="¡Contactenmé!">
+                </div>
+            </form>
+
+        </div>
       
     </section>
     
+    
     {% comment %} PROPUESTA {% endcomment %}
     
-    {% include 'nuevarev.html' %}  
-    
     {% include 'faqs.html' %}  
+    {% include 'testimonios.html' %}  
+
+
+    <section class="mt-3 mb-3">
+        <h2 class="h-center mb-2">¿Qué esperás?<br>Vende tu inmueble ideal-mente.</h2>
+        <p class="mt-2 h-center"><a href=" {% url 'contacto' %} " class="btn-1-r mt-3">¡Quiero que me contacten!</a></p>
+    </section>
+    
 
    
 

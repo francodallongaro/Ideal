@@ -18,8 +18,9 @@ urlpatterns = [
     path("", hello.views.index, name="index"),
     path("venta/", hello.views.venta, name="venta"),
     path("contacto/", hello.views.contacto, name="contacto"),
-    path("portal/", hello.views.portal, name="portal"),
-    path("portal/<int:pk>/", hello.views.clasificado_detalle, name="clasificado_detalle"),
+    path("contactos/<int:pk>/", hello.views.contacto2, name="contacto2"),
+    path("comprar/", hello.views.portal, name="portal"),
+    path("comprar/<int:pk>/", hello.views.clasificado_detalle, name="clasificado_detalle"),
     
     path("admin/", admin.site.urls),
 ]

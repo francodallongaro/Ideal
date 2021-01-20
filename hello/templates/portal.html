@@ -1,19 +1,21 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}Comprar{% endblock title %}
+
 {% block content %}
 
 <main>
     <section id="section-principal" class="row v-center v100">
         <div class="col-7 col-s pt-2">
         <div class="logo mb-2">
-            <img src=" {% static 'ideal/logo.svg' %} " alt="IDEAL">
+            <img src=" {% static 'img/ideal/logo.svg' %} " alt="IDEAL">
             {% comment %} <img src=" {% static 'ideal/ideal.svg' %} " alt="IDEAL"> {% endcomment %}
         </div>
         <h1>Encontrá hoy tu<br>hogar ideal.</h1>
         <p class="typewriter mb-3 mr-1">Sin comisiones y entre particulares</p>
         </div>
-        <img id="img-principal" class="col-5 col-s img-center" src="{% static 'ideal/principal.jpeg' %}" alt="IMAGEN">
+        <img id="img-principal" class="col-5 col-s img-center" src="{% static 'img/ideal/principal.jpeg' %}" alt="IMAGEN">
     </section>
 
 
@@ -39,15 +41,15 @@
                     
                     <div class="row p-1">
                         <div class="col-4 inline br">
-                            <img class="img-center mr-1" src="{% static 'ideal/iconos/ambientes.svg' %}" alt="">
+                            <img class="img-center mr-1" src="{% static 'img/ideal/iconos/ambientes.svg' %}" alt="">
                             <p class="text">{{ clasificado.ambientes }}</p>
                         </div>
                         <div class="col-4 inline h-center">
-                            <img class="img-center mr-1" src="{% static 'ideal/iconos/banios.svg' %}" alt="">
+                            <img class="img-center mr-1" src="{% static 'img/ideal/iconos/banios.svg' %}" alt="">
                             <p class="text">{{ clasificado.banios }}</p>
                         </div>
                         <div class="col-4 inline bl">
-                            <img class="img-center mr-1" src="{% static 'ideal/iconos/m2.svg' %}" alt="">
+                            <img class="img-center mr-1" src="{% static 'img/ideal/iconos/m2.svg' %}" alt="">
                             <p class="text">{{ clasificado.m2_totales }}</p>
                         </div>
                     </div>

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contacto{% endblock title %}
+
+{% block content %}
+
+<main>
+
+    {% comment %} PROPUESTA {% endcomment %}
+
+    <section class="v100 row v-center">
+    <div class="col-10 card-contacto">
+        <div class="row">
+            <div class="col-8 col-s">
+                <h1>¡Todo listo!</h1>
+                <p class="text mb-2">Seleccionaste el plan {{pack.nombre}}</p>
+                <p class="text mb-2">Elegí el canal más cómodo y te<br/>contactaremos a la brevedad</p>
+                <div class="row mt-3">
+                    <a class="col-4" href="mailto:ideal@gmail.com">
+                        <img class="img-center" src=" {% static 'img/ideal/redes/mail.svg' %} " alt="">
+                        <p class="h-center text mt-1">Enviar e-mail</p>
+                    </a>
+                    <a class="col-4" href="https://api.whatsapp.com/send?phone=541144726070&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20blabla%20ubicado%20en%20blabla%202." target="_blank">
+                        <img class="img-center" src=" {% static 'img/ideal/redes/whatsapp.svg' %} " alt="">
+                        <p class="h-center text mt-1">Enviar Whatsapp</p>
+                    </a>
+                </div>
+            </div>
+            <form class="col-4 col-s card-contacto" method="POST">
+            <p class="h-center text mt-1">Rellená este formulario y<br>¡Vendé ya!</p>
+                <div class="form-group p-1">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input class="btn-1-r" type="submit" value="¡Contactenmé!">
+                </div>
+            </form>
+        </div>
+    </div>
+      
+    </section>
+    
+    {% comment %} PROPUESTA {% endcomment %}
+    
+</main>
+{% endblock content %}

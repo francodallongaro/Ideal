@@ -10,6 +10,10 @@
     height: 20px;
 }
 
+a {
+    text-decoration: none;
+}
+
 // ------------------------------ BORDES ------------------------
 
 .bb {
@@ -322,10 +326,16 @@ h4 {
     font-size: 2rem;
 }
 
+.faq-respuesta {width: 90%;}
+
+
+
 
 .inline {
     display: flex;
 }
+
+
 
 // ---------------------------- TABLA ------------------------
 
@@ -334,11 +344,8 @@ table {
     width: 100%;
     box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
     border-radius: 16px;
-    border: 3px solid white;
+    border: 1px solid white;
 
-    .impar {
-        background-color: rgba(82, 229, 212, 0.15);
-    }
 
     tr {
         text-align: center;
@@ -354,9 +361,7 @@ table {
         text-align: center;
         vertical-align: center;
 
-        img {
-            width: 30px;
-        }
+        
     }
 }
 
@@ -373,11 +378,43 @@ table {
 
 .card-contacto {
     background-color: $c-w;
+    width: 100%;
     // width: auto;
     // height: auto;
-    padding: 1rem;
+    padding: 1.5rem;
     box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
     border-radius: 16px;
+}
+
+.impar {
+    // width: 100%;
+    // height: 100%;
+    background-color: rgba(82, 229, 212, 0.15);
+}
+
+.card-tabla {
+    
+    width: 100%;
+    // width: auto;
+    // height: auto;
+    padding: 1rem 0;
+    box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
+    border-radius: 16px;
+
+    p {
+        align-self: center;
+    }
+
+    
+    img {
+        // width: 30px;
+        width: 100%;
+        height: 35px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
 }
 
 .card-clasificado {
@@ -388,11 +425,23 @@ table {
 }
 
 .tour360 {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
     background-color: $c-0;
     box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
     border-radius: 16px;
+    height: 300px;
+    div {
+        background: transparent;
+    
+        h2 {
+            background: transparent;
+        }
+        p {
+            background: transparent;
+            strong {
+                background: transparent;
+            }
+        }
+    }
 }
 
 // ------------------------- IMG ------------------------------
@@ -414,6 +463,13 @@ table {
     height: 90px;
 }
 
+#img-360 {
+    width: 100%;
+    height: 300px;
+    border-bottom-right-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
 
 // ------------------------- PREGUNTAS --------------------------
 
@@ -430,5 +486,159 @@ table {
 }
 
 
+// ------------------------- SLIDER --------------------------
+
+// DEJAR EL SLIDE INVISIBLE
+
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+}
+  
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+  
+input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+  
+input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+}
+
+// DEJAR EL SLIDE INVISIBLE
+
+// DARLE ONDA AL BOTON
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #e0e0e0;
+    height: 25px;
+    width: 25px;
+    border-radius: 500px;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 0px 5px 5px rgba(41, 41, 42, 0.26);
+}
+
+// DARLE ONDA AL BOTON
+
+// DARLE ONDA A LA BARRA
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    box-shadow:  inset 1px 1px 5px #00000063;
+    background: #e4e4e4;
+    border-radius: 500px;
+    // border: 0.2px solid #010101;
+}
+
+// input[type=range]:focus::-webkit-slider-runnable-track {
+//     background: #367ebd;
+// }
+
+// DARLE ONDA A LA BARRA
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #3071a9;
+}
+
+// FORMULARIO
+
+.form-group {
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    p {
+        label {
+            display: none;
+        }
+        .form-control {
+            margin-bottom: 15px;
+            width: 100%;
+            height: 50px;
+            border: none;
+            background: #F5F5F5;
+            border-radius: 5px;
+            outline: none;
+
+            &::placeholder, ::-webkit-input-placeholder {
+                padding-left: 1rem;
+                color: $c-b;
+            }
+            
+        }
+
+    }
+}
 
 
+
+input[type=submit] {
+    box-shadow: none;
+    border: none;
+}
+
+
+// MAPA
+
+.map-container {
+    height: 300px;
+    position: relative;
+    border-radius: 16px;
+}
+
+.map-container iframe {
+    border: none;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 16px;
+}
+
+// VIDEO
+
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 16/9 ratio */
+    padding-top: 30px; /* IE6 workaround*/
+    height: 0;
+    overflow: hidden;
+}
+
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed {
+    position: absolute;
+    border-radius: 16px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
+
+
+
+// AMEBAS
+
+
+// #form-contacto {
+//     background-image:url(img/ideal/amebas/ameba-contacto.png);
+//     background-position:center;
+//     width:700px;
+//     height:400px;
+// }
