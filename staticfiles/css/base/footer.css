@@ -1,0 +1,32 @@
+footer {
+  background-color: black;
+  color: white;
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 450px;
+}
+
+footer div {
+  background-color: black;
+}
+
+footer h4 {
+  background-color: black;
+  color: white;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+}
+
+footer p {
+  color: white;
+  background-color: black;
+}
+
+footer img {
+  background-color: black;
+}
+/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,34 @@
+@import "variables";
+
+footer {
+    background-color: $c-b;
+    color: $c-w;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 450px;
+
+    div {
+        background-color: $c-b;
+    }
+
+    h4 {
+        background-color: $c-b;
+        color: $c-w;
+    }
+
+    a {
+        text-decoration: none;
+        color: $c-w;
+        background-color: $c-b;
+    }
+
+    p { 
+        color: $c-w;
+        background-color: $c-b;
+    }
+
+    img {
+        background-color: $c-b;
+    }
+}
+

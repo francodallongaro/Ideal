@@ -1,0 +1,34 @@
+.container p span.typed-text {
+  font-weight: normal;
+  color: #dd7732;
+}
+
+.container p span.cursor {
+  display: inline-block;
+  background-color: #36ceb9;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+
+.container p span.cursor.typing {
+  animation: none;
+}
+
+@keyframes blink {
+  0% {
+    background-color: #36ceb9;
+  }
+  49% {
+    background-color: #36ceb9;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #36ceb9;
+  }
+}

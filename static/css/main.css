@@ -454,7 +454,6 @@ table td {
 }
 
 .card-clasificado {
-  padding: 1rem;
   background-color: white;
   -webkit-box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
           box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
@@ -510,7 +509,7 @@ table td {
 }
 
 #img-portal {
-  width: 500px;
+  width: 100%;
   height: 300px;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;

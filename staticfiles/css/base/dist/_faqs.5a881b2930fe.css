@@ -1,0 +1,41 @@
+#faqs {
+  padding: 1rem;
+  border-bottom: 1px solid gray;
+  color: #47BD9C;
+  font-size: 1.5rem;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#faqs:hover {
+  background: #e6e6e6;
+}
+#faqs::-webkit-details-marker {
+  color: #65DBBA;
+}
+
+summary {
+  padding: 1rem;
+  border-bottom: 1px dashed gray;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+details[open] summary ~ * {
+  animation: sweep 0.5s ease-in-out;
+}
+
+@keyframes sweep {
+  0% {
+    opacity: 0;
+    margin-left: -10px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+details[open] summary::-webkit-details-marker {
+  color: #65DBBA;
+}
