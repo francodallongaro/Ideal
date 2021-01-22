@@ -342,38 +342,14 @@ h4 {
 // ---------------------------- TABLA ------------------------
 
 
-table {
-    width: 100%;
-    box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
-    border-radius: 16px;
-    border: 1px solid white;
-
-
-    tr {
-        text-align: center;
-        vertical-align: center;
-    }
-    th {
-        height: 40px;
-        text-align: start;
-        vertical-align: center;
-    }
-    td {
-        height: 40px;
-        text-align: center;
-        vertical-align: center;
-
-        
-    }
-}
-
-
 
 // ---------------------------- CARDS ------------------------  
 
 .card-precio {
     background-color: $c-w;
+    width: auto;
     padding: 3rem;
+    z-index: 3;
     box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
     border-radius: 16px;
 }
@@ -389,11 +365,15 @@ table {
 }
 
 .card-testimonio {
+    justify-self: center;
     background-color: $c-w;
-    width: 100%;
+    // width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+    
     // width: auto;
     // height: auto;
-    padding: 1.5rem 3rem;
+    padding: 3rem 1.5rem;
     box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
     border-radius: 16px;
 }
@@ -417,6 +397,7 @@ table {
     padding: 1rem 0;
     box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
     border-radius: 16px;
+    margin-bottom: 5rem;
 
     p {
         align-self: center;
@@ -470,11 +451,18 @@ table {
 }
 
 #img-principal {
-    width: 100%;
+    position: relative;
+    top: 0;
+    right: 10%;
+    width: 130%;
 }
 
 #img-calc {
     width: 100%;
+}
+
+#img-calc-2 {
+    width: 80%;
 }
 
 .icono {
@@ -489,6 +477,8 @@ table {
 }
 
 #img-portal {
+    object-fit: cover;
+    object-position: 100% 50%;
     width: 100%;
     height: 300px;
     border-top-left-radius: 16px;
@@ -509,7 +499,7 @@ table {
     
     &:hover {
         cursor: pointer;
-        width: 110%;
+        background-color: salmon;
     }
 }
 

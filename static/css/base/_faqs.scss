@@ -10,9 +10,9 @@
     cursor: pointer;
     transition: background-color .3s;
 
-    &:hover {
-        background: rgb(230, 230, 230);
-    }
+    // &:hover {
+    //     background: rgb(230, 230, 230);
+    // }
 
     &::-webkit-details-marker {
         color: $c-0;

@@ -3,13 +3,13 @@
 {% comment %} CALCULADORA {% endcomment %}
 
 
-<section>
+<section class="mb-3">
     <h2 class="h-center">¿Cuánto podes ahorrar con  <div class="logo">
         <div class="logo">
         <img src=" {% static 'img/ideal/logo.svg' %} " alt="IDEAL">
       </div>
       </div> ?</h2>
-    <div class="row v50 v-center">
+    <div class="row v50 v-center mt-2">
         <div class="col-6 col-s v-a-stretch mt-2">
             <h4 class="mb-1">Valor de tu propiedad: </h4>
             <input type="range" id="rangeInput" class="rangeslider mb-1" step='10000' name="rangeInput" min="80000" max="1000000" value="120000" oninput="amount.value=rangeInput.value">                                                       
@@ -22,12 +22,12 @@
             <output id="amount2" class="output_slider calc-text" name="amount2" for="rangeInput2">4</output><span class="calc-text">%</span>
             <p class="mt-3"><a href=" {% url 'venta' %} " class="btn-1-r">¡Quiero ahorrar YA!</a></p>
         </div> 
-        <div class="col-1 hidden"></div>
-        <div class="col-5 col-s">
+        <div class="col-1"></div>
+        <div class="col-5 col-s pl-2">
             <h4 class="mt-1">Ahorrás</h4>
             <h2 class="ahorro"><span class="ahorro" id="ahorrofinal">U$S 4800</span></h2>
             <p class=" text mt-1 mb-3"><span id="ahorro">¡Cambiar los muebles antiguos de tu casa!</span></p>
-            <img id="img-calc" src="{% static 'img/ideal/calculadora/muebles.png' %}" alt="Muebles">
+            <img id="img-calc-2" src="{% static 'img/ideal/calculadora/muebles.png' %}" alt="Muebles">
         </div>
     </div>
 </section>

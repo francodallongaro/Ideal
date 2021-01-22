@@ -3,7 +3,7 @@
 {% comment %} CALCULADORA {% endcomment %}
 
 
-<section class="mb-3 mt-3">
+<section id="calculadora" class="mb-3 mt-3">
     <h2 class="h-center mb-1">¿Cuánto podes ahorrar con  
         <div class="logo">
         <img class="ideal-cal" src=" {% static 'img/ideal/logo.svg' %} " alt="IDEAL">
@@ -12,24 +12,22 @@
     <h2 class="ahorro h-center mb-3">¡Descubrilo!</h2>
 
     <div class="row mb-1 v-center">
-        <div class="col-5 col-s mt-2">
+        <div id="valor" class="col-5 col-s mt-2">
             <h4 class="mb-1">Con ideal desde: </h4>
             <p class="calc-text">U$S 500</p>
             <p class="text">(Pagás en pesos a tipo de cambio oficial)</p>
             <h4 class="mt-1">Con inmobiliarias: </h4>
             <p class="calc-text"><span id="costocomision">U$S 4800</span></p>
             <h4 class="mt-1">Ahorrás</h4>
-            <h2 class="ahorro"><span class="ahorro" id="ahorrofinal">U$S 4800</span></h2>
-
-            
+            <h2 class="ahorro"><span class="ahorro" id="ahorrofinal">U$S 4800</span></h2>  
         </div>
-        <div class="col-7 col-s v-a-stretch mt-2">
-            <h4 class="mb-1">Valor de tu propiedad: </h4>
+        <div class="col-7 col-s mt-2">
+            <h4 class="">Valor de tu propiedad: </h4>
             <input type="range" id="rangeInput" class="rangeslider mb-1" step='10000' name="rangeInput" min="80000" max="1000000" value="120000" oninput="amount.value=rangeInput.value">                                                       
             <br>          
             <span class="calc-text">U$S </span><output id="amount" class="output_slider calc-text" name="amount" for="rangeInput">120000</output>
             <br>
-            <h4 class="mb-1 mt-2">Comisión: </h4>
+            <h4 class=" mt-2">Comisión: </h4>
             <input type="range" id="rangeInput2" class="rangeslider mb-1" step='0.5' name="rangeInput2" min="1" max="6" value="4" oninput="amount2.value=rangeInput2.value">                                                       
             <br> 
             <output id="amount2" class="output_slider calc-text" name="amount2" for="rangeInput2">4</output><span class="calc-text">%</span>
@@ -37,8 +35,8 @@
     </div>
     <div class="row mb-3 v-center">
         <div class="col-5 col-s">
-            <h2 class="calc-ahorro">Con los que ahorrás<br>con ideal ...</h2>
-            <p class=" text mt-1 mb-3"><span id="ahorro">¡Cambiar los muebles antiguos de tu casa!</span></p>
+            <h2 class="calc-ahorro hidden">Con los que ahorrás<br>con ideal ...</h2>
+            <p class=" text mt-1 mb-3 hidden"><span id="ahorro">¡Cambiar los muebles antiguos de tu casa!</span></p>
             <p class="mt-1"><a href=" {% url 'venta' %} " class="btn-1-r">¡Quiero ahorrar YA!</a></p>
         </div>
         <div class="col-7 col-s">

@@ -1,17 +1,19 @@
 {% load static %}
 {% comment %} TESTIMONIOS {% endcomment %}
 
-<section class="mb-3 mt-3">
+<section id="testimonios" class="mb-3 mt-3">
     <h2 class="h-center">Ellos vendieron,<br>¡Vos también podés!</h2>
+
     <div class="card-testimonio mt-3 mb-3 row">
-        <img class="col-1" src=" {% static 'img/ideal/quote.svg' %} " alt="quote mark">
+        <img class="col-1 hidden" src=" {% static 'img/ideal/quote.svg' %} " alt="quote mark">
         <div class="col-11">
             <h4 class="principal"><span id="principal">Graciela vendió en solo 3 semanas</span></h4>
             <p class="text"><span id="testimonio">No se si fueron las fotos, la publicación, el plan de marketing o qué, pero en 3 semanas tenía mi departamento vendido y casi sin esfuerzo!</span></p>
         </div>
+        
     </div>
     <div class="row">
-        <div class="col-3 hidden img-center"></div>
+        <div class="col-3 hidden"></div>
         <img id="img1" class="img-center col-1 col-4-s avatar" src=" {% static 'img/ideal/avatares/av1.svg' %} " alt="img1">
         <img id="img2" class="img-center col-1 col-4-s avatar" src=" {% static 'img/ideal/avatares/av2.svg' %} " alt="img2">
         <img id="img3" class="img-center col-1 col-4-s avatar" src=" {% static 'img/ideal/avatares/av3.svg' %} " alt="img3">

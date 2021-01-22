@@ -8,15 +8,15 @@
 
 {% comment %} PROPUESTA {% endcomment %}
 
-  <section class="v60 row v-center">
-    <div class="col-7 mt-3">
+  <section id="section-venta" class="v60 row v-center">
+    <div class="col-7 col-s mt-3">
       <div class="logo">
         <img src=" {% static 'img/ideal/logo.svg' %} " alt="IDEAL">
       </div>
       <h1>Vender tu casa<br>nunca fue tan fácil</h1>
       <p class="">Elegí la opción que mejor se<br>adapta a tus necesidades.</p>
     </div>
-    <img class="col-5" src=" {% static 'img/ideal/amebas/ameba-contacto.png' %} " alt="">
+    <img id="img-principal" class="col-5" src=" {% static 'img/ideal/amebas/ameba-contacto.png' %} " alt="">
   </section>
 
   <section class="mb-3">
@@ -255,7 +255,7 @@
       </div>
 
       <div class="row">
-        <p class="col-6 col-s pl-1">Fotos y plano</p>
+        <p class="col-6 col-s pl-1 ">Fotos y plano</p>
         <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
         <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
         <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
@@ -469,7 +469,7 @@
 
 {% include 'testimonios.html' %}
 
-  <section class="mt-3 mb-3">
+  <section class="mt-3 mb-3 frase">
     <h2 class="h-center mb-2">Vende tu casa online.<br>Es un juego de niños. </h2>
     <p class="mt-2 h-center"><a href=" {% url 'contacto' %} " class="btn-1-r mt-3">¡Contáctenos!</a></p>
   </section>
