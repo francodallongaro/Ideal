@@ -1,0 +1,334 @@
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#portales {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+// ------------------------- ALTURAS ---------------------------
+
+.v100 {
+    height: 100vh;
+}
+
+.v90 {
+    height: 90vh;
+}
+
+.v80 {
+    height: 80vh;
+}
+
+.v70 {
+    height: 70vh;
+}
+
+.v60 {
+    height: 60vh;
+}
+
+.v50 {
+    height: 50vh;
+}
+
+.v40 {
+    height: 40vh;
+}
+
+.v30 {
+    height: 30vh;
+}
+
+// ------------------------- COLUMNAS ---------------------------
+
+.col {
+    grid-column: span 12;
+}
+
+.col-1 {
+    grid-column: span 1;
+}
+
+.col-2 {
+    grid-column: span 2;
+}
+
+.col-3 {
+    grid-column: span 3;
+}
+
+.col-4 {
+    grid-column: span 4;
+}
+
+.col-5 {
+    grid-column: span 5;
+}
+
+.col-6 {
+    grid-column: span 6;
+}
+
+.col-7 {
+    grid-column: span 7;
+}
+
+.col-8 {
+    grid-column: span 8;
+}
+.col-9 {
+    grid-column: span 9;
+}
+
+.col-10 {
+    grid-column: span 10;
+}
+
+.col-11 {
+    grid-column: span 11;
+}
+
+
+// ------------------------- ROW ----------------------------- 
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+}
+
+// ------------------ ALINEACIONES VERTICALES ----------------------
+
+.v-center {
+    align-items: center;
+}
+
+.v-s-center {
+    align-self: center;
+}
+
+.v-start {
+    align-items: start;
+}
+
+.v-a-start {
+    align-self: start;
+}
+
+.v-a-stretch {
+    align-self: stretch;
+}
+
+
+.v-s-end {
+    align-self: flex-end;
+}
+
+// ------------------ ALINEACIONES HORIZONTALES -----------------------
+
+.h-center {
+    text-align: center;
+}
+
+.h-end {
+    justify-items: end;
+    text-align: end;
+}
+
+.h-s-end {
+    justify-self: end;
+}
+
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --------------------- MEDIA QUERIES -------------------------- */
+@media screen and (max-width: 1920px) {
+    .container {
+        width: 100vw;
+    }
+    main {
+        padding-left: 10%;
+        padding-right: 10%;
+        
+    }
+    
+}
+
+@media screen and (max-width: 1285px) {
+    // .container {
+    //     width: 100vw;
+    // }
+    main {
+        padding-left: 10%;
+        padding-right: 10%;
+        
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+    
+    h2{
+        font-size: 3rem;
+    }
+
+    .col-s {
+        grid-column: span 12 !important;
+    }
+    
+    .col-6-s {
+        grid-column: span 6 !important; 
+    }
+
+    .col-4-s {
+        grid-column: span 4 !important; 
+    }
+
+    .col-3-s {
+        grid-column: span 3 !important; 
+    }
+
+    .section-principal {
+        
+        #img-principal {
+            position: absolute;
+            opacity: 0.6;
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+    // .container {
+    //     width: 100vw;
+    // }
+
+    .col-s {
+        grid-column: span 12 !important;
+    }
+    
+    .col-6-s {
+        grid-column: span 6 !important; 
+    }
+
+    .col-4-s {
+        grid-column: span 4 !important; 
+    }
+
+    .col-3-s {
+        grid-column: span 3 !important; 
+    }
+
+    .section-principal {
+        
+        #img-principal {
+            position: absolute;
+            opacity: 0.6;
+        }
+    }
+
+    .btn-1-r{
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+}
+
+
+@media screen and (max-width: 450px) {
+    // .container {
+    //     width: 100vw;
+    // }
+
+    main {
+        width: 100vw;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .col-s {
+        grid-column: span 12 !important;
+    }
+    
+    .col-6-s {
+        grid-column: span 6 !important; 
+    }
+
+    .col-4-s {
+        grid-column: span 4 !important; 
+    }
+
+    .col-3-s {
+        grid-column: span 3 !important; 
+    }
+
+    h1{
+        font-size: 2rem;
+        line-height: 40px;
+    }
+    
+    h2{
+        font-size: 2rem;
+    }
+
+    .avatar {
+        width: 30px;
+    }
+
+    .btn-1-r{
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    .section-principal {
+
+        #img-principal {
+            position: absolute;
+            opacity: 0.6;
+        }
+    }
+
+    .v90, .v80, .v70, .v60, .v50, .v40 {
+        height: auto;
+    }
+    table {
+        th, td {
+            height: 35px;
+            text-align: center;
+            align-self: center;
+        }
+    }
+
+    .tabla-titulo {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+    .titulo-tabla {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .hidden {
+        display: none;
+    }
+}

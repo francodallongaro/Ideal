@@ -11,7 +11,7 @@ def index(request):
 
 def venta(request):
 
-    faqs = Faqs.objects.all()
+    faqs = Faqs.objects.all().order_by('orden')
     packs = Pack.objects.all()
 
     ctx = {
@@ -23,7 +23,7 @@ def venta(request):
 
 def contacto(request):
 
-    faqs = Faqs.objects.all()
+    faqs = Faqs.objects.all().order_by('orden')
 
     if request.method == 'POST':
             form = UsuarioForm(request.POST)
@@ -112,6 +112,7 @@ def clasificado_detalle(request, pk, *args, **kwargs):
 
     # try:
     clasificado = Clasificado.objects.get(pk=pk)
+    fotos = clasificado.foto_set.all()
 
     tipologia = clasificado.tipologia
     print(tipologia)
@@ -156,6 +157,7 @@ def clasificado_detalle(request, pk, *args, **kwargs):
             'clasificado': clasificado,
             'similares': similares,
             'form': form,
+            'fotos': fotos,
             # 'myFilter': myFilter,
         }
 

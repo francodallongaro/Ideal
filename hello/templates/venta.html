@@ -23,17 +23,17 @@
     <div class="row mt-3">
       <div class="col-4 col-s card-precio img-center">
         <h2 class="h-center mt-2">{{packs.0.nombre}}</h2>
-        <h2 class="h-center mb-2"><strong>${{packs.0.precio}}</strong>/mes</h2>
+        <h2 class="h-center mb-2"><strong>{{packs.0.precio}}</strong> U$D</h2>
         <p class="mt-1 mb-2 h-center"><a href=" {% url 'contacto2' packs.0.pk %} " class="btn-1-r">Consultar Básico</a></p>
       </div>
       <div class="col-4 col-s card-precio img-center">
         <h2 class="h-center mt-2">{{packs.1.nombre}}</h2>
-        <h2 class="h-center mb-2"><strong>${{packs.1.precio}}</strong>/mes</h2>
+        <h2 class="h-center mb-2"><strong>{{packs.1.precio}}</strong> U$D</h2>
         <p class="mt-1 mb-2 h-center"><a href=" {% url 'contacto2' packs.1.pk %} " class="btn-1-r">Consultar Ideal</a></p>
       </div>
       <div class="col-4 col-s card-precio img-center">
         <h2 class="h-center mt-2">{{packs.2.nombre}}</h2>
-        <h2 class="h-center mb-2"><strong>${{packs.2.precio}}</strong>/mes</h2>
+        <h2 class="h-center mb-2"><strong>{{packs.2.precio}}</strong> U$D</h2>
         <p class="mt-1 mb-2 h-center"><a href=" {% url 'contacto2' packs.2.pk %} " class="btn-1-r">Consultar Premium</a></p>
       </div>
     </div>
@@ -50,7 +50,7 @@
   </section>
 
 
-    <table class="row mb-3">
+    {% comment %} <table class="row mb-3">
       <tbody class="col col-s">
         <tr class="row">
           <th scope="row" class="col-6 col-s mb-2 pl-1"><h2 class="titulo-tabla">Servicios</h2></th>
@@ -236,7 +236,7 @@
         </tr>
 
       </tbody>
-    </table>
+    </table> {% endcomment %}
 
     <div id="card-tabla" class="card-tabla mb-3">
 
@@ -248,112 +248,207 @@
       </div>
 
       <div class="row">
-        <p class="col-6 col-s impar pl-1">Prueba</p>
+        <p class="col-6 col-s impar pl-1">Tasación de tu propiedad</p>
         <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
         <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
         <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
       </div>
 
       <div class="row">
-        <p class="col-6 col-s pl-1">Prueba</p>
+        <p class="col-6 col-s pl-1">Fotos y plano</p>
         <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
         <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
         <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
       </div>
       
       <div class="row">
-        <p class="col-6 col-s impar pl-1">Prueba</p>
+        <p class="col-6 col-s impar pl-1">Video</p>
+        <div class="col-2 col-4-s impar"></div>
+        <!-- <img class="col-2 col-4-s img-center impar" src="" alt=""> -->
+        <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
+        <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
+      </div>
+
+      <div class="row">
+        <p class="col-6 col-s pl-1">Tour 360º</p>
+        <div class="col-2 col-4-s"></div>
+        <!-- <img class="col-2 col-4-s img-center" src="" alt=""> -->
+        <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
+        <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
+      </div>
+      
+      <div class="row">
+        <p class="col-6 col-s impar pl-1">Redacción del anuncio</p>
         <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
         <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
         <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
       </div>
 
       <div class="row">
-        <p class="col-6 col-s pl-1">Prueba</p>
+        <p class="col-6 col-s pl-1">Publicación y difusión del anuncio</p>
         <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
         <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
         <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
       </div>
       
       <div class="row">
-        <p class="col-6 col-s impar pl-1">Prueba</p>
-        <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
-        <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
+        <p class="col-6 col-s impar pl-1">Anuncio destacado</p>
+        <div class="col-2 col-4-s impar"></div>
+        <div class="col-2 col-4-s impar"></div>
+        <!-- <img class="col-2 col-4-s img-center impar" src="" alt="">
+        <img class="col-2 col-4-s img-center impar" src="" alt=""> -->
         <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
       </div>
 
       <div class="row">
-        <p class="col-6 col-s pl-1">Prueba</p>
+        <p class="col-6 col-s pl-1">Cartel inmobiliario dinámico</p>
         <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
         <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
         <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
       </div>
       
       <div class="row">
-        <p class="col-6 col-s impar pl-1">Prueba</p>
-        <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
+        <p class="col-6 col-s impar pl-1">Filtro de interesados</p>
+        <!-- <img class="col-2 col-4-s img-center impar" src="" alt=""> -->
+        <div class="col-2 col-4-s impar"></div>
         <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
         <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
       </div>
 
       <div class="row">
-        <p class="col-6 col-s pl-1">Prueba</p>
-        <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
+        <p class="col-6 col-s pl-1">Coordinación de visitas</p>
+        <!-- <img class="col-2 col-4-s img-center" src="" alt=""> -->
+        <div class="col-2 col-4-s"></div>
         <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
         <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
       </div>
       
       <div class="row">
-        <p class="col-6 col-s impar pl-1">Prueba</p>
+        <p class="col-6 col-s impar pl-1">Ficha técnica del inmueble</p>
         <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
         <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
         <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
       </div>
 
       <div class="row">
-        <p class="col-6 col-s pl-1">Prueba</p>
+        <p class="col-6 col-s pl-1">Soporte post venta</p>
+        <div class="col-2 col-4-s"></div>
+        <div class="col-2 col-4-s"></div>
+        <!-- <img class="col-2 col-4-s img-center" src="" alt="">
+        <img class="col-2 col-4-s img-center" src="" alt=""> -->
         <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
+      </div>
+      
+      <div class="row">
+        <p class="col-6 col-s impar pl-1">Experto dedicado para ti</p>
+        <div class="col-2 col-4-s impar"></div>
+        <div class="col-2 col-4-s impar"></div>
+        <!-- <img class="col-2 col-4-s img-center impar" src="" alt="">
+        <img class="col-2 col-4-s img-center impar" src="" alt=""> -->
+        <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
+      </div>
+
+      <div class="row">
+        <p class="col-6 col-s pl-1">Reportes semanales contra pedido</p>
+        <div class="col-2 col-4-s"></div>
+        <div class="col-2 col-4-s"></div>
+        <!-- <img class="col-2 col-4-s img-center" src="" alt="">
+        <img class="col-2 col-4-s img-center" src="" alt=""> -->
+        <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
+      </div>
+      
+      <div class="row">
+        <p class="col-6 col-s impar pl-1">Visitas acompañadas</p>
+        <div class="col-2 col-4-s impar"></div>
+        <div class="col-2 col-4-s impar"></div>
+        <!-- <img class="col-2 col-4-s img-center impar" src="" alt="">
+        <img class="col-2 col-4-s img-center impar" src="" alt=""> -->
+        <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
+      </div>
+
+      <div class="row">
+        <p class="col-6 col-s pl-1">Estudio de títulos</p>
+        <div class="col-2 col-4-s"></div>
+        <div class="col-2 col-4-s"></div>
+        <!-- <img class="col-2 col-4-s img-center" src="" alt="">
+        <img class="col-2 col-4-s img-center" src="" alt=""> -->
+        <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
+      </div>
+      
+      <div class="row">
+        <p class="col-6 col-s impar pl-1">Gestión online de todo el proceso</p>
+        <div class="col-2 col-4-s impar"></div>
+        <div class="col-2 col-4-s impar"></div>
+        <div class="col-2 col-4-s impar"></div>
+        <!-- <img class="col-2 col-4-s img-center impar" src="" alt="">
+        <img class="col-2 col-4-s img-center impar" src="" alt="">
+        <img class="col-2 col-4-s img-center impar" src="" alt=""> -->
+      </div>
+
+      <div class="row">
+        <p class="col-6 col-s pl-1">Ambientación / alquiler muebles</p>
+        <div class="col-2 col-4-s"></div>
+        <div class="col-2 col-4-s"></div>
+        <!-- <img class="col-2 col-4-s img-center" src="" alt="">
+        <img class="col-2 col-4-s img-center" src="" alt=""> -->
+        <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/asterizco.svg' %} " alt="">
+      </div>
+      
+      <div class="row">
+        <p class="col-6 col-s impar pl-1"></p>
+        <div class="col-2 col-4-s impar"></div>
+        <div class="col-2 col-4-s impar"></div>
+        <div class="col-2 col-4-s impar"></div>
+        <!-- <img class="col-2 col-4-s img-center impar" src="" alt="">
+        <img class="col-2 col-4-s img-center impar" src="" alt="">
+        <img class="col-2 col-4-s img-center impar" src="" alt=""> -->
+      </div>
+
+      <div class="row">
+        <p class="col-6 col-s pl-1">POSTVENTA</p>
+        <div class="col-2 col-4-s"></div>
+        <div class="col-2 col-4-s"></div>
+        <div class="col-2 col-4-s"></div>
+        <!-- <img class="col-2 col-4-s img-center" src="" alt="">
+        <img class="col-2 col-4-s img-center" src="" alt="">
+        <img class="col-2 col-4-s img-center" src="" alt=""> -->
+      </div>
+      
+      <div class="row">
+        <p class="col-6 col-s impar pl-1">Borradores de cada documento</p>
+        <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
+        <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
+        <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
+      </div>
+
+      <div class="row">
+        <p class="col-6 col-s pl-1">Asesoramiento legal</p>
+        <div class="col-2 col-4-s"></div>
+        <!-- <img class="col-2 col-4-s img-center" src="" alt=""> -->
         <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
         <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
       </div>
       
       <div class="row">
-        <p class="col-6 col-s impar pl-1">Prueba</p>
-        <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
-        <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
-        <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
+        <p class="col-6 col-s impar pl-1"></p>
+        <div class="col-2 col-4-s impar"></div>
+        <div class="col-2 col-4-s impar"></div>
+        <div class="col-2 col-4-s impar"></div>
+        <!-- <img class="col-2 col-4-s img-center impar" src="" alt="">
+        <img class="col-2 col-4-s img-center impar" src="" alt="">
+        <img class="col-2 col-4-s img-center impar" src="" alt=""> -->
       </div>
 
       <div class="row">
-        <p class="col-6 col-s pl-1">Prueba</p>
+        <p class="col-6 col-s pl-1">FINANCIACIÓN</p>
+        <div class="col-2 col-4-s"></div>
+        <!-- <img class="col-2 col-4-s img-center" src="" alt=""> -->
         <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
         <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
-        <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
-      </div>
-      
-      <div class="row">
-        <p class="col-6 col-s impar pl-1">Prueba</p>
-        <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
-        <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
-        <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
       </div>
 
-      <div class="row">
-        <p class="col-6 col-s pl-1">Prueba</p>
-        <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
-        <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
-        <img class="col-2 col-4-s img-center" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
-      </div>
-      
-      <div class="row">
-        <p class="col-6 col-s impar pl-1">Prueba</p>
-        <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
-        <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
-        <img class="col-2 col-4-s img-center impar" src=" {% static 'img/ideal/iconos/check.svg' %} " alt="">
-      </div>
-
-      <div class="row">
-        <p class="col-6 col-s pl-1"> </p>
+      <div class="row mt-2 pb-2">
+        <p class="col-6 col-s pl-1">*consultar precio y disponibilidad</p>
         <p class="col-2 col-4-s h-center"><a href=" {% url 'contacto2' packs.0.pk %} " class="btn-1-r">Básico</a></p>
         <p class="col-2 col-4-s h-center"><a href=" {% url 'contacto2' packs.1.pk %} " class="btn-1-r">Ideal</a></p>
         <p class="col-2 col-4-s h-center"><a href=" {% url 'contacto2' packs.2.pk %} " class="btn-1-r">Premium</a></p>
@@ -381,4 +476,6 @@
 
 
 </main>
+
+
 {% endblock content %}

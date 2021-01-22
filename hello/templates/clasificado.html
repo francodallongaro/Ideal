@@ -29,6 +29,18 @@
         </div>
 
         <div class="row">
+            <img id="img-clasificado" class="col" src="{{ clasificado.imagen_principal.url }}" alt="">
+        </div>
+
+        {% include 'carrousel.html' %}
+
+        <div class="row">
+            {% for foto in fotos %}
+                <img class="clasificado-mini col-2" src="{{ foto.imagen.url }}" alt="{{ foto.nombre }}">
+            {% endfor %}
+        </div>
+
+        <div class="row">
             <div class="col-8 col-s pr-2">
                 <h2>Detalles</h2>
                 <h4 class="bb mb-2">Características</h4>
@@ -196,7 +208,7 @@
             <h2 class="col bb">Publicaciones similares</h2>
             {% for similar in similares %} 
                     <div class="col-4 col-s card-clasificado mb-2">
-                        {% comment %} <img src="{{ similar.imagen_principal.url }}" alt="Foto Principal"> {% endcomment %}
+                        <img id="img-portal" src="{{ similar.imagen_principal.url }}" alt="Foto Principal">
                         
                         <div class="row v-center p-1 bb mt-1 mb-1">
                             <div class="col-8">

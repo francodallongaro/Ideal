@@ -12,8 +12,10 @@ class Faqs(models.Model):
         choices=CAT_CHOICES,
         default='General',
         max_length=50)
+    orden = models.IntegerField(null=True, blank=True)
     pregunta = models.CharField(max_length=100, blank=True)
-    respuesta = models.CharField(max_length=500, blank=True)
+    respuesta = models.TextField(blank=True, null=True)
+    fecha_creacion = models.DateTimeField(auto_now_add=True)
     
 
 
@@ -268,9 +270,9 @@ class Clasificado(models.Model):
 
     creacion = models.DateTimeField(auto_now_add=True)
 
-    # pack = models.ForeignKey(Pack, related_name='pack', on_delete=models.SET_NULL, default=None, null=True)
+    pack = models.ForeignKey(Pack, related_name='pack', on_delete=models.SET_NULL, default=None, null=True)
 
-    # vendedor = models.ForeignKey(Usuario, related_name='usuario', on_delete=models.SET_NULL, default=None, null=True)
+    vendedor = models.ForeignKey(Usuario, related_name='usuario', on_delete=models.SET_NULL, default=None, null=True)
 
     tipologia = models.CharField(
         choices=TIPOLOGIA_CHOICES,
@@ -395,21 +397,21 @@ class Clasificado(models.Model):
 
 
 
-# class Foto(models.Model):
+class Foto(models.Model):
 
-#     propiedad = models.ForeignKey(Clasificado, on_delete=models.CASCADE, default=None)
-#     imagen = models.ImageField(upload_to="propiedades/", null=True, blank=True)
-#     nombre = models.CharField(max_length=50)
+    propiedad = models.ForeignKey(Clasificado, on_delete=models.CASCADE, default=None)
+    imagen = models.ImageField(upload_to="galeria/", null=True, blank=True)
+    nombre = models.CharField(max_length=50)
 
-#     class Meta:
-#         verbose_name = ("Foto")
-#         verbose_name_plural = ("Fotos")
+    class Meta:
+        verbose_name = ("Foto")
+        verbose_name_plural = ("Fotos")
 
-#     def __str__(self):
-#         return self.nombre
+    def __str__(self):
+        return self.nombre
 
-#     def get_absolute_url(self):
-#         return reverse("Foto_detail", kwargs={"pk": self.pk})
+    def get_absolute_url(self):
+        return reverse("Foto_detail", kwargs={"pk": self.pk})
 
 # class Plano(models.Model):
 

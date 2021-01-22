@@ -14,7 +14,7 @@
     <div class="row mb-1 v-center">
         <div class="col-5 col-s mt-2">
             <h4 class="mb-1">Con ideal desde: </h4>
-            <p class="calc-text">U$S 1500</p>
+            <p class="calc-text">U$S 500</p>
             <p class="text">(Pagás en pesos a tipo de cambio oficial)</p>
             <h4 class="mt-1">Con inmobiliarias: </h4>
             <p class="calc-text"><span id="costocomision">U$S 4800</span></p>
@@ -77,7 +77,7 @@
               
         function cambiarFrase() {
             let costocomision_val = (costo.value * comision.value) / 100;
-            let ahorro = costocomision_val-1500;
+            let ahorro = costocomision_val-500;
             ahorrofinal.innerHTML = 'U$S ' + ahorro;
             
             if (ahorro > 40000) {

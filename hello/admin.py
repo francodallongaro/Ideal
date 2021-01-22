@@ -3,103 +3,113 @@ from hello.models import *
 
 # Register your models here.
 
-# class ClasificadoAdmin(admin.ModelAdmin):
-#     # inlines = [InLineFoto, InLinePlano]
-#     list_display = ('nombre', 'tipologia',)
-#     list_filter = ('tipologia',)
-#     search_fields = ('nombre', 'tipologia',)
 
-#     fieldsets = (
-#         (None, {
-#             "fields": (
-#                 'verificada',
-#                 'destacada',
-#                 'vendedor',
-#                 'pack'
-#             ),
-#         }),
-#         ('INFORMACIÓN', {
-#             "fields": (
-#                 'nombre',
-#                 'tipologia',
-#                 'descripcion'
-#             ),
-#         }),
-#         ('PORTALES', {
-#             'classes': ('wide',),
-#             "fields": (
-#                 ('zonaprop',
-#                 'properati',
-#                 'argenprop',
-#                 'mercadolibre',
-#                 'reporteinmobiliario'),
-#             ),
-#         }),
-#         ('UBICACIÓN', {
-#             'classes': ('wide',),
-#             "fields": (
-#                 ('direccion',
-#                 'barrio',
-#                 'cp'),
-#             ),
-#         }),
-#         ('COSTOS', {
-#             'classes': ('wide',),
-#             "fields": (
-#                 ('costo',
-#                 'moneda_costo',
-#                 'expensas',
-#                 'moneda_expensas',
-#                 'luz',
-#                 'gas',
-#                 'abl',
-#                 'aysa'),
-#             ),
-#         }),
-#         ('INFORMACIÓN', {
-#             'classes': ('wide',),
-#             "fields": (
-#                 ('m2_totales',
-#                 'm2_cubiertos',
-#                 'piso',
-#                 'depto',
-#                 'ambientes',
-#                 'dormitorios',
-#                 'banios',
-#                 'orientacion',
-#                 'cochera',
-#                 'cocheras',
-#                 'baulera',
-#                 'antiguedad'),
-#             ),
-#         }),
-#         ('AMENITIES', {
-#             'classes': ('wide',),
-#             "fields": (
-#                 ('pileta',
-#                 'gimnasio',
-#                 'juegos',
-#                 'solarium',
-#                 'microcine',
-#                 'parrilla',
-#                 'salon_usos_multiples',
-#                 'laundry'),
-#             ),
-#         }),
-#         ('SERVICIOS', {
-#             'classes': ('wide',),
-#             "fields": (
-#                 ('alarma',
-#                 'mascotas',
-#                 'aire_acondicionado',
-#                 'losa_radiante',
-#                 'internet',
-#                 'cable'),
-#             ),
-#         }),
-#     )
+class FaqsAdmin(admin.ModelAdmin):
+    list_display = ('pregunta', 'categoria',)
+    list_filter = ('categoria',)
+    search_fields = ('pregunta', 'respuesta',)
+
+
+class InLineFoto(admin.TabularInline):
+    model = Foto
+
+class ClasificadoAdmin(admin.ModelAdmin):
+    # inlines = [InLineFoto, InLinePlano]
+    inlines = [InLineFoto]
+    list_display = ('nombre', 'tipologia',)
+    list_filter = ('tipologia',)
+    search_fields = ('nombre', 'tipologia',)
+
+    fieldsets = (
+        (None, {
+            "fields": (
+                'verificada',
+                'destacada',
+                'vendedor',
+                'pack'
+            ),
+        }),
+        ('INFORMACIÓN', {
+            "fields": (
+                'nombre',
+                'tipologia',
+                'descripcion'
+            ),
+        }),
+        ('PORTALES', {
+            'classes': ('wide',),
+            "fields": (
+                ('zonaprop',
+                'properati',
+                'argenprop',
+                'mercadolibre',
+                'reporteinmobiliario'),
+            ),
+        }),
+        ('UBICACIÓN', {
+            'classes': ('wide',),
+            "fields": (
+                ('direccion',
+                'barrio',
+                'cp'),
+            ),
+        }),
+        ('COSTOS', {
+            'classes': ('wide',),
+            "fields": (
+                ('costo',
+                'moneda_costo',
+                'expensas',
+                'moneda_expensas',
+                'luz',
+                'gas',
+                'abl',
+                'aysa'),
+            ),
+        }),
+        ('INFORMACIÓN', {
+            'classes': ('wide',),
+            "fields": (
+                ('m2_totales',
+                'm2_cubiertos',
+                'piso',
+                'depto',
+                'ambientes',
+                'dormitorios',
+                'banios',
+                'orientacion',
+                'cocheras',
+                'baulera',
+                'antiguedad'),
+            ),
+        }),
+        ('AMENITIES', {
+            'classes': ('wide',),
+            "fields": (
+                ('pileta',
+                'gimnasio',
+                'juegos',
+                'solarium',
+                'microcine',
+                'parrilla',
+                'salon_usos_multiples',
+                'laundry'),
+            ),
+        }),
+        ('SERVICIOS', {
+            'classes': ('wide',),
+            "fields": (
+                ('alarma',
+                'mascotas',
+                'aire_acondicionado',
+                'losa_radiante',
+                'internet',
+                'cable'),
+            ),
+        }),
+    )
 
 admin.site.register(Usuario)
-admin.site.register(Faqs)
+admin.site.register(Faqs, FaqsAdmin)
 admin.site.register(Pack)
-admin.site.register(Clasificado)
+admin.site.register(Clasificado, ClasificadoAdmin)

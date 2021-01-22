@@ -20,21 +20,17 @@
             <input type="range" id="rangeInput2" class="rangeslider mb-1" step='0.5' name="rangeInput2" min="1" max="6" value="4" oninput="amount2.value=rangeInput2.value">                                                       
             <br> 
             <output id="amount2" class="output_slider calc-text" name="amount2" for="rangeInput2">4</output><span class="calc-text">%</span>
-            <p class="mt-1"><a href=" {% url 'venta' %} " class="btn-1-r">¡Quiero ahorrar YA!</a></p>
+            <p class="mt-3"><a href=" {% url 'venta' %} " class="btn-1-r">¡Quiero ahorrar YA!</a></p>
         </div> 
-        <div class="col-6 col-s">
-            <h4 class="mt-1">Podes ahorrar</h4>
+        <div class="col-1 hidden"></div>
+        <div class="col-5 col-s">
+            <h4 class="mt-1">Ahorrás</h4>
             <h2 class="ahorro"><span class="ahorro" id="ahorrofinal">U$S 4800</span></h2>
             <p class=" text mt-1 mb-3"><span id="ahorro">¡Cambiar los muebles antiguos de tu casa!</span></p>
             <img id="img-calc" src="{% static 'img/ideal/calculadora/muebles.png' %}" alt="Muebles">
         </div>
     </div>
 </section>
-
-
-{% comment %} CALCULADORA {% endcomment %}
-
-{% comment %} SCRIPT {% endcomment %}
 
 <script>
     let costo = document.querySelector("#rangeInput");
@@ -43,23 +39,19 @@
     let outahorro = document.querySelector("#ahorro");
     let ahorrofinal = document.querySelector("#ahorrofinal");
     let imagen = document.querySelector("#img-calc");
-            
+          
     costo.addEventListener("change",e=>{
-        let costocomision_val = (costo.value * comision.value) / 100;
-        outcostocomision.innerHTML = 'U$S ' + costocomision_val;
         cambiarFrase()
     })     
         
     comision.addEventListener("change",e=>{
-        let costocomision_val = (costo.value * comision.value) / 100;
-        outcostocomision.innerHTML = 'U$S ' + costocomision_val;
         cambiarFrase()
         
     })
-            
+          
     function cambiarFrase() {
         let costocomision_val = (costo.value * comision.value) / 100;
-        let ahorro = costocomision_val-1500;
+        let ahorro = costocomision_val-500;
         ahorrofinal.innerHTML = 'U$S ' + ahorro;
         
         if (ahorro > 40000) {
@@ -81,4 +73,3 @@
     }
 </script>
 
-{% comment %} SCRIPT {% endcomment %}

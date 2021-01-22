@@ -98,6 +98,10 @@ body {
   align-items: center;
 }
 
+.v-s-center {
+  align-self: center;
+}
+
 .v-start {
   align-items: start;
 }
@@ -108,6 +112,10 @@ body {
 
 .v-a-stretch {
   align-self: stretch;
+}
+
+.v-s-end {
+  align-self: flex-end;
 }
 
 .h-center {
