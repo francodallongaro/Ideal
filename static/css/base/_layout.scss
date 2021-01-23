@@ -28,6 +28,14 @@ body {
     margin-bottom: 5rem;
 }
 
+#seccion-contacto {
+    
+    #form-contacto {
+        background-color: white;
+        z-index: 10;
+    }
+}
+
 // ------------------------- ALTURAS ---------------------------
 
 .v100 {
@@ -380,10 +388,25 @@ body {
             // z-index: -1;
         }
 
-        .card-precio {
-            width: 100%;
+    }
+    
+    .card-precio {
+        width: 80%;
+        
+    }
+
+    #seccion-contacto {
+        padding-top: 40%;
+        
+    }
+    
+    .contacto {
+        #seccion-faqs {
+            margin-top: 250px;   
         }
     }
+
+
 
     .v90, .v80, .v70, .v60, .v50, .v40 {
         height: auto;

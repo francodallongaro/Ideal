@@ -117,6 +117,8 @@ class Usuario(models.Model):
     tel = models.IntegerField()
     email = models.EmailField(max_length=254)
 
+    cp_ciudad = models.CharField(max_length=50, blank=True, null=True)
+
 
     class Meta:
         verbose_name = ("Usuario")

@@ -5,11 +5,11 @@
 
 {% block content %}
 
-<main>
+<main class="contacto">
 
     {% comment %} PROPUESTA {% endcomment %}
 
-    <section class="v100 row v-center">
+    <section id="seccion-contacto" class="v100 row v-center">
         <div class="col-8 col-s">
             <div class="logo">
                 <img src=" {% static 'img/ideal/logo.svg' %} " alt="IDEAL">
@@ -31,7 +31,7 @@
         </div>
         <div class="col-4 col-s">
             <form id="form-contacto" class="card-contacto" method="POST">
-            <p class="h-center mt-1">Rellená este formulario y<br>¡Vendé ya!</p>
+            <p class="h-center mt-1 preg-text">Rellená este formulario y<br>¡Vendé ya!</p>
                 <div class="form-group p-1">
                     {% csrf_token %}
                     {{ form.as_p }}
@@ -40,7 +40,8 @@
             </form>
 
         </div>
-      
+        
+        <img id="ameba-contacto" src=" {% static 'img/ideal/amebas/ameba-contacto.png' %} " alt="">
     </section>
     
     

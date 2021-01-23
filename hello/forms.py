@@ -5,12 +5,13 @@ class UsuarioForm(forms.ModelForm):
     
     class Meta:
         model = Usuario
-        fields = ('nombre','tel','email')
+        fields = ('nombre','tel','email', 'cp_ciudad')
 
         widgets = {
             'nombre': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}),
             'tel': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Teléfono'}),
-            'email': forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Email'})
+            'email': forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Email'}),
+            'cp_ciudad': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Código Postal o Ciudad'})
         }
 
 class ClasificadoForm(forms.ModelForm):
