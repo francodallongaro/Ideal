@@ -380,7 +380,6 @@ h4 {
 
 .card-precio {
   background-color: white;
-  width: auto;
   padding: 3rem;
   z-index: 3;
   -webkit-box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
@@ -538,6 +537,14 @@ h4 {
 .avatar:hover {
   cursor: pointer;
   background-color: salmon;
+}
+
+#ameba-contacto {
+  position: absolute;
+  top: 15%;
+  right: 80px;
+  z-index: -1;
+  opacity: 0.8;
 }
 
 .pregunta {
@@ -1008,6 +1015,11 @@ body {
   margin-bottom: 5rem;
 }
 
+#seccion-contacto #form-contacto {
+  background-color: white;
+  z-index: 10;
+}
+
 .v100 {
   height: 100vh;
 }
@@ -1308,8 +1320,14 @@ body {
     width: 70%;
     height: 337px;
   }
-  #section-venta .card-precio {
-    width: 100%;
+  .card-precio {
+    width: 80%;
+  }
+  #seccion-contacto {
+    padding-top: 40%;
+  }
+  .contacto #seccion-faqs {
+    margin-top: 250px;
   }
   .v90, .v80, .v70, .v60, .v50, .v40 {
     height: auto;

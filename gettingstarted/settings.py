@@ -158,7 +158,7 @@ USE_TZ = True
 
 
 # STATIC_URL = '/static/'
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 AWS_ACCESS_KEY_ID = 'AKIA2AAJQQ3Z4JGGRJXW'
@@ -176,6 +176,6 @@ STATIC_LOCATION = 'static'
 STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
 STATICFILES_STORAGE = 'hello.storage_backends.StaticStorage'
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
 
 django_heroku.settings(locals())
