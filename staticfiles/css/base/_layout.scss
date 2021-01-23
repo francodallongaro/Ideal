@@ -4,10 +4,28 @@ body {
     margin-right: auto;
 }
 
+.hidden {
+    display: block;
+}
+
+.oculto {
+    display: none;
+}
+
 
 #portales {
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}
+
+#testimonios {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.frase {
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 
 // ------------------------- ALTURAS ---------------------------
@@ -205,9 +223,7 @@ body {
         }
     }
 
-    .hidden {
-        display: none;
-    }
+    
     
 }
 
@@ -245,9 +261,7 @@ body {
         font-size: 1rem;
     }
 
-    .hidden {
-        display: none;
-    }
+    
 
 }
 
@@ -297,29 +311,139 @@ body {
         font-size: 1rem;
     }
 
-    .section-principal {
+    #section-principal {
+
+        padding-top: 10%;
+
+        div {
+            z-index: 5;
+            background: transparent;
+            img {
+                background: transparent;
+            }
+            h1 {
+                background: transparent;
+            }
+            p {
+                background: transparent;
+            }
+            span {
+                background: transparent;
+            }
+        }
 
         #img-principal {
             position: absolute;
-            opacity: 0.6;
+            top: 20%;
+            left: 30%;
+            opacity: 0.4;
+            object-fit: cover;
+            object-position: -30% 0;
+
+            width: 70%;
+            height: 337px;
+            // z-index: -1;
+        }
+    }
+    
+    #section-venta {
+
+        padding-top: 40%;
+
+        div {
+            z-index: 5;
+            background: transparent;
+            img {
+                background: transparent;
+            }
+            h1 {
+                background: transparent;
+            }
+            p {
+                background: transparent;
+            }
+            span {
+                background: transparent;
+            }
+        }
+
+        #img-principal {
+            position: absolute;
+            top: 20%;
+            left: 30%;
+            opacity: 0.4;
+            object-fit: cover;
+            object-position: -30% 0;
+
+            width: 70%;
+            height: 337px;
+            // z-index: -1;
+        }
+
+        .card-precio {
+            width: 100%;
         }
     }
 
     .v90, .v80, .v70, .v60, .v50, .v40 {
         height: auto;
     }
-    table {
-        th, td {
-            height: 35px;
+
+    .card-testimonio {
+        justify-self: center;
+        background-color: $c-w;
+        // width: 100%;
+        
+        // width: auto;
+        // height: auto;
+        // padding: 3rem 1.5rem;
+        box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
+        border-radius: 16px;
+    }
+
+    #calculadora {
+        h2 {
+            font-size: 2rem;
+        }
+
+        #valor { 
+            z-index: 1;
+            background: transparent;
+            h4, h2, p, span {
+            background: transparent;
+            }
+        }
+        
+        #img-calc {
+            position: absolute;
+            // top: 20%;
+            top: 2600px;
+            left: 20%;
+            
+            opacity: 0.3;
+            object-fit: cover;
+            object-position: -20% 0;
+            
+    
+            width: 80%;
+            height: 250px;
+        }
+    }
+
+
+    .card-tabla {
+        h2 {
             text-align: center;
-            align-self: center;
+        }
+        p {
+            text-align: center;
         }
     }
 
     .tabla-titulo {
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-top: 1rem;
-        font-weight: bolder;
+        // font-weight: bolder;
         text-align: center;
     }
 

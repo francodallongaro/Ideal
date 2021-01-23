@@ -301,10 +301,6 @@ h4 {
   font-family: "Raleway", sans-serif;
 }
 
-.tabla-titulo {
-  font-size: 2rem;
-}
-
 .faq-respuesta {
   width: 90%;
 }
@@ -313,30 +309,11 @@ h4 {
   display: flex;
 }
 
-table {
-  width: 100%;
-  box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
-  border-radius: 16px;
-  border: 1px solid white;
-}
-table tr {
-  text-align: center;
-  vertical-align: center;
-}
-table th {
-  height: 40px;
-  text-align: start;
-  vertical-align: center;
-}
-table td {
-  height: 40px;
-  text-align: center;
-  vertical-align: center;
-}
-
 .card-precio {
   background-color: white;
+  width: auto;
   padding: 3rem;
+  z-index: 3;
   box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
   border-radius: 16px;
 }
@@ -350,9 +327,11 @@ table td {
 }
 
 .card-testimonio {
+  justify-self: center;
   background-color: white;
-  width: 100%;
-  padding: 1.5rem 3rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 3rem 1.5rem;
   box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
   border-radius: 16px;
 }
@@ -371,16 +350,24 @@ table td {
   padding: 1rem 0;
   box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.15);
   border-radius: 16px;
+  margin-bottom: 5rem;
+}
+.card-tabla .fila {
+  height: 40px;
+}
+.card-tabla .tabla-titulo {
+  font-size: 2rem;
+  text-align: center;
 }
 .card-tabla p {
   align-self: center;
-  height: 45px;
+  height: 40px;
 }
 .card-tabla img {
   width: 100%;
   height: 35px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -416,11 +403,18 @@ table td {
 }
 
 #img-principal {
-  width: 100%;
+  position: relative;
+  top: 0;
+  right: 10%;
+  width: 130%;
 }
 
 #img-calc {
   width: 100%;
+}
+
+#img-calc-2 {
+  width: 80%;
 }
 
 .icono {
@@ -435,6 +429,8 @@ table td {
 }
 
 #img-portal {
+  object-fit: cover;
+  object-position: 100% 50%;
   width: 100%;
   height: 300px;
   border-top-left-radius: 16px;
@@ -453,7 +449,7 @@ table td {
 
 .avatar:hover {
   cursor: pointer;
-  width: 110%;
+  background-color: salmon;
 }
 
 .pregunta {
