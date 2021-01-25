@@ -166,8 +166,20 @@ body {
     text-align: end;
 }
 
+.t-end {
+    text-align: end;
+}
+
 .h-s-end {
     justify-self: end;
+}
+
+.h-c-center {
+    justify-content: center;
+}
+
+.h-c-start {
+    justify-content: start;
 }
 
 .img-center {
@@ -207,19 +219,19 @@ body {
         font-size: 3rem;
     }
 
-    .col-s {
+    .col-m {
         grid-column: span 12 !important;
     }
     
-    .col-6-s {
+    .col-6-m {
         grid-column: span 6 !important; 
     }
 
-    .col-4-s {
+    .col-4-m {
         grid-column: span 4 !important; 
     }
 
-    .col-3-s {
+    .col-3-m {
         grid-column: span 3 !important; 
     }
 
@@ -269,6 +281,44 @@ body {
         font-size: 1rem;
     }
 
+    #section-principal {
+
+        padding-top: 10%;
+
+        div {
+            z-index: 5;
+            background: transparent;
+            img {
+                background: transparent;
+            }
+            h1 {
+                background: transparent;
+            }
+            p {
+                background: transparent;
+            }
+            span {
+                background: transparent;
+            }
+        }
+
+        #img-principal {
+            position: absolute;
+            top: 20%;
+            left: 30%;
+            opacity: 0.4;
+            object-fit: cover;
+            object-position: -30% 0;
+
+            width: 70%;
+            height: 337px;
+            // z-index: -1;
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
     
 
 }
@@ -392,6 +442,7 @@ body {
     
     .card-precio {
         width: 80%;
+        padding: 1rem;
         
     }
 
@@ -453,22 +504,66 @@ body {
         }
     }
 
+    #calculadora2 {
+
+        #valor { 
+            z-index: 1;
+            background: transparent;
+            h4, h2, p, span, a {
+            background: transparent;
+            }
+        }
+        a {
+            z-index: 2;
+        }
+        
+        #img-calc-2 {
+            position: absolute;
+            // top: 20%;
+            top: 6100px;
+            left: 20%;
+            
+            opacity: 0.3;
+            object-fit: cover;
+            object-position: -20% 0;
+
+            z-index: -3;
+            
+    
+            width: 80%;
+            height: 250px;
+        }
+    }
+
 
     .card-tabla {
+        .row {
+            grid-gap: 0;
+            div {
+                padding-bottom: 10px;
+                margin-bottom: 5px;
+            }
+        }
         h2 {
             text-align: center;
+            
         }
         p {
+            padding-left: 0;
             text-align: center;
         }
+        .planes {
+            font-size: 1rem;
+            font-weight: bolder;
+            margin-bottom: 1rem;
+        }
+        img {
+            padding-bottom: 10px;
+            margin-bottom: 5px;
+        }
+
     }
 
-    .tabla-titulo {
-        font-size: 1rem;
-        margin-top: 1rem;
-        // font-weight: bolder;
-        text-align: center;
-    }
 
     .titulo-tabla {
         text-align: center;

@@ -239,6 +239,12 @@ DEPTO_CHOICES = (
     ('H', 'H'),
 )
 
+# DEPARTAMENTOS DISPOSICION
+DISPO_CHOICES = (
+    ('Frente', 'Frente'),
+    ('Contrafrente', 'Contrafrente'),
+)
+
 # NUMEROS PARA CANTIDADES
 NUM_CHOICES = (
     ('1', '1'),
@@ -283,15 +289,20 @@ class Clasificado(models.Model):
 
     nombre = models.CharField(max_length=50, blank=True)
     descripcion = models.TextField(blank=True)
+
     
     zonaprop = models.BooleanField(default=False)
     properati = models.BooleanField(default=False)
     argenprop = models.BooleanField(default=False)
     mercadolibre = models.BooleanField(default=False)
     reporteinmobiliario = models.BooleanField(default=False)
+
     direccion = models.CharField(max_length=50, blank=True)
     mapa = models.CharField(max_length=300, null=True, blank=True)
+    visita = models.CharField(max_length=300, null=True, blank=True)
+
     youtube = models.CharField(max_length=300, null=True, blank=True)
+    tour = models.CharField(max_length=300, null=True, blank=True)
 
     barrio = models.CharField(
         choices=BARRIOS_CHOICES,
@@ -313,10 +324,10 @@ class Clasificado(models.Model):
         default='$',
         max_length=50)
 
-    luz = models.IntegerField(blank=True, default=0)
-    gas = models.IntegerField(blank=True, default=0)
-    abl = models.IntegerField(blank=True, default=0)
-    aysa = models.IntegerField(blank=True, default=0)
+    # luz = models.IntegerField(blank=True, default=0)
+    # gas = models.IntegerField(blank=True, default=0)
+    # abl = models.IntegerField(blank=True, default=0)
+    # aysa = models.IntegerField(blank=True, default=0)
    
 
     imagen_principal = models.ImageField(upload_to="", null=True, blank=True)
@@ -362,7 +373,22 @@ class Clasificado(models.Model):
         max_length=10,
         default='1')
 
-    baulera = models.BooleanField(default=False)
+    # baulera = models.BooleanField(default=False)
+
+    cant_de_pisos = models.CharField(
+        choices=NUM_CHOICES,
+        max_length=10,
+        default='1')
+    
+    depto_por_piso = models.CharField(
+        choices=NUM_CHOICES,
+        max_length=10,
+        default='1')
+
+    disposicion = models.CharField(
+        choices=DISPO_CHOICES,
+        max_length=15,
+        default='Frente')
 
     pileta = models.BooleanField(default=False)
     gimnasio = models.BooleanField(default=False)
@@ -373,15 +399,16 @@ class Clasificado(models.Model):
     salon_usos_multiples = models.BooleanField(default=False)
     laundry = models.BooleanField(default=False)
 
-    alarma = models.BooleanField(default=False)
-    mascotas = models.BooleanField(default=False)
+    seguridad = models.BooleanField(default=False)
+    # mascotas = models.BooleanField(default=False)
     aire_acondicionado = models.BooleanField(default=False)
-    losa_radiante = models.BooleanField(default=False)
+    # losa_radiante = models.BooleanField(default=False)
     
     internet = models.CharField(
         choices=SERVICIOS_CHOICES,
         max_length=50,
         default='-')
+
     cable = models.CharField(
         choices=SERVICIOS_CHOICES,
         max_length=50,

@@ -33,6 +33,9 @@ class ClasificadoAdmin(admin.ModelAdmin):
             "fields": (
                 'nombre',
                 'tipologia',
+                'visita',
+                'youtube',
+                'tour',
                 'descripcion'
             ),
         }),
@@ -60,11 +63,7 @@ class ClasificadoAdmin(admin.ModelAdmin):
                 ('costo',
                 'moneda_costo',
                 'expensas',
-                'moneda_expensas',
-                'luz',
-                'gas',
-                'abl',
-                'aysa'),
+                'moneda_expensas'),
             ),
         }),
         ('INFORMACIÓN', {
@@ -79,8 +78,7 @@ class ClasificadoAdmin(admin.ModelAdmin):
                 'banios',
                 'orientacion',
                 'cocheras',
-                'baulera',
-                'antiguedad'),
+                'balcones'),
             ),
         }),
         ('AMENITIES', {
@@ -99,12 +97,19 @@ class ClasificadoAdmin(admin.ModelAdmin):
         ('SERVICIOS', {
             'classes': ('wide',),
             "fields": (
-                ('alarma',
-                'mascotas',
+                ('seguridad',
                 'aire_acondicionado',
-                'losa_radiante',
                 'internet',
                 'cable'),
+            ),
+        }),
+        ('EDIFICIO', {
+            'classes': ('wide',),
+            "fields": (
+                ('cant_de_pisos',
+                'disposicion',
+                'antiguedad',
+                'depto_por_piso'),
             ),
         }),
     )

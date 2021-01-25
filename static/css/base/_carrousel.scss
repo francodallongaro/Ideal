@@ -1,6 +1,6 @@
 @import "variables";
 
-$carousel-height: 250px;
+$carousel-height: 600px;
 $control-size: 50px;
 
 
@@ -11,6 +11,8 @@ $control-size: 50px;
   overflow: hidden;
   position: relative;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+
+  margin-bottom: 3rem;
   
   &:hover .controls {
     opacity: 1;
@@ -35,7 +37,7 @@ $control-size: 50px;
       height: 40px;
       width: 40px;
       border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.7);
+      // background-color: rgba(255, 255, 255, 0.7);
       opacity: .5;
       transition: ease .3s;
       cursor: pointer;
@@ -56,9 +58,15 @@ $control-size: 50px;
       transition: 1s ease-in-out all;
       
       .slide {
+        object-fit: cover;
+        object-position: 100% 50%;
+        // width: 100%;
+        height: $carousel-height;
+        border-radius: 20px;
+
         min-width: 100%;
-        min-height: $carousel-height;
-        height: auto;
+        // min-height: $carousel-height;
+        // height: auto;
       }
     }
 }
