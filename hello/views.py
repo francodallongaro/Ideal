@@ -12,7 +12,7 @@ def index(request):
 def venta(request):
 
     faqs = Faqs.objects.all().order_by('orden')
-    packs = Pack.objects.all()
+    packs = Pack.objects.all().order_by('orden')
 
     ctx = {
         'faqs': faqs,

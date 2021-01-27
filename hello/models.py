@@ -32,6 +32,7 @@ class Faqs(models.Model):
 
 class Pack(models.Model):
 
+    orden = models.IntegerField(null=True, blank=True)
     nombre = models.CharField(max_length=50, null=True, blank=True)   
     precio = models.IntegerField(null=True, blank=True) 
 
@@ -301,7 +302,10 @@ class Clasificado(models.Model):
     mapa = models.CharField(max_length=300, null=True, blank=True)
     visita = models.CharField(max_length=300, null=True, blank=True)
 
+    img_youtube = models.ImageField(upload_to="", null=True, blank=True)
     youtube = models.CharField(max_length=300, null=True, blank=True)
+
+    img_tour = models.ImageField(upload_to="", null=True, blank=True)
     tour = models.CharField(max_length=300, null=True, blank=True)
 
     barrio = models.CharField(

@@ -34,6 +34,7 @@ class ClasificadoAdmin(admin.ModelAdmin):
                 'nombre',
                 'tipologia',
                 'visita',
+                'imagen_principal',
                 'youtube',
                 'tour',
                 'descripcion'

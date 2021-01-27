@@ -14,7 +14,7 @@
         <img src=" {% static 'img/ideal/logo.svg' %} " alt="IDEAL">
       </div>
       <h1>Vender tu casa<br>nunca fue tan fácil</h1>
-      <p class="">Elegí la opción que mejor se<br>adapta a tus necesidades.</p>
+      <p class="">Elegí la opción que mejor se adapta a tus necesidades.</p>
     </div>
     <img id="img-principal" class="col-5" src=" {% static 'img/ideal/amebas/ameba-contacto.png' %} " alt="">
   </section>
@@ -23,17 +23,17 @@
     <div class="row mt-3">
       <div class="col-4 col-s card-precio img-center">
         <h2 class="h-center mt-2">{{packs.0.nombre}}</h2>
-        <h2 class="h-center mb-2"><strong>{{packs.0.precio}}</strong> U$D</h2>
+        <h2 class="h-center mb-2">U$D <strong>{{packs.0.precio}}</strong></h2>
         <p class="mt-1 mb-2 h-center"><a href=" {% url 'contacto2' packs.0.pk %} " class="btn-1-r">Consultar Básico</a></p>
       </div>
       <div class="col-4 col-s card-precio img-center">
         <h2 class="h-center mt-2">{{packs.1.nombre}}</h2>
-        <h2 class="h-center mb-2"><strong>{{packs.1.precio}}</strong> U$D</h2>
+        <h2 class="h-center mb-2">U$D <strong>{{packs.1.precio}}</strong></h2>
         <p class="mt-1 mb-2 h-center"><a href=" {% url 'contacto2' packs.1.pk %} " class="btn-1-r">Consultar Ideal</a></p>
       </div>
       <div class="col-4 col-s card-precio img-center">
         <h2 class="h-center mt-2">{{packs.2.nombre}}</h2>
-        <h2 class="h-center mb-2"><strong>{{packs.2.precio}}</strong> U$D</h2>
+        <h2 class="h-center mb-2">U$D <strong>{{packs.2.precio}}</strong></h2>
         <p class="mt-1 mb-2 h-center"><a href=" {% url 'contacto2' packs.2.pk %} " class="btn-1-r">Consultar Premium</a></p>
       </div>
     </div>

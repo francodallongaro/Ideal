@@ -71,3 +71,6 @@ $control-size: 50px;
     }
 }
 
+@media screen and (max-width: 450px) {
+  $carousel-height: 300px;
+}

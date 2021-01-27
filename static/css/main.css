@@ -652,14 +652,25 @@ input[type=range]:focus::-ms-fill-lower {
   background: #F5F5F5;
   border-radius: 5px;
   outline: none;
+  padding-left: 1rem;
 }
 
-.form-group p .form-control::-webkit-input-placeholder, .form-group p .form-control ::-webkit-input-placeholder {
+.form-group p .form-control::-webkit-input-placeholder {
   padding-left: 1rem;
   color: black;
 }
 
-.form-group p .form-control::placeholder, .form-group p .form-control ::-webkit-input-placeholder {
+.form-group p .form-control:-ms-input-placeholder {
+  padding-left: 1rem;
+  color: black;
+}
+
+.form-group p .form-control::-ms-input-placeholder {
+  padding-left: 1rem;
+  color: black;
+}
+
+.form-group p .form-control::placeholder {
   padding-left: 1rem;
   color: black;
 }
