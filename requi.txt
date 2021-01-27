@@ -1,0 +1,22 @@
+appdirs==1.4.4
+asgiref==3.3.1
+certifi==2020.12.5
+distlib==0.3.1
+dj-database-url==0.5.0
+Django==3.1.5
+django-heroku==0.3.1
+filelock==3.0.12
+gunicorn==20.0.4
+importlib-metadata==3.4.0
+pipenv==2018.5.18
+psycopg2==2.8.6
+pytz==2020.5
+six==1.15.0
+sqlparse==0.4.1
+typing-extensions==3.7.4.3
+virtualenv==20.4.0
+virtualenv-clone==0.5.4
+whitenoise==5.2.0
+zipp==3.4.0
+[33mYou are using pip version 9.0.2, however version 21.0 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.[0m
