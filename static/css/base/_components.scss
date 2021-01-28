@@ -3,7 +3,20 @@
 // LOGO
 
 .logo {
-    display: inline-block;
+    height: 70px;
+}
+
+.logo-calc {
+    height: 50px;
+    margin: 0 1rem;
+}
+
+#logo-btn {
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 1100;
+    
 }
 
 #logo {
@@ -464,6 +477,8 @@ h4 {
 
 // ------------------------- IMG ------------------------------
 
+
+
 .portales {
     width: 100%;
     padding: .5rem;
@@ -641,6 +656,7 @@ input[type=range]:focus::-ms-fill-lower {
         label {
             display: none;
         }
+        
         .form-control {
             margin-bottom: 15px;
             width: 100%;
@@ -650,6 +666,7 @@ input[type=range]:focus::-ms-fill-lower {
             border-radius: 5px;
             outline: none;
             padding-left: 1rem;
+            font-size: 14px;
 
             &::placeholder {
                 color: $c-b;

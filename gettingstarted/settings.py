@@ -19,6 +19,9 @@ import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 # BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -84,6 +87,17 @@ WSGI_APPLICATION = "gettingstarted.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+# if DEBUG == True:
+
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     }
+
+# else:
+
 DATABASES = {
     "default": {
         "ENGINE" : "django.db.backends.postgresql",
@@ -95,12 +109,7 @@ DATABASES = {
     }
 }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+
 
 # import dj_database_url
 # DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
@@ -161,21 +170,35 @@ USE_TZ = True
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-AWS_ACCESS_KEY_ID = 'AKIA2AAJQQ3Z4JGGRJXW'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'ideal-bucket'
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
-AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
-AWS_S3_OBJECT_PARAMETERS = {"CacheControl": "max-age=86400"}
-PUBLIC_MEDIA_LOCATION = 'media'
-MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/"
-DEFAULT_FILE_STORAGE = 'hello.storage_backends.MediaStorage'
+if DEBUG == True:
 
-STATIC_LOCATION = 'static'
-STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
-STATICFILES_STORAGE = 'hello.storage_backends.StaticStorage'
+    STATIC_URL = '/static/'
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-django_heroku.settings(locals(), staticfiles=False)
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+    django_heroku.settings(locals())
+
+else:
+
+    AWS_ACCESS_KEY_ID = 'AKIA2AAJQQ3Z4JGGRJXW'
+    AWS_SECRET_ACCESS_KEY = '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'
+    AWS_STORAGE_BUCKET_NAME = 'ideal-bucket'
+    AWS_S3_FILE_OVERWRITE = False
+    AWS_DEFAULT_ACL = None
+    AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
+    AWS_S3_OBJECT_PARAMETERS = {"CacheControl": "max-age=86400"}
+    PUBLIC_MEDIA_LOCATION = 'media'
+    MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/"
+    DEFAULT_FILE_STORAGE = 'hello.storage_backends.MediaStorage'
+
+    STATIC_LOCATION = 'static'
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
+    STATICFILES_STORAGE = 'hello.storage_backends.StaticStorage'
+
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+    django_heroku.settings(locals(), staticfiles=False)

@@ -10,12 +10,12 @@
     {% comment %} PROPUESTA {% endcomment %}
 
     <section class="v100 row v-center">
-    <div class="col-10 card-contacto">
+    <div class="col card-contacto">
         <div class="row">
-            <div class="col-8 col-s">
-                <h1>¡Todo listo!</h1>
-                <p class="text mb-2">Seleccionaste el plan {{pack.nombre}}</p>
-                <p class="text mb-2">Elegí el canal más cómodo y te<br/>contactaremos a la brevedad</p>
+            <div class="col-7 col-s pl-2">
+                <h1 class="mt-2">¡Todo listo!</h1>
+                <p class="text mb-2 mt-1">Seleccionaste el plan <span class="calc-text">{{pack.nombre}}</span></p>
+                <p class="calc-text mb-2">Elegí el canal más cómodo y te<br/>contactaremos a la brevedad</p>
                 <div class="row mt-3">
                     <a class="col-4" href="mailto:ideal@gmail.com">
                         <img class="img-center" src=" {% static 'img/ideal/redes/mail.svg' %} " alt="">
@@ -27,8 +27,8 @@
                     </a>
                 </div>
             </div>
-            <form class="col-4 col-s card-contacto" method="POST">
-            <p class="h-center text mt-1">Rellená este formulario y<br>¡Vendé ya!</p>
+            <form class="col-5 col-s card-contacto" method="POST">
+            <h4 class="h-center mt-1">Rellená este formulario y<br>¡Vendé ya!</h4>
                 <div class="form-group p-1">
                     {% csrf_token %}
                     {{ form.as_p }}

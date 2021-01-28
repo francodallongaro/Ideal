@@ -4,27 +4,26 @@
 
 
 <section id="calculadora2" class="mb-3">
-    <h2 class="h-center">¿Cuánto podes ahorrar con  <div class="logo">
-        <div class="logo">
-        <img src=" {% static 'img/ideal/logo.svg' %} " alt="IDEAL">
-      </div>
-      </div> ?</h2>
-    <div class="row v50 v-center mt-2 valor">
-        <div class="col-6 col-s v-a-stretch mt-2">
-            <h4 class="mb-1">Valor de tu propiedad: </h4>
+    <h2 class="h-c-center h-center">¿Cuánto podes ahorrar con 
+        
+        <img class="logo-calc" src=" {% static 'img/ideal/logo.png' %} " alt="IDEAL">
+       ?</h2>
+    <div class="row v50 mt-2 valor">
+        <div class="col-6 col-s">
+            <h4 class="">Valor de tu propiedad: </h4>
             <input type="range" id="rangeInput" class="rangeslider mb-1" step='10000' name="rangeInput" min="80000" max="2000000" value="120000" oninput="amount.value=rangeInput.value">                                                       
             <br>          
             <span class="calc-text">U$D </span><output id="amount" class="output_slider calc-text" name="amount" for="rangeInput">120000</output>
             <br>
-            <h4 class="mb-1 mt-2">Comisión: </h4>
+            <h4 class="mt-2">Comisión: </h4>
             <input type="range" id="rangeInput2" class="rangeslider mb-1" step='0.5' name="rangeInput2" min="1" max="6" value="4" oninput="amount2.value=rangeInput2.value">                                                       
             <br> 
             <output id="amount2" class="output_slider calc-text" name="amount2" for="rangeInput2">4</output><span class="calc-text">%</span>
-            <p class="mt-3"><a href=" {% url 'venta' %} " class="btn-1-r">¡Quiero ahorrar YA!</a></p>
+            <p class="mt-3"><a href=" {% url 'contacto' %} " class="btn-1-r">¡Quiero ahorrar YA!</a></p>
         </div> 
         <div class="col-1"></div>
         <div id="valor" class="col-5 col-s">
-            <h4 class="mt-1">Ahorrás</h4>
+            <h4 class="">Ahorrás</h4>
             <h2 class="ahorro"><span class="ahorro" id="ahorrofinal">U$D 4300</span></h2>
             <p class=" text mt-1 mb-3 hidden"><span id="ahorro">¡Cambiar los muebles antiguos de tu casa!</span></p>
             <img id="img-calc-2" src="{% static 'img/ideal/calculadora/muebles.png' %}" alt="Muebles">

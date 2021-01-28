@@ -509,26 +509,28 @@ body {
         #valor { 
             z-index: 1;
             background: transparent;
-            h4, h2, p, span, a {
+            h4, h2, p, span {
             background: transparent;
             }
         }
+
         a {
-            z-index: 2;
+            display: none;
         }
+        
         
         #img-calc-2 {
             position: absolute;
             // top: 20%;
-            top: 6100px;
+            top: 5950px;
             left: 20%;
             
             opacity: 0.3;
             object-fit: cover;
             object-position: -20% 0;
 
-            z-index: -3;
             
+            z-index: -5;
     
             width: 80%;
             height: 250px;
@@ -572,5 +574,9 @@ body {
 
     .hidden {
         display: none;
+    }
+
+    .avatar {
+        width: 50px;
     }
 }

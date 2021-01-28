@@ -3,10 +3,9 @@
 header {
     position: fixed;
     width: 100%;
-    // display: flex;
-    // justify-content: space-between;
+    
     align-items: center;
-    // padding: 20px;
+
     border-bottom: 1px solid white;
     box-shadow: 0px 1px 0px #E5E9F2;
     padding-right: 10%;
@@ -97,6 +96,7 @@ nav ul li a {
         ul {
             position: absolute;
             top: 50%;
+            
             transform: translateY(-50%);
             width: 100%;
             
@@ -132,7 +132,7 @@ nav ul li a {
 
     .nav-wrapper ul li a {
         padding: 10px 24px;
-        opacity: 0;
+        display: none;
         color: #000;
         font-size: 20px;
         font-weight: 600;
@@ -203,7 +203,7 @@ nav ul li a {
 }
 
 #nav:checked ~ .nav-wrapper ul li a {
-    opacity: 1;
+    display: block;
     transform: translateX(0);
 }
 

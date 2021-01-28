@@ -63,7 +63,19 @@ details[open] summary::-webkit-details-marker {
 }
 
 .logo {
-  display: inline-block;
+  height: 70px;
+}
+
+.logo-calc {
+  height: 50px;
+  margin: 0 1rem;
+}
+
+#logo-btn {
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 1100;
 }
 
 #logo {
@@ -654,6 +666,7 @@ input[type=range]:focus::-ms-fill-lower {
   border-radius: 5px;
   outline: none;
   padding-left: 1rem;
+  font-size: 14px;
 }
 
 .form-group p .form-control::-webkit-input-placeholder {
@@ -973,7 +986,7 @@ nav ul li a:hover {
   }
   .nav-wrapper ul li a {
     padding: 10px 24px;
-    opacity: 0;
+    display: none;
     color: #000;
     font-size: 20px;
     font-weight: 600;
@@ -1047,7 +1060,7 @@ nav ul li a:hover {
 }
 
 #nav:checked ~ .nav-wrapper ul li a {
-  opacity: 1;
+  display: block;
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
@@ -1524,22 +1537,22 @@ body {
     z-index: 1;
     background: transparent;
   }
-  #calculadora2 #valor h4, #calculadora2 #valor h2, #calculadora2 #valor p, #calculadora2 #valor span, #calculadora2 #valor a {
+  #calculadora2 #valor h4, #calculadora2 #valor h2, #calculadora2 #valor p, #calculadora2 #valor span {
     background: transparent;
   }
   #calculadora2 a {
-    z-index: 2;
+    display: none;
   }
   #calculadora2 #img-calc-2 {
     position: absolute;
-    top: 6100px;
+    top: 5950px;
     left: 20%;
     opacity: 0.3;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: -20% 0;
        object-position: -20% 0;
-    z-index: -3;
+    z-index: -5;
     width: 80%;
     height: 250px;
   }
@@ -1572,6 +1585,9 @@ body {
   }
   .hidden {
     display: none;
+  }
+  .avatar {
+    width: 50px;
   }
 }
 /*# sourceMappingURL=main.css.map */
