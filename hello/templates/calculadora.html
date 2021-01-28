@@ -4,28 +4,28 @@
 
 
 <section id="calculadora" class="mb-3 mt-3">
-    <h2 class="h-center mb-1">¿Cuánto podes ahorrar con  
+    <h2 class="h-center">¿Cuánto podes ahorrar con  
         <div class="logo">
         <img class="ideal-cal" src=" {% static 'img/ideal/logo.svg' %} " alt="IDEAL">
         </div> ?
     </h2>
-    <h2 class="ahorro h-center mb-3">¡Descubrilo!</h2>
+    <h4 class="ahorro h-center mb-3">¡Descubrilo!</h4>
 
-    <div class="row mb-1 v-center">
+    <div class="row mb-1">
         <div id="valor" class="col-5 col-6-m col-s mt-2">
-            <h4 class="mb-1">Con ideal desde: </h4>
-            <p class="calc-text">U$S 500</p>
+            <h4 class="">Con ideal desde: </h4>
+            <p class="calc-text">U$D 500</p>
             <p class="text">(Pagás en pesos a tipo de cambio oficial)</p>
             <h4 class="mt-1">Con inmobiliarias: </h4>
-            <p class="calc-text"><span id="costocomision">U$S 4800</span></p>
+            <p class="calc-text"><span id="costocomision">U$D 4800</span></p>
             <h4 class="mt-1">Ahorrás</h4>
-            <h2 class="ahorro"><span class="ahorro" id="ahorrofinal">U$S 4300</span></h2>  
+            <h2 class="ahorro"><span class="ahorro" id="ahorrofinal">U$D 4300</span></h2>  
         </div>
         <div class="col-7 col-6-m col-s mt-2">
             <h4 class="">Valor de tu propiedad: </h4>
             <input type="range" id="rangeInput" class="rangeslider mb-1" step='10000' name="rangeInput" min="80000" max="2000000" value="120000" oninput="amount.value=rangeInput.value">                                                       
             <br>          
-            <span class="calc-text">U$S </span><output id="amount" class="output_slider calc-text" name="amount" for="rangeInput">120000</output>
+            <span class="calc-text">U$D </span><output id="amount" class="output_slider calc-text" name="amount" for="rangeInput">120000</output>
             <br>
             <h4 class=" mt-2">Comisión: </h4>
             <input type="range" id="rangeInput2" class="rangeslider mb-1" step='0.5' name="rangeInput2" min="1" max="6" value="4" oninput="amount2.value=rangeInput2.value">                                                       
@@ -62,13 +62,13 @@
               
         costo.addEventListener("change",e=>{
             let costocomision_val = (costo.value * comision.value) / 100;
-            outcostocomision.innerHTML = 'U$S ' + costocomision_val;
+            outcostocomision.innerHTML = 'U$D ' + costocomision_val;
             cambiarFrase()
         })     
             
         comision.addEventListener("change",e=>{
             let costocomision_val = (costo.value * comision.value) / 100;
-            outcostocomision.innerHTML = 'U$S ' + costocomision_val;
+            outcostocomision.innerHTML = 'U$D ' + costocomision_val;
             cambiarFrase()
             
         })
@@ -76,7 +76,7 @@
         function cambiarFrase() {
             let costocomision_val = (costo.value * comision.value) / 100;
             let ahorro = costocomision_val-500;
-            ahorrofinal.innerHTML = 'U$S ' + ahorro;
+            ahorrofinal.innerHTML = 'U$D ' + ahorro;
             
             if (ahorro > 40000) {
                 outahorro.innerHTML = '¡Reservar un pasaje a marte (con Elon) y conocer el espacio exterior!';

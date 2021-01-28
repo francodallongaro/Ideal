@@ -14,7 +14,7 @@
             <h4 class="mb-1">Valor de tu propiedad: </h4>
             <input type="range" id="rangeInput" class="rangeslider mb-1" step='10000' name="rangeInput" min="80000" max="2000000" value="120000" oninput="amount.value=rangeInput.value">                                                       
             <br>          
-            <span class="calc-text">U$S </span><output id="amount" class="output_slider calc-text" name="amount" for="rangeInput">120000</output>
+            <span class="calc-text">U$D </span><output id="amount" class="output_slider calc-text" name="amount" for="rangeInput">120000</output>
             <br>
             <h4 class="mb-1 mt-2">Comisión: </h4>
             <input type="range" id="rangeInput2" class="rangeslider mb-1" step='0.5' name="rangeInput2" min="1" max="6" value="4" oninput="amount2.value=rangeInput2.value">                                                       
@@ -25,7 +25,7 @@
         <div class="col-1"></div>
         <div id="valor" class="col-5 col-s">
             <h4 class="mt-1">Ahorrás</h4>
-            <h2 class="ahorro"><span class="ahorro" id="ahorrofinal">U$S 4300</span></h2>
+            <h2 class="ahorro"><span class="ahorro" id="ahorrofinal">U$D 4300</span></h2>
             <p class=" text mt-1 mb-3 hidden"><span id="ahorro">¡Cambiar los muebles antiguos de tu casa!</span></p>
             <img id="img-calc-2" src="{% static 'img/ideal/calculadora/muebles.png' %}" alt="Muebles">
         </div>
@@ -52,7 +52,7 @@
     function cambiarFrase() {
         let costocomision_val = (costo.value * comision.value) / 100;
         let ahorro = costocomision_val-500;
-        ahorrofinal.innerHTML = 'U$S ' + ahorro;
+        ahorrofinal.innerHTML = 'U$D ' + ahorro;
         
         if (ahorro > 40000) {
             outahorro.innerHTML = '¡Reservar un pasaje a marte (con Elon) y conocer el espacio exterior!';

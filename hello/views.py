@@ -96,7 +96,7 @@ def contacto2(request, pk, *args, **kwargs):
 def portal(request):
 
     clasificados = Clasificado.objects.all()
-    cuenta = Clasificado.objects.all().count()
+    cuenta = Clasificado.objects.filter(verificada=True).count()
     
 
     # destacados = Clasificado.objects.filter(pack__nombre='ideal').order_by('creacion')[:3]

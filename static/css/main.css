@@ -555,7 +555,8 @@ h4 {
 
 .avatar:hover {
   cursor: pointer;
-  background-color: salmon;
+  background-color: #47BD9C;
+  border-radius: 16px;
 }
 
 #ameba-contacto {
@@ -656,22 +657,18 @@ input[type=range]:focus::-ms-fill-lower {
 }
 
 .form-group p .form-control::-webkit-input-placeholder {
-  padding-left: 1rem;
   color: black;
 }
 
 .form-group p .form-control:-ms-input-placeholder {
-  padding-left: 1rem;
   color: black;
 }
 
 .form-group p .form-control::-ms-input-placeholder {
-  padding-left: 1rem;
   color: black;
 }
 
 .form-group p .form-control::placeholder {
-  padding-left: 1rem;
   color: black;
 }
 

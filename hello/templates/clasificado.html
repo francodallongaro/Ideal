@@ -18,11 +18,11 @@
 
         <p class="text pt-3 mb-2"><strong>Venta</strong> > {{ clasificado.tipologia }} > {{ clasificado.barrio }} > {{ clasificado.ambientes }} Ambientes > {{clasificado.direccion}}</p>
         <div class="row v-center mt-1 mb-3">
-            <div class="col-8 col-6-m">
+            <div class="col-8 col-6-m col-s">
                 <h2 class="">{{clasificado.tipologia}} • {{clasificado.m2_totales}}m²</h2>
                 <p class="text">{{clasificado.direccion}}, {{ clasificado.barrio }}</p>
             </div>
-            <div class="col-4 col-6-m">
+            <div class="col-4 col-6-m col-s">
                 <h2 class=" ahorro h-end">{{clasificado.costo}} {{clasificado.moneda_costo}}</h2>
                 <p class="text h-end">Expensas: {{clasificado.moneda_expensas}}{{ clasificado.expensas }}</p>
             </div>
@@ -46,63 +46,63 @@
                 <p class="calc-text mb-1">{{clasificado.visita}}</p>
                 <h4 class="bb mb-2">Unidad</h4>
                 <div class="row mb-1">
-                    <div class="col-3">
+                    <div class="col-3 col-6-s">
                         <img class="img-center icono-caracteristica" src="{% static 'img/ideal/iconos/ambiente.svg' %}" alt="">
                         <p class="h-center"><strong>Ambientes: </strong><br/>{{clasificado.ambientes}}</p>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 col-6-s">
                         <img class="img-center icono-caracteristica" src="{% static 'img/ideal/iconos/sup.svg' %}" alt="">
                         <p class="h-center"><strong>Superficie: </strong><br/>{{clasificado.m2_totales}}m²</p>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 col-6-s">
                         <img class="img-center icono-caracteristica" src="{% static 'img/ideal/iconos/cama.svg' %}" alt="">
                         <p class="h-center"><strong>Dormitorios: </strong><br/>{{clasificado.dormitorios}}</p>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 col-6-s">
                         <img class="img-center icono-caracteristica" src="{% static 'img/ideal/iconos/banio.svg' %}" alt="">
                         <p class="h-center"><strong>Baños: </strong><br/>{{clasificado.banios}}</p>
                     </div>
                 <!-- </div>
                 <div class="row"> -->
-                    <div class="col-3">
+                    <div class="col-3 col-6-s">
                         <img class="img-center icono-caracteristica" src="{% static 'img/ideal/iconos/balcon.svg' %}" alt="">
                         <p class="h-center"><strong>Balcones: </strong><br/>{{clasificado.balcones}}</p>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 col-6-s">
                         <img class="img-center icono-caracteristica" src="{% static 'img/ideal/iconos/orientacion.svg' %}" alt="">
                         <p class="h-center"><strong>Orientación: </strong><br/>{{clasificado.orientacion}}</p>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 col-6-s">
                         <img class="img-center icono-caracteristica" src="{% static 'img/ideal/iconos/supcub.svg' %}" alt="">
                         <p class="h-center"><strong>Sup. Cubierta: </strong><br/>{{clasificado.m2_cubiertos}}m²</p>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 col-6-s">
                         <img class="img-center icono-caracteristica" src="{% static 'img/ideal/iconos/cocheras.svg' %}" alt="">
                         <p class="h-center"><strong>Cocheras: </strong><br/>{{clasificado.cocheras}}</p>
                     </div>
                 </div>
                 <h4 class="bb mb-1">Edificio</h4>
                 <div class="row mb-2">
-                    <div class="col-3">
+                    <div class="col-3 col-6-s">
                         <img class="img-center icono-caracteristica" src="{% static 'img/ideal/iconos/antiguedad.svg' %}" alt="">
                         <p class="h-center"><strong>Antiguedad: </strong><br/>{{clasificado.antiguedad}}</p>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 col-6-s">
                         <img class="img-center icono-caracteristica" src="{% static 'img/ideal/iconos/edificio.svg' %}" alt="">
                         <p class="h-center"><strong>Cant. de pisos: </strong><br/>{{clasificado.cant_de_pisos}}</p>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 col-6-s">
                         <img class="img-center icono-caracteristica" src="{% static 'img/ideal/iconos/sup.svg' %}" alt="">
                         <p class="h-center"><strong>Depto. por piso: </strong><br/>{{clasificado.depto_por_piso}}</p>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 col-6-s">
                         <img class="img-center" src="{% static 'img/ideal/iconos/edificio.svg' %}" alt="">
                         <p class="h-center"><strong>Disposición: </strong><br/>{{clasificado.disposicion}}</p>
                     </div>
                 </div>
                 <h4 class="bb mb-2">Amenities</h4>
                 <div class="row mb-2">
-                    <div class="col-3 inline h-c-start">
+                    <div class="col-3 col-6-s inline h-c-start">
                             {% if clasificado.salon_usos_multiples %}
                                 <img class="mr-1 checked" src="{% static 'img/ideal/iconos/checked.svg' %}" alt="">
                             {% else %}
@@ -110,7 +110,7 @@
                             {% endif %}
                             <p class=""><strong>Sum</strong></p>
                     </div>
-                    <div class="col-3 inline h-c-start">
+                    <div class="col-3 col-6-s inline h-c-start">
                             {% if clasificado.pileta %}
                                 <img class="mr-1 checked" src="{% static 'img/ideal/iconos/checked.svg' %}" alt="">
                             {% else %}
@@ -118,7 +118,7 @@
                             {% endif %}
                             <p class=""><strong>Pileta</strong></p>
                     </div>
-                    <div class="col-3 inline h-c-start">
+                    <div class="col-3 col-6-s inline h-c-start">
                             {% if clasificado.seguridad %}
                                 <img class="mr-1 checked" src="{% static 'img/ideal/iconos/checked.svg' %}" alt="">
                             {% else %}
@@ -126,7 +126,7 @@
                             {% endif %} 
                             <p class=""><strong>Seguridad</strong></p>
                     </div>
-                    <div class="col-3 inline h-c-start">
+                    <div class="col-3 col-6-s inline h-c-start">
                             {% if clasificado.juegos %}
                                 <img class="mr-1 checked" src="{% static 'img/ideal/iconos/checked.svg' %}" alt="">
                             {% else %}
@@ -134,7 +134,7 @@
                             {% endif %} 
                             <p class=""><strong>S. de Juegos</strong></p>
                     </div>
-                    <div class="col-3 inline h-c-start">
+                    <div class="col-3 col-6-s inline h-c-start">
                             {% if clasificado.parrilla %}
                                 <img class="mr-1 checked" src="{% static 'img/ideal/iconos/checked.svg' %}" alt="">
                             {% else %}
@@ -142,7 +142,7 @@
                             {% endif %} 
                             <p class=""><strong>Parrilla</strong></p>
                     </div>
-                    <div class="col-3 inline h-c-start">
+                    <div class="col-3 col-6-s inline h-c-start">
                             {% if clasificado.gimnasio %}
                                 <img class="mr-1 checked" src="{% static 'img/ideal/iconos/checked.svg' %}" alt="">
                             {% else %}
@@ -150,7 +150,7 @@
                             {% endif %}
                             <p class=""><strong>Gimnasio</strong></p>
                     </div>
-                    <div class="col-3 inline h-c-start">
+                    <div class="col-3 col-6-s inline h-c-start">
                             {% if clasificado.laundry %}
                                 <img class="mr-1 checked" src="{% static 'img/ideal/iconos/checked.svg' %}" alt="">
                             {% else %}
@@ -158,7 +158,7 @@
                             {% endif %}
                             <p class=""><strong>Laundry</strong></p>
                     </div>
-                    <div class="col-3 inline h-c-start">
+                    <div class="col-3 col-6-s inline h-c-start">
                             {% if clasificado.aire_acondicionado %}
                                 <img class="mr-1 checked" src="{% static 'img/ideal/iconos/checked.svg' %}" alt="">
                             {% else %}
@@ -215,9 +215,15 @@
         
         <!-- YOUTUBE -->
         <h2 class="bb mb-2 mt-3">Video</h2>
-        <div class="”video-responsive”">
-            <iframe src="{{clasificado.youtube}}" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-        </div>
+        <a class="tour360 row v-center" href="{{clasificado.youtube}}" target=_blank>
+            <div class="col-8 col-s pl-2">
+                <h2>Visualizá esta propiedad<br>como si estuvieses ahí</h2>
+                <p class="text mt-1">¡Hace <strong>click aquí</strong> para ver el video!</p>
+            </div>
+            <div class="col-4 col-s">
+                <img src="{% static 'img/ideal/principal.jpeg' %}" id="img-360" alt="Imagen">
+            </div>
+        </a>
         
         <!-- INFO EXTRA -->
         <h2 class="bb mb-2 mt-3">Información adicional</h2>

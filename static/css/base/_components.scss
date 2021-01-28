@@ -527,7 +527,8 @@ h4 {
     
     &:hover {
         cursor: pointer;
-        background-color: salmon;
+        background-color: $c-1;
+        border-radius: 16px;
     }
 }
 
@@ -651,7 +652,6 @@ input[type=range]:focus::-ms-fill-lower {
             padding-left: 1rem;
 
             &::placeholder {
-                padding-left: 1rem;
                 color: $c-b;
             }
             
